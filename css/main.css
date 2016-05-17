@@ -20,7 +20,6 @@ body>.wrapper {
 
 .header {
     width: 100%;
-   /* min-height: 250px; */
 }
 
 .header .title {
@@ -34,6 +33,16 @@ body>.wrapper {
 
 .nav-container {
     background-color: rgba(0,0,0,0.0);
+    min-height: 3em;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav {
