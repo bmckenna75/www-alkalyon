@@ -193,8 +193,11 @@ body>.wrapper {
     width: 100%;
 }
 
-.header .title, .header .title a {
+.header .title {
     background-color: rgba(255, 255, 255, 0.82);
+}
+
+.header .title, .header .title a {
     text-align: center;
     text-decoration: none;
     color: #111;
