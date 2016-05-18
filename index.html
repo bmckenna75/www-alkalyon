@@ -8,20 +8,30 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 
         <script>
+        if ($(window).width() > 1080) {
+	  $(document).ready(function() { $(".arrow").hide();});
+          $(window).scroll(function() {
+              var scroll = $(window).scrollTop();
+              var nav = $(".nav-container");
 
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            var nav = $(".nav-container");
+              var diff = scroll - nav.offset().top;            
 
-            var diff = scroll - nav.offset().top;            
-
-            if (diff >= 0) {
-                $(".nav").addClass("sticky");
-            } else {
-                $(".sticky").removeClass("sticky");
-            }
-        });
-
+              if (diff >= 0) {
+                  $(".nav").addClass("sticky");
+              } else {
+                  $(".sticky").removeClass("sticky");
+              }
+          });} else {
+              $(document).ready(function() {
+                $(".nav").hide();
+		$(".dropdown-content").hide();
+		$(".nav-head").click(function(){$(".nav").toggle();$(".nav-head .arrow").toggleClass("rotate90");});
+		$(".dropdown>a").click(function(){
+			$(".dropdown-content").toggle();
+			$(".dropdown .arrow").toggleClass("rotate90");
+		});
+              });
+          }
         </script>
 
     </head>
@@ -30,18 +40,19 @@
             <div class="header">
                 <div class="title">Certified Cat</div>
                 <div class="nav-container">
+                    <div class="nav-head"><a href="#">Site nav <span class="arrow">&#9658;</span></a></div>
                     <div class="nav">
                         <div class="item"><a href="#">thing 1</a></div>
                         <div class="item"><a href="#">thing 2</a></div>
+                        <div class="item"> <a href="#">last thing</a></div>
                         <div class="item">
-                          <div class="dropdown"> <a href="#">menu &#9660;</a>
+                          <div class="dropdown"> <a href="#">menu <span class="arrow">&#9658;</span></a>
                                 <div class="dropdown-content">
                                     <a href="#">item 1</a>
                                     <a href="#">item 2</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="item"> <a href="#">last thing</a></div>
                     </div>
                 </div>
             </div>
@@ -71,8 +82,8 @@
 
             <div class="footer-container">
                 <div class="footer-content">
-                  <div class="sig right">Art © Cercat, 2015-2016</div>
-                  <div class="sig left">Made with ❤️ by a chris fox | <a href="http://github.com/arcaena/">github</a> | <a href="http://twitter.com/rpi_fox">twitter</a> | <a href="https://telegram.me/pandoras_fox">telegram</a></div>
+                  <div class="sig right">Art &copy; Cercat, 2015-2016</div>
+                  <div class="sig left">Made with &hearts; by <a href="http://twitter.com/rpi_fox">chris fox</a></div>
                 </div>
             </div>
         </div>

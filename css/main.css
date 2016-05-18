@@ -8,6 +8,9 @@
     .content-container {
         display: flex;
     }
+    .after-content {
+        padding-bottom: 75px;
+    }
     body {
         background: rgba(0,0,0,0) url("./../imgs/bg.png") no-repeat fixed center;
     }
@@ -20,11 +23,19 @@
         margin-right: auto;
     }
 
+    .header .title {
+        font-size: 5em;
+	border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
    .nav-container {
         background-color: rgba(0,0,0,0.0);
         min-height: 3em;
     }
-
+    .nav-head {
+        display: none;
+    }
     .nav {
         list-style-type: none;
         margin: 0 auto 0 auto;
@@ -32,7 +43,6 @@
         width: fit-content;
         display: flex;
     }
-
     .nav .item {
         display: inline-block;
         width: 150px;
@@ -40,7 +50,6 @@
         text-align: center;
         vertical-align: middle;
         line-height: 3em;
-        background-color: rgba(55, 55, 55, 0.82);
         padding: 0;
         margin: 0;
         transition: background-color 0.15s linear;
@@ -116,30 +125,50 @@
         background: rgba(0,0,0,0) url("./../imgs/bg.png") no-repeat fixed center;
         background-size: cover;
     }
-
     .nav-container {
-        width: fit-content;
         margin-left: auto;
         margin-right: auto;
     }
+
     .nav {
         width: 100%;
     }
-    .nav .item {
-        background-color: rgba(0,0,0, 0.85);
+    .nav .item, .nav-head {
         width: 100%;
-        height: 3em;
+        min-height: 3em;
     }
-    .nav .item a {
+    .nav .item a, .nav-head a {
         width: 100%;
         height: 100%;
         font-size: 1.5em;
         vertical-align: middle;
         text-align: center;
         line-height: 1.5em;
+        text-decoration: none;
+        display: inline-block;
+        color: #777;
+    }
+    .nav .item .dropdown-content a {
+        color: #a2a;
+    }
+    .header .title {
+        font-size: 3em;
+    }
+    .nav {
+        border-top: 1px solid #777;
+    }
+    .after-content {
+        padding-bottom: 100px;
     }
 
 }
+
+.rotate90 { 
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+
 
 html, body {
     height: 100%;
@@ -166,13 +195,12 @@ body>.wrapper {
 
 .header .title {
     background-color: rgba(255, 255, 255, 0.82);
-    font-size: 5em;
     text-align: center;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-
 }
 
+.nav .item, .nav-head {
+    background-color: rgba(55, 55, 55, 0.82);
+}
 
 .content-container {
     width: 100%;
@@ -200,10 +228,6 @@ body>.wrapper {
 
 .clear {
     clear: both;
-}
-
-.after-content {
-    padding-bottom: 75px;
 }
 
 .footer-container {
