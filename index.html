@@ -10,9 +10,11 @@
 
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
-            console.log(scroll);
+            var nav = $(".nav-container");
 
-            if (scroll >= 97) {
+            var diff = scroll - nav.offset().top;            
+
+            if (diff >= 0) {
                 $(".nav").addClass("sticky");
             } else {
                 $(".sticky").removeClass("sticky");
