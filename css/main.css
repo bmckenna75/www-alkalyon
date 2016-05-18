@@ -22,8 +22,8 @@
 
     .header .title {
         font-size: 5em;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 0.4em;
+        border-bottom-left-radius: 0.4em;
     }
 
    .nav-container {
@@ -56,15 +56,20 @@
         transition: background-color 0.15s linear;
     }
 
-    .nav>.item:first-child {
-        border-bottom-left-radius: 5px;
+    .nav>.item:first-child, .nav>.item.current:first-child a {
+        border-bottom-left-radius: 0.8em;
     }
 
-    .nav>.item:last-child {
-        border-bottom-right-radius: 5px;
+    .nav>.item:last-child, .nav>.item.current:last-child {
+        border-bottom-right-radius: 0.8em;
     }
-    .nav .item:hover {
+    .nav .item:hover, .nav>.item:hover:last-child {
         background-color: rgba(200,125,175,0.62);
+        border-bottom-right-radius: 0px ;
+    }
+
+    .nav .item:hover>.dropdown>a {
+        background-color: rgba(0,0,0,0);
         border-bottom-right-radius: 0px;
     }
 
@@ -95,13 +100,13 @@
         position: absolute;
         width: 100%;
         transition: opacity 0.15s linear;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 0.8em;
+        border-bottom-left-radius: 0.8em;
     }
 
     .dropdown-content>a:last-child {
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 0.8em;
+        border-bottom-left-radius: 0.8em;
     }
 
     .dropdown:hover .dropdown-content {
@@ -149,6 +154,10 @@
         min-height: 3em;
         max-height: 3em;
     }
+    .nav .item {
+        width: 50%;
+        float: left;
+    }
     .nav .item a, .nav-head a {
         width: 100%;
 	min-height: 100%;
@@ -163,22 +172,20 @@
     .nav .item .dropdown-content a {
         color: #777;
         font-size: 1.3em;
-        background-color: rgba(55, 55, 55, 0.82);
+        background-color: rgba(55, 55, 55, 0.92);
         z-index: 1;
     }
     .nav .item .dropdown-content a.current {
-        background-color: rgba(185, 185, 185, 0.82);
+        background-color: rgba(185, 185, 185, 0.92);
     }
     .header .title {
         font-size: 3em;
     }
     .nav {
         border-top: 1px solid #777;
-        display: -webkit-flex;
-        display: flex;
     }
     .after-content {
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     .nav .dropdown-content {
         display: -webkit-flex;
@@ -231,28 +238,27 @@ body>.wrapper {
 }
 
 .nav .item, .nav-head {
-    background-color: rgba(55, 55, 55, 0.82);
+    background-color: rgba(55, 55, 55, 0.92);
 }
 
-.item.current, .item.current a, a.current{
-    background-color: rgba(185, 185, 185, 0.82);
+.item.current, .item.current>a, a.current{
+    background-color: rgba(185, 185, 185, 0.92);
 }
 
 .content-container {
     width: 100%;
     height: fit-content;
-    margin-top: 75px;
-    background-color: rgba(235, 235, 235, 0.95);
-    border-radius: 5px;
+    margin-top: 50px;
 }
 
 .content-block {
-    width: 95%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-
-    padding-top: 5px;
-    padding-bottom: 15px;
+    margin-bottom: 1em;
+    background-color: rgba(235, 235, 235, 0.95);
+    padding: 15px;
+    border-radius: 1em;
 }
 
 .center {
@@ -276,8 +282,8 @@ body>.wrapper {
     left: 0;
     background-color: rgba(200, 200, 200, 0.85);
     height: fit-content;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-top-right-radius: 0.8em;
+    border-top-left-radius: 0.8em;
 }
 
 .footer-content {
