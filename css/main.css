@@ -63,7 +63,7 @@
         background-color: rgba(200,125,175,0.62);
     }
 
-    .nav .item:hover a, .nav .item:hover .drop-button {
+    .nav .item:hover>.dropdown>a, .nav .item:hover .drop-button {
         color: #eee;
     }
 
@@ -107,7 +107,9 @@
 
     .dropdown-content a {
         z-index: 100;
-        background-color: rgba(200,125,175,0.62);
+        /*background-color: rgba(200,125,175,0.62);*/
+        background-color: rgba(55, 55, 55, 0.82);
+        color: #777;
         transition: all linear 0.15s;
     }
 
