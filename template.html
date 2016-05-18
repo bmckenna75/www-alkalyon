@@ -3,39 +3,15 @@
     <head>
         <title>PAGE TITLE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-
-        <script>
-        if ($(window).width() > 1080) {
-          $(document).ready(function() { $(".arrow").hide();});
-          $(window).scroll(function() {
-              var scroll = $(window).scrollTop();
-              var nav = $(".nav-container");
-              var diff = scroll - nav.offset().top;
-              if (diff >= 0) {
-                  $(".nav").addClass("sticky");
-              } else {
-                  $(".sticky").removeClass("sticky");
-              }
-          });} else {
-              $(document).ready(function() {
-                $(".nav").hide();
-                $(".dropdown-content").hide();
-                $(".nav-head").click(function(){$(".nav").toggle();$(".nav-head .arrow").toggleClass("rotate90");});
-                $(".dropdown>a").click(function(){
-                    $(".dropdown-content").toggle();
-                    $(".dropdown .arrow").toggleClass("rotate90");
-                });
-              });
-          }
-        </script>
+        <script src="/js/responsive.js"></script>
     </head>
     <body>
         <div class="wrapper">
             <div class="header">
-                <div class="title">Certified Cat</div>
+                <div class="title"><a href="/">Certified Cat</a></div>
                 <div class="nav-container">
                     <div class="nav-head"><a href="#">Site nav <span class="arrow">&#9658;</span></a></div>
                     <div class="nav">
@@ -45,8 +21,8 @@
                         <div class="item">
                           <div class="dropdown"> <a href="#">Gallery<span class="arrow">&#9658;</span></a>
                                 <div class="dropdown-content">
-                                    <a href="/gallery/category-1">category 1</a>
-                                    <a href="/gallery/category-2">category 2</a>
+                                    <a href="/gallery/traditional/">Traditional</a>
+                                    <a href="/gallery/digital/">Digital</a>
                                 </div>
                             </div>
                         </div>

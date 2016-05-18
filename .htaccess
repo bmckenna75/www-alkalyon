@@ -1,0 +1,11 @@
+# make sure this is in the main conf file
+# in my case it was line 263
+# also had to put a + for follow SymLinks or whatever but you don't haaave to do that
+# Options -Indexe
+
+
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html
