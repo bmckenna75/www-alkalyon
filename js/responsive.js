@@ -1,4 +1,4 @@
-if ($(window).width() > 1080) {
+if ($(window).width() > 700) {
   $(document).ready(function() { $(".arrow").hide();});
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
