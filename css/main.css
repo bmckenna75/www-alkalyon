@@ -61,6 +61,7 @@
     }
     .nav .item:hover {
         background-color: rgba(200,125,175,0.62);
+        border-bottom-right-radius: 0px;
     }
 
     .nav .item:hover>.dropdown>a, .nav .item:hover>a {
