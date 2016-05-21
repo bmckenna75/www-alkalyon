@@ -15,29 +15,39 @@ $(document).ready(function() {
     $(".dropdown-content").hide(); 
     $(".card").addClass("visible");
   }
-  checkPos();
   $(window).scroll(function() { checkPos(); });
+  $('.scrollTop').click(function(){
+    $('html, body').animate({scrollTop : 0},500);
+    return false;
+  });
+});
+
+$(window).load(function() {
+  checkPos();
 });
 
 function checkPos() {
-  if ($(window).width() > 700) {
-    var scroll = $(window).scrollTop();
-    var nav = $(".nav-container");
-    var diff = scroll - nav.offset().top;
-
-    if (diff >= 0) {
+  var scroll = $(window).scrollTop();
+  var nav = $(".nav-container");
+  var diff = scroll - nav.offset().top;
+  if (diff > 0) {
+    if ($(window).width() > 700) {
       $(".nav").addClass("sticky");
-    } else {
+    }
+    $('.scrollTop').fadeIn(200);
+  } else {
+    if ($(window).width() > 700) {
       $(".sticky").removeClass("sticky");
-    } 
+    }
+    $('.scrollTop').fadeOut(200);
+  } 
 
-    $(".card").each(function() {
-      var diff = $(this).offset().top - scroll;
-      if (diff <= $(window).height()) {
-        $(this).addClass("visible");
-      }
-    });
-  }
+  $(".card").each(function() {
+    var diff = $(this).offset().top - scroll;
+    if (diff <= $(window).height()) {
+      $(this).addClass("visible");
+    }
+  });
 }
 
 $(window).resize(function() {
