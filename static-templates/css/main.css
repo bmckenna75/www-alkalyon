@@ -106,7 +106,8 @@ body>.wrapper {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
-    background-color: rgba(235, 235, 235, 0.95);
+    background-color: rgba(100, 100, 100, 0.75);
+    color: #bbb;
     padding: 0.5em 1em;
     border-radius: 1em;
 }
@@ -127,7 +128,7 @@ body>.wrapper {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    padding: 10px;
+    padding: 10px 0px;
     display: inline-block;
     background: #444;
     border-radius: 0.75em;
@@ -136,6 +137,7 @@ body>.wrapper {
     color: #777;
     visibility: hidden;
     opacity: 0;
+    word-wrap: break-word;
 }
 
 .visibile {
@@ -161,19 +163,23 @@ body>.wrapper {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(200, 200, 200, 0.85);
+    background-color: rgba(50, 60, 50, 0.85);
     height: fit-content;
     border-top-right-radius: 0.8em;
     border-top-left-radius: 0.8em;
 }
 
 .footer-content {
-    color: #555;
+    color: #888;
     width: 100%;
     line-height: 1.75em;
     vertical-align: middle;
     text-align: center;
     height: 1.75em;
+}
+
+.footer-content a {
+    color: #aa00aa;
 }
 
 .left {
@@ -247,6 +253,15 @@ body>.wrapper {
         margin: 0;
         transition: background-color 0.15s linear;
     }
+
+    .nav .item:not(:last-child) {
+        border-right: 1px solid rgba(100, 100, 100, 0.5);
+    }
+    .nav .item:not(:first-child) {
+        border-left: 1px solid rgba(100, 100, 100, 0.5);
+    }
+
+
 
     .nav>.item:first-child, .nav>.item.current:first-child a {
         border-bottom-left-radius: 0.8em;
@@ -360,7 +375,7 @@ body>.wrapper {
     }
     .nav .item a, .nav-head a {
         width: 100%;
-	min-height: 100%;
+        min-height: 100%;
         font-size: 1.5em;
         text-align: center;
         line-height: 1.5em;
