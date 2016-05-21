@@ -1,4 +1,196 @@
-@media screen and (min-width: 700px) {
+/* put this at the top so specifics can be overriden */
+.rotate90 {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.card.visible {
+  animation-name: fade-in;
+  -webkit-animation-name: fade-in; 
+
+  animation-duration: 600ms; 
+  -webkit-animation-duration: 600ms;
+
+  animation-timing-function: ease-out; 
+  -webkit-animation-timing-function: ease-out;   
+
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes fade-in {
+from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.header .header-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 665px;
+    max-width: 75%;
+    max-height: 500px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body>.wrapper {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+}
+
+.header .title {
+    background-color: rgba(255, 255, 255, 0.82);
+}
+
+.header .title, .header .title a {
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+}
+
+.nav .item, .nav-head {
+    background-color: rgba(55, 55, 55, 0.92);
+}
+
+.item.current, .item.current>a, a.current{
+    background-color: rgba(185, 185, 185, 0.92);
+}
+
+.content-container {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+}
+
+.content-block {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    background-color: rgba(235, 235, 235, 0.95);
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+.content-header {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.content-cards {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.card {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    display: inline-block;
+    background: #444;
+    border-radius: 0.75em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #777;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visibile {
+
+}
+
+.center {
+    text-align: center;
+}
+
+.content-block img {
+    max-width: 75%;
+    /* height: auto; */
+    max-height: 250px;
+}
+
+.clear {
+    clear: both;
+}
+
+.footer-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(200, 200, 200, 0.85);
+    height: fit-content;
+    border-top-right-radius: 0.8em;
+    border-top-left-radius: 0.8em;
+}
+
+.footer-content {
+    color: #555;
+    width: 100%;
+    line-height: 1.75em;
+    vertical-align: middle;
+    text-align: center;
+    height: 1.75em;
+}
+
+.left {
+    float: left;
+    padding-left: 5px;
+}
+
+.right {
+    float: right;
+    padding-right: 5px;
+}
+
+.sig:not(:first-child)::after {
+    content: " |";
+}
+
+@media screen and (min-width: 701px) {
     .content-block.col {
         height: 100%;
         flex: 1;
@@ -9,7 +201,8 @@
         padding-bottom: 75px;
     }
     body {
-        background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center;
+/*        background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center; */
+          background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat;
     }
     .sticky {
         position: fixed;
@@ -18,12 +211,11 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
+        z-index: 999;
     }
 
-    .header .title {
-        font-size: 5em;
-        border-bottom-right-radius: 0.4em;
-        border-bottom-left-radius: 0.4em;
+    .header .header-pic {
+        max-width: 100%;
     }
 
    .nav-container {
@@ -46,7 +238,7 @@
     }
     .nav .item {
         display: inline-block;
-        width: 150px;
+        width: 125px;
         height: 3em;
         text-align: center;
         vertical-align: middle;
@@ -63,14 +255,16 @@
     .nav>.item:last-child, .nav>.item.current:last-child {
         border-bottom-right-radius: 0.8em;
     }
-    .nav .item:hover, .nav>.item:hover:last-child {
-        background-color: rgba(200,125,175,0.62);
-        border-bottom-right-radius: 0px ;
+    .nav .item.has-dropdown:hover{
+        border-radius: 0px ;
     }
-
+    .nav .item:hover {
+        background-color: rgba(200,125,175,0.62);
+    }
     .nav .item:hover>.dropdown>a {
         background-color: rgba(0,0,0,0);
         border-bottom-right-radius: 0px;
+        color: #eee;
     }
 
     .nav .item>.dropdown>a:hover, .nav .item>.dropdown>.dropdown-content>a:hover, .nav .item:hover>a {
@@ -129,17 +323,23 @@
     /* end dropdown */
 }
 
+@media screen and (min-width: 701px) and (max-width: 739px) {
+    .content-container .content-block.col {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media screen and (min-width: 740px) {
     .content-container {
         display: -webkit-flex;
         display: flex;
-    }
+    } 
 }
 
 @media screen and (max-width: 700px) {
     body {
-        background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center;
-        background-size: cover;
+        background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat;
     }
     .nav-container {
         margin-left: auto;
@@ -171,15 +371,16 @@
     }
     .nav .item .dropdown-content a {
         color: #777;
-        font-size: 1.3em;
-        background-color: rgba(55, 55, 55, 0.92);
+        /*font-size: 1.3em;*/
+        background-color: rgba(155, 55, 55, 0.92);
         z-index: 1;
     }
     .nav .item .dropdown-content a.current {
         background-color: rgba(185, 185, 185, 0.92);
     }
-    .header .title {
-        font-size: 3em;
+    .header .header-pic {
+        max-width: 100%;
+        min-width: 100%;
     }
     .nav {
         border-top: 1px solid #777;
@@ -197,116 +398,3 @@
     }
 }
 
-.rotate90 {
-    transform: rotate(90deg);
-    display: inline-block;
-}
-
-.header .header-pic {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-    max-height: 500px;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100%;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body>.wrapper {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
-    position: relative;
-}
-
-.header {
-    width: 100%;
-}
-
-.header .title {
-    background-color: rgba(255, 255, 255, 0.82);
-}
-
-.header .title, .header .title a {
-    text-align: center;
-    text-decoration: none;
-    color: #111;
-}
-
-.nav .item, .nav-head {
-    background-color: rgba(55, 55, 55, 0.92);
-}
-
-.item.current, .item.current>a, a.current{
-    background-color: rgba(185, 185, 185, 0.92);
-}
-
-.content-container {
-    width: 100%;
-    height: fit-content;
-    margin-top: 50px;
-}
-
-.content-block {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    background-color: rgba(235, 235, 235, 0.95);
-    padding: 15px;
-    border-radius: 1em;
-}
-
-.center {
-    text-align: center;
-}
-
-.content-block img {
-    max-width: 75%;
-    /* height: auto; */
-    max-height: 250px;
-}
-
-.clear {
-    clear: both;
-}
-
-.footer-container {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(200, 200, 200, 0.85);
-    height: fit-content;
-    border-top-right-radius: 0.8em;
-    border-top-left-radius: 0.8em;
-}
-
-.footer-content {
-    color: #555;
-    width: 100%;
-    line-height: 1.75em;
-    vertical-align: middle;
-    text-align: center;
-    height: 1.75em;
-}
-
-.left {
-    float: left;
-    padding-left: 5px;
-}
-
-.right {
-    float: right;
-    padding-right: 5px;
-}
