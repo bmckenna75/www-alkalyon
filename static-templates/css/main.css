@@ -146,7 +146,7 @@ body>.wrapper {
     background-color: rgba(100, 100, 100, 0.75);
     color: #bbb;
     padding: 0.5em 1em;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 .content-header {
@@ -168,7 +168,7 @@ body>.wrapper {
     padding: 10px 0px;
     display: inline-block;
     background: #444;
-    border-radius: 0.75em;
+    border-radius: 0.4em;
     margin-bottom: 10px;
     text-align: center;
     color: #777;
@@ -202,8 +202,8 @@ body>.wrapper {
     left: 0;
     background-color: rgba(50, 50, 50, 0.85);
     height: fit-content;
-    border-top-right-radius: 0.8em;
-    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
 }
 
 .footer-content {
@@ -306,11 +306,11 @@ body>.wrapper {
 
 
     .nav>.item:first-child, .nav>.item.current:first-child a {
-        border-bottom-left-radius: 0.8em;
+        border-bottom-left-radius: 0.5em;
     }
 
     .nav>.item:last-child, .nav>.item.current:last-child {
-        border-bottom-right-radius: 0.8em;
+        border-bottom-right-radius: 0.5em;
     }
     .nav .item.has-dropdown:hover{
         border-radius: 0px ;
@@ -351,13 +351,13 @@ body>.wrapper {
         position: absolute;
         width: 100%;
         transition: opacity 0.15s linear;
-        border-bottom-right-radius: 0.8em;
-        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
     }
 
     .dropdown-content>a:last-child {
-        border-bottom-right-radius: 0.8em;
-        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
     }
 
     .dropdown:hover .dropdown-content {
