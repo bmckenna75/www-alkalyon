@@ -3,6 +3,7 @@
 ###
 
 set :js_dir, 'js'
+set :css_dir, 'css'
 
 # Per-page layout changes:
 #
