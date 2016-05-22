@@ -8,13 +8,25 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/872801506b.js"></script>
 
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
+    <%= stylesheet_link_tag :global %>
+    <%= stylesheet_link_tag :mobile %>
+    <%= stylesheet_link_tag :desktop %>
+    <%= javascript_include_tag :responsive %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div class="wrapper">
+        <%= partial 'header' %>
+        <div class="content">
+          <%= yield %>
+        </div> <!-- content -->
+
+        <%= partial 'footer' %>
+    </div> <!-- wrapper -->
+    <div class="scrollTop"><i class="fa fa-chevron-up"></i></div>
   </body>
 </html>

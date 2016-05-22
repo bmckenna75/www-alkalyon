@@ -1,0 +1,11 @@
+<div class="header">
+    <img class="header-pic" src="/images/logo.png"/>
+    <div class="nav-container">
+        <div class="nav-head"><a href="#">Site nav <span class="arrow">&#9658;</span></a></div>
+        <div class="nav">
+          <% data.nav.nav_data.each do |item| %>
+              <%= header_gen item %>
+          <% end %>
+       </div>
+    </div>
+</div>

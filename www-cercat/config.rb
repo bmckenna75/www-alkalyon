@@ -2,6 +2,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+set :js_dir, 'js'
+
 # Per-page layout changes:
 #
 # With no layout
@@ -28,11 +30,36 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+
+  def header_gen(link)
+    answer = ""
+    if link[0] == 'dropdown'
+      answer += '<div class="item has-dropdown"> <div class="dropdown"> <a href="#">'
+      answer += link[1][0] + '<span class="arrow">&#9658;</span></a>'
+      answer += '<div class="dropdown-content">'
+      link[1][2..-1].each do |item|
+        item_url = link[1][1].downcase + item.downcase
+        answer += '<a class="' + is_active(item_url) + '" href="/' + is_active_url(item_url) + '">' + item + '</a>'
+      end
+      answer += '</div></div></div>'
+    else
+      link[1].each do |item|
+        answer += '<div class="item"><a class="' + is_active(item.downcase) + '" href="/' + is_active_url(item.downcase) + '">' + item + '</a></div>'
+      end
+    end
+    return answer
+  end
+
+  def is_active(page)
+    current_page.url == "/" + page + "/" ? 'current' : 'not-current'
+  end
+
+  def is_active_url(url)
+    current_page.url == "/" + url + "/" ? '#' : url
+  end
+
+end
 
 # Build-specific configuration
 configure :build do
