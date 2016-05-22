@@ -8,10 +8,23 @@ img {
   max-width: 100%;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-.rotate90 {
-    transform: rotate(90deg);
-    display: inline-block;
+body {
+    min-height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body>.wrapper {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    position: relative;
 }
 
 .scrollTop {
@@ -48,7 +61,6 @@ img {
   }
 }
 
-
 .card.visible {
   animation-name: fade-in;
   -webkit-animation-name: fade-in;
@@ -63,41 +75,19 @@ img {
   opacity: 1;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100%;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-body>.wrapper {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
-    position: relative;
-}
-
 .header {
     width: 100%;
-}
-
-.header .header-pic {
-  display: block;
-}
-
-.header .title {
-    background-color: rgba(255, 255, 255, 0.82);
-}
-
-.header .title, .header .title a {
-    text-align: center;
-    text-decoration: none;
-    color: #111;
+    .header-pic {
+      display: block;
+    }
+    .title {
+        background-color: rgba(255, 255, 255, 0.82);
+    }
+    .title, .title a {
+      text-align: center;
+      text-decoration: none;
+      color: #111;
+    }
 }
 
 .nav .item, .nav-head {
@@ -151,10 +141,6 @@ body>.wrapper {
     visibility: hidden;
     opacity: 0;
     word-wrap: break-word;
-}
-
-.visibile {
-
 }
 
 .center {
@@ -220,7 +206,7 @@ body>.wrapper {
 @keyframes fade-in {
 from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    
   }
   to {
     opacity: 1;
@@ -237,4 +223,9 @@ from {
     opacity: 1;
     -webkit-transform: none;
   }
+}
+
+.rotate90 {
+    transform: rotate(90deg);
+    display: inline-block;
 }

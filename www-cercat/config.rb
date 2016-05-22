@@ -60,6 +60,10 @@ helpers do
     current_page.url == "/" + url + "/" ? '#' : url
   end
 
+  def is_active_root()
+    current_page.url == "/" ? '"#"' : '"/"'
+  end
+
 end
 
 # Build-specific configuration

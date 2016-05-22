@@ -14,7 +14,7 @@
         <div class="wrapper">
             <div class="header">
                 <img class="header-pic" src="./images/logo.png"/>
-		<div class="nav-container">
+		            <div class="nav-container">
                     <div class="nav-head"><a href="#">Site nav <span class="arrow">&#9658;</span></a></div>
                     <div class="nav">
                         <div class="item has-dropdown">
@@ -31,42 +31,53 @@
                         <div class="item"><a href="/about">Commissions</a></div>
                    </div>
                 </div>
-            </div>
-            <div class="content">
-                <div class="content-container">
-                    <div class="content-block col">
-                        <h1 class="content-header">left column</h1>
-                        <p>put left column stuff here</p>
-                    </div>
-                    <div class="content-block col">
-                        <h1 class="content-header">right column</h1>
-                        <p> put right column content here</p>
-                        <p> if you want to have one column, remove this element and remove the 'col' class from the other one.</p>
-                   </div>
-                </div>
-                <div class="content-cards">
-                    <div class="card head-card"> <h1 class="card-header">gallery stuff</h1> <p>cards overview text here (what're they for, etc, etc); they'll probably have a lightbox on them so you can scroll through horizontally or vertically; might make them more card-y in the future</p></div>
-                    <div class="card"> <img src='http://i.imgur.com/8oakqNd.jpg'/> <p>aaaaaaaa</p></div>
-                    <div class="card"> <img src='http://i.imgur.com/8oakqNd.jpg'/> <p>aaaaaaaa</p></div>
-                    <div class="card"> <img src='http://i.imgur.com/8oakqNd.jpg'/> <p>aaaaaaaa</p></div>
-                    <div class="card"> <img src='http://i.imgur.com/8oakqNd.jpg'/> <p>aaaaaaaa</p></div>
-                </div>
-            </div>
-
-            <div class="after-content"></div>
-
-            <div class="footer-container">
-                <div class="footer-content">
-                  <div class="left-floats">
-                      <div class="sig left">Made with &hearts; by <a href="https://github.com/arcaena/">Chris Guillott</a></div>
-                  </div>
-                  <div class="right-floats">
-                      <div class="sig right">Art &copy; $person, $year</div>
-                      <div class="sig right"><a href="/tos">TOS</a></div>
+                <div class="widgets">
+                  <div class="widget-container">
+                    <div class="widget-canvas">
+                      <div class="widgets-before"></div>
+                      <div class="widget widget-tumblr"><a href="http://tumblr.com"><img src="./images/tumblrwidget.png"/></a></div>
+                      <div class="widget widget-twitter"><a href="http://twitter.com"><img src="./images/twitterwidget.png"/></a></div>
+                      <div class="widget widget-insta"><a href="http://instagram.com"><img src="./images/instawidget.png"/></a></div>
+                      <div class="widgets-after"></div>
                   </div>
                 </div>
             </div>
-        </div>
-        <div class="scrollTop"><i class="fa fa-chevron-up"></i></div>
+            <div class="content-container">
+              <div class="content-block">
+                <script>
+                  function color() {
+                    $(".widget img").css("-webkit-filter", "hue-rotate(" + $("#hue").val() +  "deg)");
+                  }
+                  function color10() {
+                    var temp = parseInt($("#hue").val());
+                    if (temp > 350) {
+                      $("#hue").val(temp - 350);
+                    } else {
+                      $("#hue").val(temp + 10);
+                    }
+                    $(".widget img").css("-webkit-filter", "hue-rotate(" + $("#hue").val() +  "deg)");
+                  }
+                </script>
+                <input type="number" min="0" max="359" value="0" id="hue"> <button type="button" onclick="color()">shift!</button> <button type="button" onclick="color10()">+10</button>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+                <p>aaaaaaa</p>
+              </div>
+            </div>
+          </div>
     </body>
 </html>
