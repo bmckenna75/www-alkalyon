@@ -39,8 +39,8 @@ helpers do
       answer += '<div class="item has-dropdown"> <div class="dropdown"> <a href="#">'
       answer += link[1][0] + '<span class="arrow">&#9658;</span></a>'
       answer += '<div class="dropdown-content">'
-      link[1][2..-1].each do |item|
-        item_url = link[1][1].downcase + item.downcase
+      link[1][1..-1].each do |item|
+        item_url = link[1][0].downcase + '/' + item.downcase
         answer += '<a class="' + is_active(item_url) + '" href="/' + is_active_url(item_url) + '">' + item + '</a>'
       end
       answer += '</div></div></div>'
