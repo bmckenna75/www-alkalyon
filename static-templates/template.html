@@ -15,7 +15,7 @@
             <div class="header">
                 <img class="header-pic" src="./images/logo.png"/>
 		            <div class="nav-container">
-                    <div class="nav-head"><a href="#">Site nav <span class="arrow">&#9658;</span></a></div>
+                    <div class="nav-head"><i class="fa fa-bars" aria-hidden="true"></i></span></div>
                     <div class="nav">
                         <div class="item has-dropdown">
                           <div class="dropdown"> <a href="#">Illustration<span class="arrow">&#9658;</span></a>
@@ -31,53 +31,7 @@
                         <div class="item"><a href="/about">Commissions</a></div>
                    </div>
                 </div>
-                <div class="widgets">
-                  <div class="widget-container">
-                    <div class="widget-canvas">
-                      <div class="widgets-before"></div>
-                      <div class="widget widget-tumblr"><a href="http://tumblr.com"><img src="./images/tumblrwidget.png"/></a></div>
-                      <div class="widget widget-twitter"><a href="http://twitter.com"><img src="./images/twitterwidget.png"/></a></div>
-                      <div class="widget widget-insta"><a href="http://instagram.com"><img src="./images/instawidget.png"/></a></div>
-                      <div class="widgets-after"></div>
-                  </div>
-                </div>
             </div>
-            <div class="content-container">
-              <div class="content-block">
-                <script>
-                  function color() {
-                    $(".widget img").css("-webkit-filter", "hue-rotate(" + $("#hue").val() +  "deg)");
-                  }
-                  function color10() {
-                    var temp = parseInt($("#hue").val());
-                    if (temp > 350) {
-                      $("#hue").val(temp - 350);
-                    } else {
-                      $("#hue").val(temp + 10);
-                    }
-                    $(".widget img").css("-webkit-filter", "hue-rotate(" + $("#hue").val() +  "deg)");
-                  }
-                </script>
-                <input type="number" min="0" max="359" value="0" id="hue"> <button type="button" onclick="color()">shift!</button> <button type="button" onclick="color10()">+10</button>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-                <p>aaaaaaa</p>
-              </div>
-            </div>
-          </div>
+        </div>
     </body>
 </html>

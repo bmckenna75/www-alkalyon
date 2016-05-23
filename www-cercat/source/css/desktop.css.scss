@@ -1,7 +1,14 @@
 @media screen and (min-width: 701px) {
+
+    body.index .header {
+      height: 100vh;
+    }
+
     .content-block.col {
         height: 100%;
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
         margin-left: 0.5%;
         margin-right: 0.5%
     }
@@ -9,6 +16,7 @@
         padding-bottom: 75px;
     }
     body {
+/*        background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center; */
           background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat;
     }
     .sticky {
@@ -21,10 +29,23 @@
         z-index: 999;
     }
 
+    .widgets {
+      position: relative;
+    }
+
+
+
+    .header-pic {
+      height: 44vh;
+      width: 100%;
+    }
+
+    .nav:not(.roll-up) .item {
+
+    }
+
     .header .header-pic {
         max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
 
    .nav-container {
@@ -38,65 +59,108 @@
         list-style-type: none;
         margin: 0 auto 0 auto;
         padding: 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
-        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         -webkit-align-items: center;
-        -webkit-justify-content: center;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .nav .item {
         display: inline-block;
-        width: 125px;
-        height: 3em;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 3em;
+        width: 20vw;
+        height: 12vh;
+        line-height: 5.5vh;
         padding: 0;
         margin: 0;
-        transition: background-color 0.15s linear;
+        background-size: 100% auto;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        text-align: center;
+        transition: all 0.15s ease-in;
     }
 
-    .nav .item:not(:last-child) {
-        border-right: 1px solid rgba(100, 100, 100, 0.5);
-    }
-    .nav .item:not(:first-child) {
-        border-left: 1px solid rgba(100, 100, 100, 0.5);
+    .nav.roll-up .item {
+      height: 5.5vh;
     }
 
-
-
-    .nav>.item:first-child, .nav>.item.current:first-child a {
-        border-bottom-left-radius: 0.8em;
+    .nav .item.current {
+      -webkit-filter: grayscale(0%) saturate(130%);
     }
 
-    .nav>.item:last-child, .nav>.item.current:last-child {
-        border-bottom-right-radius: 0.8em;
-    }
-    .nav .item.has-dropdown:hover{
-        border-radius: 0px ;
-    }
-    .nav .item:hover {
-        background-color: rgba(200,125,175,0.62);
-    }
-    .nav .item:hover>.dropdown>a {
-        background-color: rgba(0,0,0,0);
-        border-bottom-right-radius: 0px;
-        color: #eee;
+    .nav .item .dropdown-content>a.current {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ccc;
     }
 
-    .nav .item>.dropdown>a:hover, .nav .item>.dropdown>.dropdown-content>a:hover, .nav .item:hover>a {
-        color: #eee;
+    .nav .item {
+      background-size: 100% 100%;
     }
 
-    .nav .item a {
+    .nav.roll-up .item {
+      background-size: 100% auto;
+      line-height: 5.5vh;
+    }
+
+    .nav .item:nth-child(1) {
+      background-image: url("/images/nav/1.jpg");
+    }
+    .nav .item:nth-child(2) {
+      background-image: url("/images/nav/2.jpg");
+    }
+    .nav .item:nth-child(3) {
+      background-image: url("/images/nav/3.jpg");
+    }
+    .nav .item:nth-child(4) {
+      background-image: url("/images/nav/4.jpg");
+    }
+    .nav .item:nth-child(5) {
+      background-image: url("/images/nav/5.jpg");
+    }
+
+    .nav-container {
+      height: 12vh;
+    }
+
+    .nav:not(.roll-up) .item.has-dropdown .dropdown-content {
+      position: absolute;
+      top: 0px;
+      height: 6vh;
+      line-height: 6vh;
+    }
+
+    .nav.roll-up .item.has-dropdown .dropdown-content {
+      position: absolute;
+      top: 0px;
+      height: 2.75vh;
+      line-height: 2.75vh;
+    }
+
+    .nav .item:hover:not(.current) {
+      -webkit-filter: grayscale(50%);
+    }
+
+    .nav .item.current:hover {
+      -webkit-filter: saturate(100%) grayscale(0%);
+    }
+
+    .nav>.item.has-dropdown:hover>.dropdown>.dropdown-head {
+      color: transparent;
+    }
+
+    .nav .item a, .nav .item .dropdown-head {
         display: inline-block;
         width: 100%;
         height: 100%;
         text-decoration: none;
         color: #777;
         font-size: 1em;
-        transition: color 0.15s linear;
+        -webkit-transition: color 0.15s linear;
+        transition: all 0.15s linear;
     }
     /* dropdown stuff */
     .dropdown {
@@ -107,36 +171,30 @@
     }
 
     .dropdown-content {
-        z-index: -1;
-        opacity: 0.0;
-        position: absolute;
+        opacity: 0;
+        position: relative;
         width: 100%;
-        transition: opacity 0.15s linear;
-        border-bottom-right-radius: 0.8em;
-        border-bottom-left-radius: 0.8em;
+        transition: opacity 0.35s ease-in;
+        -webkit-transition: opacity 0.35s ease-in;
     }
 
-    .dropdown-content>a:last-child {
-        border-bottom-right-radius: 0.8em;
-        border-bottom-left-radius: 0.8em;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-        opacity: 1;
+    .item.has-dropdown:hover .dropdown .dropdown-content {
+        /*display: block; */
+        opacity: 1 !important;
         z-index: 1;
+        display: inline-block;
     }
 
     .dropdown-content a {
         z-index: 100;
         /*background-color: rgba(200,125,175,0.62);*/
-        background-color: rgba(55, 55, 55, 0.82);
         color: #777;
-        transition: all linear 0.15s;
+        -webkit-transition: opacity linear 0.15s;
+        transition: opacity linear 0.15s;
     }
 
     .dropdown-content a:hover {
-        background-color: rgba(225, 125, 175, 0.95);
+        background-color: rgba(225, 125, 175, 0.25);
     }
     /* end dropdown */
 }
@@ -150,7 +208,8 @@
 
 @media screen and (min-width: 740px) {
     .content-container {
-        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }

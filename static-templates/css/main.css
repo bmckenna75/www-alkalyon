@@ -1,6 +1,7 @@
 /* put this at the top so specifics can be overriden */
 .rotate90 {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
     display: inline-block;
 }
 
@@ -14,8 +15,6 @@
   height: 50px;
   display: block;
   text-decoration: none;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
   border-radius: 35px;
   display: none;
 }
@@ -28,9 +27,6 @@
   top: 13px;
   font-size: 19px;
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .scrollTop:hover {
@@ -58,11 +54,13 @@
 @keyframes fade-in {
 from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   to {
     opacity: 1;
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -135,6 +133,8 @@ body>.wrapper {
 
 .content-container {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-top: 50px;
 }
@@ -202,6 +202,8 @@ body>.wrapper {
     bottom: 0;
     left: 0;
     background-color: rgba(50, 50, 50, 0.85);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-top-right-radius: 0.5em;
     border-top-left-radius: 0.5em;
@@ -218,6 +220,7 @@ body>.wrapper {
 
 .footer-content a {
     color: #fff;
+    -webkit-transition: color 0.5s linear;
     transition: color 0.5s linear;
 }
 
@@ -247,7 +250,9 @@ body>.wrapper {
 
     .content-block.col {
         height: 100%;
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
         margin-left: 0.5%;
         margin-right: 0.5%
     }
@@ -299,12 +304,16 @@ body>.wrapper {
         list-style-type: none;
         margin: 0 auto 0 auto;
         padding: 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
-        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         -webkit-align-items: center;
-        -webkit-justify-content: center;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .nav .item {
         display: inline-block;
@@ -315,7 +324,9 @@ body>.wrapper {
         vertical-align: middle;
         padding: 0;
         margin: 0;
+        -webkit-transition: background-color 0.15s linear;
         transition: background-color 0.15s linear;
+        -webkit-transition: height 0.1s linear;
         transition: height 0.1s linear;
     }
 
@@ -358,6 +369,7 @@ body>.wrapper {
         text-decoration: none;
         color: #777;
         font-size: 1em;
+        -webkit-transition: color 0.15s linear;
         transition: color 0.15s linear;
     }
     /* dropdown stuff */
@@ -389,6 +401,7 @@ body>.wrapper {
         /*background-color: rgba(200,125,175,0.62);*/
         background-color: rgba(55, 55, 55, 0.82);
         color: #777;
+        -webkit-transition: all linear 0.15s;
         transition: all linear 0.15s;
     }
 
@@ -407,7 +420,8 @@ body>.wrapper {
 
 @media screen and (min-width: 740px) {
     .content-container {
-        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }
@@ -421,16 +435,45 @@ body>.wrapper {
         margin-right: auto;
     }
 
-    .nav {
-        width: 100%;
+    .nav-head {
+      position: fixed;
+      top: 20vh;
+      left: 0px;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.7);
+      width: 40px;
+      height: 40px;
+      display: block;
+      text-decoration: none;
+      border-radius: 20px;
     }
-    .nav .item, .nav-head {
-        width: 100%;
-        min-height: 3em;
-        max-height: 3em;
+
+    .nav-head i {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      left: 11px;
+      top: 11px;
+      font-size: 19px;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    .nav {
+        width: 50%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 25vh;
     }
     .nav .item {
-        width: 50%;
+        width: 100%;
+    }
+
+
+
+    .nav .item {
+        width: 100%;
         float: left;
     }
     .nav .item a, .nav-head a {
@@ -464,9 +507,13 @@ body>.wrapper {
         padding-bottom: 50px;
     }
     .nav .dropdown-content {
-        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         -webkit-flex-direction: column;
         -webkit-align-items: center;
         z-index: 1;
@@ -478,6 +525,8 @@ body>.wrapper {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 100%;
 }
@@ -489,18 +538,31 @@ body>.wrapper {
   background-image: url("./../images/widget-container.jpg");
   background-size: cover;
   background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .widgets-before {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   /*flex-grow: 764.40; */
 }
 .widgets-after {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   /*flex-grow: 759.42;*/
 }
 
@@ -510,9 +572,11 @@ body>.wrapper {
 
 .widget:hover img {
   -webkit-filter: hue-rotate(130deg);
-  filter: hue-rotate(90deg);
-  transform: translate(0px, -0.25vw) rotate(7.5deg);
-
+  filter: hue-rotate(195deg);
+  -webkit-transform: translate(0px, -0.25vw) rotate(7.5deg);
+          transform: translate(0px, -0.25vw) rotate(7.5deg);
+  -webkit-transition: -webkit-filter 0.25s linear;
+          transition: filter 0.25s linear;
 }
 
 .widget-tumblr {
@@ -525,7 +589,8 @@ body>.wrapper {
 
 .widget-twitter {
   margin: auto 6.2vh auto 6.2vh;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 .widget-twitter img {
   height: 10.07vh;

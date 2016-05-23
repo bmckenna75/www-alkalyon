@@ -36,8 +36,8 @@ helpers do
   def header_gen(link)
     answer = ""
     if link[0] == 'dropdown'
-      answer += '<div class="item has-dropdown"> <div class="dropdown"> <a href="#">'
-      answer += link[1][0] + '<span class="arrow">&#9658;</span></a>'
+      answer += '<div class="item has-dropdown"> <div class="dropdown"> <div class="dropdown-head">'
+      answer += link[1][0] + '<span class="arrow">&#9658;</span></div>'
       answer += '<div class="dropdown-content">'
       link[1][1..-1].each do |item|
         item_url = link[1][0].downcase + '/' + item.downcase
@@ -46,7 +46,7 @@ helpers do
       answer += '</div></div></div>'
     else
       link[1].each do |item|
-        answer += '<div class="item"><a class="' + is_active(item.downcase) + '" href="/' + is_active_url(item.downcase) + '">' + item + '</a></div>'
+        answer += '<div class="item ' + + is_active(item.downcase) + '"><a class="' + is_active(item.downcase) + '" href="/' + is_active_url(item.downcase) + '">' + item + '</a></div>'
       end
     end
     return answer
@@ -57,7 +57,7 @@ helpers do
   end
 
   def is_active_url(url)
-    current_page.url == "/" + url + "/" ? '#' : url
+    current_page.url == "/" + url + "/" ? url + '#' : url
   end
 
   def is_active_root()
@@ -69,8 +69,8 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end
