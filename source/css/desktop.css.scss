@@ -1,4 +1,4 @@
-$current-bg: #2e2d3b;
+$current-bg: #2E2D3F;
 $hover-bg: #55475e;
 $inactive-bg: #2e2e2e;
 
@@ -73,19 +73,16 @@ $inactive-bg: #2e2e2e;
         vertical-align: center;
         padding: 0;
         margin: 0;
-        background-size: 100% calc(6.1848vw);
+        background-size: 100% 6.1848vw;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         text-align: center;
-        transition: all 0.15s ease-in;
+        transition: all 0.25s ease-in;
     }
 
     .nav.roll-up .item {
       height: 2.8vw;
       line-height: 2.8vw;
-      background-size: 100% auto;
-      background: $inactive-bg;
-      background-position: center 100px;
     }
 
     .nav .item.current {
@@ -96,12 +93,29 @@ $inactive-bg: #2e2e2e;
       background-color: $current-bg;
     }
 
+    .nav.roll-up .item {
+      transition: height;
+    }
+
+    .nav.roll-up .item a, .nav.roll-up .item .dropdown, .nav.roll-up .item .dropdown-content, .nav.roll-up .item .dropdown-head {
+      transition: opacity 0.1s linear;
+      transition: color 0.45s ease-in;
+      transition: background 0.25s ease-out;
+    }
+
     .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {
       color: #777;
+      opacity: 1;
+      background-color: $inactive-bg;
+    }
+
+    .nav.roll-up .item.current a {
+      background-color: $current-bg;
     }
 
     .nav .item:hover>a {
       color: #fff;
+      opacity: 1;
       background-color: $hover-bg;
     }
 
@@ -178,9 +192,8 @@ $inactive-bg: #2e2e2e;
         height: 100%;
         text-decoration: none;
         color: transparent;
+        opacity: 0;
         font-size: 1em;
-        -webkit-transition: color 0.15s linear;
-        transition: all 0.15s linear;
     }
     /* dropdown stuff */
     .dropdown {
@@ -211,8 +224,12 @@ $inactive-bg: #2e2e2e;
     .dropdown-content a {
         z-index: 100;
         color: #fff;
-        -webkit-transition: opacity linear 0.15s;
-        transition: opacity linear 0.15s;
+        -webkit-transition: opacity linear 0.25s;
+        transition: opacity linear 0.25s;
+    }
+
+    .nav .item:hover .dropdown-content a {
+      opacity: 1;
     }
 
     .nav .item:hover .dropdown-content a:hover {

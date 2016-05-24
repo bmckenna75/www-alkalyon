@@ -601,13 +601,13 @@ body > .wrapper {
   height: 1.75em; }
 
 /* line 215, global.css.scss */
-.footer-content a {
+a {
   color: #fff;
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear; }
 
 /* line 221, global.css.scss */
-.footer-content a:hover {
+a:hover {
   color: #c3c; }
 
 /* line 225, global.css.scss */

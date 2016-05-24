@@ -75,76 +75,90 @@
     vertical-align: center;
     padding: 0;
     margin: 0;
-    background-size: 100% calc(6.1848vw);
+    background-size: 100% 6.1848vw;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     text-align: center;
-    transition: all 0.15s ease-in; }
+    transition: all 0.25s ease-in; }
 
   /* line 83, desktop.css.scss */
   .nav.roll-up .item {
     height: 2.8vw;
-    line-height: 2.8vw;
-    background-size: 100% auto;
-    background: #2e2e2e;
-    background-position: center 100px; }
+    line-height: 2.8vw; }
 
-  /* line 91, desktop.css.scss */
+  /* line 88, desktop.css.scss */
   .nav .item.current {
     -webkit-filter: grayscale(0%) saturate(130%); }
 
-  /* line 95, desktop.css.scss */
+  /* line 92, desktop.css.scss */
   .nav .item .dropdown-content > a.current {
-    background-color: #2e2d3b; }
+    background-color: #2E2D3F; }
 
-  /* line 99, desktop.css.scss */
+  /* line 96, desktop.css.scss */
+  .nav.roll-up .item {
+    transition: height; }
+
+  /* line 100, desktop.css.scss */
+  .nav.roll-up .item a, .nav.roll-up .item .dropdown, .nav.roll-up .item .dropdown-content, .nav.roll-up .item .dropdown-head {
+    transition: opacity 0.1s linear;
+    transition: color 0.45s ease-in;
+    transition: background 0.25s ease-out; }
+
+  /* line 106, desktop.css.scss */
   .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {
-    color: #777; }
+    color: #777;
+    opacity: 1;
+    background-color: #2e2e2e; }
 
-  /* line 103, desktop.css.scss */
+  /* line 112, desktop.css.scss */
+  .nav.roll-up .item.current a {
+    background-color: #2E2D3F; }
+
+  /* line 116, desktop.css.scss */
   .nav .item:hover > a {
     color: #fff;
+    opacity: 1;
     background-color: #55475e; }
 
-  /* line 108, desktop.css.scss */
+  /* line 122, desktop.css.scss */
   .nav .item.has-dropdown:hover .dropdown-content a {
     color: #fff;
     background-color: #2e2e2e; }
 
-  /* line 113, desktop.css.scss */
+  /* line 127, desktop.css.scss */
   .nav .item.current:hover a {
-    background-color: #2e2d3b; }
+    background-color: #2E2D3F; }
 
-  /* line 117, desktop.css.scss */
+  /* line 131, desktop.css.scss */
   .nav .item {
     background-repeat: no-repeat;
     background-color: #2e2e2e; }
 
-  /* line 122, desktop.css.scss */
+  /* line 136, desktop.css.scss */
   .nav .item:nth-child(1) {
     background-image: url("/images/nav/1.jpg"); }
 
-  /* line 125, desktop.css.scss */
+  /* line 139, desktop.css.scss */
   .nav .item:nth-child(2) {
     background-image: url("/images/nav/2.jpg"); }
 
-  /* line 128, desktop.css.scss */
+  /* line 142, desktop.css.scss */
   .nav .item:nth-child(3) {
     background-image: url("/images/nav/3.jpg"); }
 
-  /* line 131, desktop.css.scss */
+  /* line 145, desktop.css.scss */
   .nav .item:nth-child(4) {
     background-image: url("/images/nav/4.jpg"); }
 
-  /* line 134, desktop.css.scss */
+  /* line 148, desktop.css.scss */
   .nav .item:nth-child(5) {
     background-image: url("/images/nav/5.jpg"); }
 
-  /* line 138, desktop.css.scss */
+  /* line 152, desktop.css.scss */
   .nav-container {
     height: 6.1848vw; }
 
-  /* line 142, desktop.css.scss */
+  /* line 156, desktop.css.scss */
   .nav:not(.roll-up) .item.has-dropdown .dropdown-content {
     position: absolute;
     top: 0px;
@@ -152,7 +166,7 @@
     height: 3.0934vw;
     line-height: 3.0934vw; }
 
-  /* line 150, desktop.css.scss */
+  /* line 164, desktop.css.scss */
   .nav.roll-up .item.has-dropdown .dropdown-content {
     position: absolute;
     top: 0px;
@@ -160,43 +174,42 @@
     height: 2.8vw;
     line-height: 2.8vw; }
 
-  /* line 158, desktop.css.scss */
+  /* line 172, desktop.css.scss */
   .nav.roll-up .item.has-dropdown .dropdown-content a {
     float: left;
     width: 50%; }
 
-  /* line 163, desktop.css.scss */
+  /* line 177, desktop.css.scss */
   .nav .item:hover:not(.current) {
     -webkit-filter: grayscale(0%); }
 
-  /* line 167, desktop.css.scss */
+  /* line 181, desktop.css.scss */
   .nav .item.current:hover {
     -webkit-filter: grayscale(0%); }
 
-  /* line 171, desktop.css.scss */
+  /* line 185, desktop.css.scss */
   .nav > .item.has-dropdown:hover > .dropdown > .dropdown-head {
     color: transparent; }
 
-  /* line 175, desktop.css.scss */
+  /* line 189, desktop.css.scss */
   .nav .item a, .nav .item .dropdown-head {
     display: inline-block;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: transparent;
-    font-size: 1em;
-    -webkit-transition: color 0.15s linear;
-    transition: all 0.15s linear; }
+    opacity: 0;
+    font-size: 1em; }
 
   /* dropdown stuff */
-  /* line 186, desktop.css.scss */
+  /* line 199, desktop.css.scss */
   .dropdown {
     position: relative;
     display: inline-block;
     width: 100%;
     height: 100%; }
 
-  /* line 193, desktop.css.scss */
+  /* line 206, desktop.css.scss */
   .dropdown-content {
     opacity: 0;
     position: relative;
@@ -207,33 +220,37 @@
     transform: translateZ(0);
     -webkit-transform: translateZ(0); }
 
-  /* line 204, desktop.css.scss */
+  /* line 217, desktop.css.scss */
   .item.has-dropdown:hover .dropdown .dropdown-content {
     /*display: block; */
     opacity: 1 !important;
     z-index: 1;
     display: inline-block; }
 
-  /* line 211, desktop.css.scss */
+  /* line 224, desktop.css.scss */
   .dropdown-content a {
     z-index: 100;
     color: #fff;
-    -webkit-transition: opacity linear 0.15s;
-    transition: opacity linear 0.15s; }
+    -webkit-transition: opacity linear 0.25s;
+    transition: opacity linear 0.25s; }
 
-  /* line 218, desktop.css.scss */
+  /* line 231, desktop.css.scss */
+  .nav .item:hover .dropdown-content a {
+    opacity: 1; }
+
+  /* line 235, desktop.css.scss */
   .nav .item:hover .dropdown-content a:hover {
     background-color: #55475e;
     color: #fff; }
 
   /* end dropdown */ }
 @media screen and (min-width: 701px) and (max-width: 739px) {
-  /* line 226, desktop.css.scss */
+  /* line 243, desktop.css.scss */
   .content-container .content-block.col {
     margin-left: auto;
     margin-right: auto; } }
 @media screen and (min-width: 740px) {
-  /* line 233, desktop.css.scss */
+  /* line 250, desktop.css.scss */
   .content-container {
     display: -webkit-box;
     display: -ms-flexbox;
