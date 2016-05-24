@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $(".nav-head").click(function() {
-    alert("CONGRATULATIONS, YOU WON");
     $(".nav").toggleClass("hidden");
     $(".nav-head .arrow").toggleClass("rotate90");
   });

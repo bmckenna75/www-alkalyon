@@ -7,31 +7,6 @@
   padding: 0;
 }
 
-.nav-container {
-  height: 6.5vw;
-}
-
-.index .nav .item.has-dropdown .dropdown-content {
-  position: absolute;
-  top: 0px;
-  height: calc(6.5vw / 2);
-  line-height: calc(6.5vw / 2);
-}
-
-.nav .item.has-dropdown .dropdown-content a {
-  height: 100%;
-  line-height: calc(6.5vw / 2);
-}
-
-.nav .item {
-  background-size: 100%  calc(6.5vw);;
-  background-position: center top;
-  background-repeat: no-repeat;
-  width: 20vw;
-  height: 6.5vw;
-}
-
-
 .widgets {
   position: relative;
 }
@@ -85,30 +60,56 @@
           transition: filter 0.25s linear;
 }
 
-.widget-tumblr {
-  margin: auto 0vh auto 0vh;
-}
-.widget-tumblr img {
-  height: 103px;
-  width: auto;
-}
+@media screen and (min-width: 701px) {
+  .nav .item {
+    background-size: 100%  calc(6.5vw);;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 6.5vw;
+  }
 
-.widget-twitter {
-  margin: auto 57px auto 57px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-.widget-twitter img {
-  height: 103px;
-  width: auto;
-}
+  .nav-container {
+    height: 6.5vw;
+  }
 
-.widget-insta {
-  margin: auto 0vh auto 0vh;
-}
-.widget-insta img {
-  height: 106px;
-  width: auto;
+  .index .nav .item.has-dropdown .dropdown-content {
+    position: absolute;
+    top: 0px;
+    height: calc(6.5vw / 2);
+    line-height: calc(6.5vw / 2);
+  }
+
+  .nav .item.has-dropdown .dropdown-content a {
+    height: 100%;
+    line-height: calc(6.5vw / 2);
+  }
+
+  .widget-tumblr {
+    margin: auto 0vh auto 0vh;
+  }
+  .widget-tumblr img {
+    height: 103px;
+    width: auto;
+  }
+
+  .widget-twitter {
+    margin: auto 57px auto 57px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .widget-twitter img {
+    height: 103px;
+    width: auto;
+  }
+
+  .widget-insta {
+    margin: auto 0vh auto 0vh;
+  }
+  .widget-insta img {
+    height: 106px;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -118,5 +119,32 @@
 
   .widget-container .widget-canvas {
     height: 45vh;
+    background-size: auto 45vh;
+  }
+
+  .widget-tumblr {
+    margin: auto 0vh auto 0vh;
+  }
+  .widget-tumblr img {
+    height: 10.3vh;
+    width: auto;
+  }
+
+  .widget-twitter {
+    margin: auto 5.7vh auto 5.7vh;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .widget-twitter img {
+    height: 10.3vh;
+    width: auto;
+  }
+
+  .widget-insta {
+    margin: auto 0vh auto 0vh;
+  }
+  .widget-insta img {
+    height: 10.6vh;
+    width: auto;
   }
 }

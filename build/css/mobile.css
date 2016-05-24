@@ -79,13 +79,13 @@
     line-height: 1.5em;
     text-decoration: none;
     display: inline-block;
-    color: #777; }
+    color: #ccc; }
 
   /* line 82, mobile.css.scss */
   .nav .item .dropdown-content a {
-    color: #777;
+    color: #ccc;
     /*font-size: 1.3em;*/
-    background-color: rgba(155, 55, 55, 0.92);
+    background-color: rgba(200, 150, 200, 0.75);
     z-index: 1; }
 
   /* line 88, mobile.css.scss */

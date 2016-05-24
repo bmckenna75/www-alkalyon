@@ -236,7 +236,9 @@ body>.wrapper {
     content: " |";
 }
 
-
+.nav {
+  z-index: 999;
+}
 
 .hidden {
   display: none !important;

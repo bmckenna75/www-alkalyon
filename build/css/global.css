@@ -624,11 +624,15 @@ body > .wrapper {
 .sig:not(:first-child)::after {
   content: " |"; }
 
-/* line 241, global.css.scss */
+/* line 239, global.css.scss */
+.nav {
+  z-index: 999; }
+
+/* line 243, global.css.scss */
 .hidden {
   display: none !important; }
 
-/* line 245, global.css.scss */
+/* line 247, global.css.scss */
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
