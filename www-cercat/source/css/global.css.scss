@@ -89,9 +89,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    min-width: 665px;
-    max-width: 75%;
-    max-height: 500px;
 }
 
 html, body {
@@ -250,78 +247,4 @@ body>.wrapper {
   display: -ms-flexbox;
   display: flex;
   max-width: 100%;
-}
-
-.widget-container .widget-canvas {
-  height: 44vh;
-  width: 100%;
-  overflow: hidden;
-  background-image: url("/images/widgets/widget-container.jpg");
-  background-size: cover;
-  background-position: center center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.widgets-before {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  /*flex-grow: 764.40; */
-}
-.widgets-after {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  /*flex-grow: 759.42;*/
-}
-
-.widget {
-  display: block;
-}
-
-.widget:hover img {
-  -webkit-filter: hue-rotate(130deg);
-  filter: hue-rotate(195deg);
-  -webkit-transform: translate(0px, -0.25vw) rotate(7.5deg);
-          transform: translate(0px, -0.25vw) rotate(7.5deg);
-  -webkit-transition: -webkit-filter 0.25s linear;
-          transition: filter 0.25s linear;
-}
-
-.widget-tumblr {
-  margin: auto 0vh auto 0vh;
-}
-.widget-tumblr img {
-  height: 10.07vh;
-  width: auto;
-}
-
-.widget-twitter {
-  margin: auto 6.2vh auto 6.2vh;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-.widget-twitter img {
-  height: 10.07vh;
-  width: auto;
-}
-
-.widget-insta {
-  margin: auto 0vh auto 0vh;
-}
-.widget-insta img {
-  height: 10.37vh;
-  width: auto;
 }

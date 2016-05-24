@@ -1,7 +1,13 @@
 @media screen and (min-width: 701px) {
 
-    body.index .header {
-      height: 100vh;
+    .wrapper {
+        max-width: 95vw;
+        margin: 0 auto;
+    }
+
+    .header-pic {
+      width: 100%;
+      height: auto;
     }
 
     .content-block.col {
@@ -27,21 +33,6 @@
         margin-left: auto;
         margin-right: auto;
         z-index: 999;
-    }
-
-    .widgets {
-      position: relative;
-    }
-
-
-
-    .header-pic {
-      height: 44vh;
-      width: 100%;
-    }
-
-    .nav:not(.roll-up) .item {
-
     }
 
     .header .header-pic {
@@ -72,12 +63,12 @@
     }
     .nav .item {
         display: inline-block;
-        width: 20vw;
-        height: 12vh;
-        line-height: 5.5vh;
+        width: 19vw;
+        height: 6.1848vw;
+        line-height: 2.1vw;
         padding: 0;
         margin: 0;
-        background-size: 100% auto;
+        background-size: 100% calc(6.1848vw);
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         text-align: center;
@@ -85,11 +76,17 @@
     }
 
     .nav.roll-up .item {
-      height: 5.5vh;
+      height: 2.8vw;
+      line-height: 2.8vw;
+      background-size: 100% auto;
     }
 
     .nav .item.current {
       -webkit-filter: grayscale(0%) saturate(130%);
+    }
+
+    .nav .item a.current {
+      color: #777;
     }
 
     .nav .item .dropdown-content>a.current {
@@ -97,13 +94,13 @@
       color: #ccc;
     }
 
-    .nav .item {
-      background-size: 100% 100%;
+    .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {
+      color: #777;
     }
 
-    .nav.roll-up .item {
-      background-size: 100% auto;
-      line-height: 5.5vh;
+    .nav .item:hover a {
+      color: #fff;
+      background-color: rgba(200, 150, 200, 0.25);
     }
 
     .nav .item:nth-child(1) {
@@ -123,25 +120,32 @@
     }
 
     .nav-container {
-      height: 12vh;
+      height: 6.1848vw;
     }
 
     .nav:not(.roll-up) .item.has-dropdown .dropdown-content {
       position: absolute;
       top: 0px;
-      height: 6vh;
-      line-height: 6vh;
+      left: 0px;
+      height: 3.0934vw;
+      line-height: 3.0934vw;
     }
 
     .nav.roll-up .item.has-dropdown .dropdown-content {
       position: absolute;
       top: 0px;
-      height: 2.75vh;
-      line-height: 2.75vh;
+      left: 0px;
+      height: 2.8vw;
+      line-height: 2.8vw;
+    }
+
+    .nav.roll-up .item.has-dropdown .dropdown-content a {
+      float: left;
+      width: 50%;
     }
 
     .nav .item:hover:not(.current) {
-      -webkit-filter: grayscale(50%);
+      -webkit-filter: grayscale(0%);
     }
 
     .nav .item.current:hover {
@@ -157,7 +161,7 @@
         width: 100%;
         height: 100%;
         text-decoration: none;
-        color: #777;
+        color: transparent;
         font-size: 1em;
         -webkit-transition: color 0.15s linear;
         transition: all 0.15s linear;
@@ -174,8 +178,11 @@
         opacity: 0;
         position: relative;
         width: 100%;
-        transition: opacity 0.35s ease-in;
-        -webkit-transition: opacity 0.35s ease-in;
+        transition: opacity 0.35s linear;
+        -webkit-transition: opacity 0.35s linear;
+        /* see http://stackoverflow.com/a/17353755 - fraction height on hover causes a weird jitter, after .roll-up has been removed once... */
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
 
     .item.has-dropdown:hover .dropdown .dropdown-content {
@@ -187,14 +194,15 @@
 
     .dropdown-content a {
         z-index: 100;
-        /*background-color: rgba(200,125,175,0.62);*/
-        color: #777;
+        background-color: rgba(100,75,100,0.62);
+        color: #fff;
         -webkit-transition: opacity linear 0.15s;
         transition: opacity linear 0.15s;
     }
 
-    .dropdown-content a:hover {
-        background-color: rgba(225, 125, 175, 0.25);
+    .nav .item:hover .dropdown-content a:hover {
+        background-color: rgba(155, 100, 155, 0.75);
+        color: #fff;
     }
     /* end dropdown */
 }

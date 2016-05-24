@@ -4,7 +4,7 @@
     }
 
     body.index {
-      background-image: url("/images/widgets/widget-container.jpg");
+      background: #220022;
       background-size: auto 44vh;
       background-position: bottom center;
     }
@@ -25,6 +25,7 @@
       display: block;
       text-decoration: none;
       border-radius: 20px;
+      z-index: 999;
     }
 
     .nav-head i {

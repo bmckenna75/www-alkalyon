@@ -6,7 +6,7 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <link rel="icon" type="image/ico" href="favicon.ico" />
-    
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
@@ -21,13 +21,11 @@
 
   <body class="<%= page_classes %>">
     <div class="wrapper">
-        <%= partial 'layouts/header' %>
-        <% if current_page.url != "/" %>
-          <div class="content">
-            <%= yield %>
-          </div> <!-- content -->
-          <%= partial 'layouts/footer' %>
-        <% end %>
+      <%= partial 'layouts/header' %>
+        <div class="content">
+          <%= yield %>
+        </div> <!-- content -->
+        <%= partial 'layouts/footer' %>
     </div> <!-- wrapper -->
     <div class="scrollTop"><i class="fa fa-chevron-up"></i></div>
   </body>

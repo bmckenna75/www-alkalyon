@@ -1,4 +1,34 @@
 ---
 title: Certified Cat Artwork
 logo_name: logo.jpg
+layout: false
 ---
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title %></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/872801506b.js"></script>
+
+    <%= stylesheet_link_tag :global %>
+    <%= stylesheet_link_tag :mobile %>
+    <%= stylesheet_link_tag :desktop %>
+    <%= stylesheet_link_tag :homepage %>
+    <%= javascript_include_tag :responsive %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <div class="wrapper">
+        <%= partial 'layouts/header' %>
+        <%= partial 'layouts/widgets' %>
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -40,7 +40,7 @@ function checkPos() {
     }
     $('.scrollTop').fadeOut(200);
   }
-  if (diff - nav.height() > 0) {
+  if (diff - nav.height() / 2.5 > 0) {
     $(".nav").addClass("roll-up");
   } else {
     $(".nav").removeClass("roll-up");
