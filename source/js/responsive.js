@@ -1,5 +1,9 @@
 $(document).ready(function() {
-  $(".nav-head").click(function(){$(".nav").toggleClass("hidden");$(".nav-head .arrow").toggleClass("rotate90");});
+  $(".nav-head").click(function() {
+    alert("CONGRATULATIONS, YOU WON");
+    $(".nav").toggleClass("hidden");
+    $(".nav-head .arrow").toggleClass("rotate90");
+  });
   $(".dropdown-head").click(function(){
     if ($(window).width() <= 700) {
       $(".dropdown-content").toggleClass("hidden");
