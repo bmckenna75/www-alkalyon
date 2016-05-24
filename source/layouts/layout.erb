@@ -16,7 +16,10 @@
     <%= stylesheet_link_tag :global %>
     <%= stylesheet_link_tag :mobile %>
     <%= stylesheet_link_tag :desktop %>
+
     <%= javascript_include_tag :responsive %>
+
+    <%= stylesheet_link_tag :lightbox %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -28,5 +31,6 @@
         <%= partial 'layouts/footer' %>
     </div> <!-- wrapper -->
     <div class="scrollTop"><i class="fa fa-chevron-up"></i></div>
+    <%= javascript_include_tag :lightbox %>
   </body>
 </html>

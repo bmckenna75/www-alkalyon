@@ -546,13 +546,17 @@ body > .wrapper {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  display: block; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
-/* line 159, global.css.scss */
+/* line 161, global.css.scss */
 .card {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  min-width: 300px;
+  max-width: 100%;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 0px;
   display: inline-block;
   background: #444;
@@ -562,23 +566,29 @@ body > .wrapper {
   color: #777;
   visibility: hidden;
   opacity: 0;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  padding-right: 15px;
+  padding-left: 15px; }
 
-/* line 179, global.css.scss */
+/* line 181, global.css.scss */
+.head-card {
+  width: 75%; }
+
+/* line 185, global.css.scss */
 .center {
   text-align: center; }
 
-/* line 183, global.css.scss */
+/* line 189, global.css.scss */
 .content-block img {
   max-width: 75%;
   /* height: auto; */
   max-height: 250px; }
 
-/* line 189, global.css.scss */
+/* line 195, global.css.scss */
 .clear {
   clear: both; }
 
-/* line 193, global.css.scss */
+/* line 199, global.css.scss */
 .footer-container {
   width: 100%;
   position: absolute;
@@ -591,7 +601,7 @@ body > .wrapper {
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em; }
 
-/* line 206, global.css.scss */
+/* line 212, global.css.scss */
 .footer-content {
   color: #888;
   width: 100%;
@@ -600,39 +610,39 @@ body > .wrapper {
   text-align: center;
   height: 1.75em; }
 
-/* line 215, global.css.scss */
+/* line 221, global.css.scss */
 a {
   color: #fff;
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear; }
 
-/* line 221, global.css.scss */
+/* line 227, global.css.scss */
 a:hover {
   color: #c3c; }
 
-/* line 225, global.css.scss */
+/* line 231, global.css.scss */
 .left {
   float: left;
   padding-left: 5px; }
 
-/* line 230, global.css.scss */
+/* line 236, global.css.scss */
 .right {
   float: right;
   padding-right: 5px; }
 
-/* line 235, global.css.scss */
+/* line 241, global.css.scss */
 .sig:not(:first-child)::after {
   content: " |"; }
 
-/* line 239, global.css.scss */
+/* line 245, global.css.scss */
 .nav {
   z-index: 999; }
 
-/* line 243, global.css.scss */
+/* line 249, global.css.scss */
 .hidden {
   display: none !important; }
 
-/* line 247, global.css.scss */
+/* line 253, global.css.scss */
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;

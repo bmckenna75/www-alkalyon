@@ -153,13 +153,17 @@ body>.wrapper {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .card {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    min-width: 300px;
+    max-width: 100%;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px 0px;
     display: inline-block;
     background: #444;
@@ -170,10 +174,12 @@ body>.wrapper {
     visibility: hidden;
     opacity: 0;
     word-wrap: break-word;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-.visibile {
-
+.head-card {
+  width: 75%;
 }
 
 .center {
