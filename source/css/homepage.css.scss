@@ -51,13 +51,16 @@
   display: block;
 }
 
+.widget img {
+  filter: hue-rotate(0deg);
+  -webkit-filter: hue-rotate(0deg);
+  transition: filter 0.5s linear;
+  transition: -webkit-filter 0.5s linear;
+}
+
 .widget:hover img {
-  -webkit-filter: hue-rotate(130deg);
   filter: hue-rotate(195deg);
-  -webkit-transform: translate(0px, -0.25vw) rotate(7.5deg);
-          transform: translate(0px, -0.25vw) rotate(7.5deg);
-  -webkit-transition: -webkit-filter 0.25s linear;
-          transition: filter 0.25s linear;
+  -webkit-filter: hue-rotate(195deg);
 }
 
 @media screen and (min-width: 701px) {
