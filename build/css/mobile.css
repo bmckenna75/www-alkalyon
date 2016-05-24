@@ -1,1 +1,119 @@
-@media screen and (max-width: 700px){body{background:#222 url("http://i.imgur.com/wKgQEaW.png") repeat}body.index{background:#220022;background-size:auto 44vh;background-position:bottom center}.nav-container{margin-left:auto;margin-right:auto}.nav-head{position:fixed;top:20vh;left:0px;background:black;background:rgba(0,0,0,0.7);width:40px;height:40px;display:block;text-decoration:none;border-radius:20px;z-index:999}.nav-head i{color:#fff;margin:0;position:relative;left:11px;top:11px;font-size:19px;-webkit-transition:all 0.3s ease;transition:all 0.3s ease}.nav{width:10em;height:100%;position:fixed;left:0;top:25vh}.nav .item{width:100%}.arrow{font-size:0.6em;position:absolute;top:0.1em}.nav .item{width:100%;float:left}.nav .item,.nav-head{background-color:rgba(55,55,55,0.92)}.item.current,.item.current>a,a.current{background-color:rgba(185,185,185,0.92)}.nav .item a,.nav-head a,.dropdown-head{width:100%;min-height:100%;font-size:1.5em;text-align:center;line-height:1.5em;text-decoration:none;display:inline-block;color:#777}.nav .item .dropdown-content a{color:#777;background-color:rgba(155,55,55,0.92);z-index:1}.nav .item .dropdown-content a.current{background-color:rgba(185,185,185,0.92)}.header .header-pic{max-width:100%;min-width:100%}.nav{border-top:1px solid #777}.after-content{padding-bottom:50px}.nav .dropdown-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-flex-direction:column;-webkit-align-items:center;z-index:1}}
+@media screen and (max-width: 700px) {
+  /* line 2, mobile.css.scss */
+  body {
+    background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat; }
+
+  /* line 6, mobile.css.scss */
+  body.index {
+    background: #220022;
+    background-size: auto 44vh;
+    background-position: bottom center; }
+
+  /* line 12, mobile.css.scss */
+  .nav-container {
+    margin-left: auto;
+    margin-right: auto; }
+
+  /* line 17, mobile.css.scss */
+  .nav-head {
+    position: fixed;
+    top: 20vh;
+    left: 0px;
+    background: black;
+    background: rgba(0, 0, 0, 0.7);
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    border-radius: 20px;
+    z-index: 999; }
+
+  /* line 31, mobile.css.scss */
+  .nav-head i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 11px;
+    top: 11px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+
+  /* line 42, mobile.css.scss */
+  .nav {
+    width: 10em;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 25vh; }
+
+  /* line 49, mobile.css.scss */
+  .nav .item {
+    width: 100%; }
+
+  /* line 52, mobile.css.scss */
+  .arrow {
+    font-size: 0.6em;
+    position: absolute;
+    top: 0.1em; }
+
+  /* line 59, mobile.css.scss */
+  .nav .item {
+    width: 100%;
+    float: left; }
+
+  /* line 64, mobile.css.scss */
+  .nav .item, .nav-head {
+    background-color: rgba(55, 55, 55, 0.92); }
+
+  /* line 68, mobile.css.scss */
+  .item.current, .item.current > a, a.current {
+    background-color: rgba(185, 185, 185, 0.92); }
+
+  /* line 72, mobile.css.scss */
+  .nav .item a, .nav-head a, .dropdown-head {
+    width: 100%;
+    min-height: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    color: #777; }
+
+  /* line 82, mobile.css.scss */
+  .nav .item .dropdown-content a {
+    color: #777;
+    /*font-size: 1.3em;*/
+    background-color: rgba(155, 55, 55, 0.92);
+    z-index: 1; }
+
+  /* line 88, mobile.css.scss */
+  .nav .item .dropdown-content a.current {
+    background-color: rgba(185, 185, 185, 0.92); }
+
+  /* line 91, mobile.css.scss */
+  .header .header-pic {
+    max-width: 100%;
+    min-width: 100%; }
+
+  /* line 95, mobile.css.scss */
+  .nav {
+    border-top: 1px solid #777; }
+
+  /* line 98, mobile.css.scss */
+  .after-content {
+    padding-bottom: 50px; }
+
+  /* line 101, mobile.css.scss */
+  .nav .dropdown-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    z-index: 1; } }
