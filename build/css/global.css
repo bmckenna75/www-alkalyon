@@ -3,7 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:600,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 /* line 8, _normalize.scss */
 html {
   font-family: sans-serif;
@@ -493,7 +493,7 @@ html, body {
 /* line 101, global.css.scss */
 body {
   min-height: 100%;
-  font-family: 'Josefin Sans', sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 /* line 106, global.css.scss */
 body > .wrapper {

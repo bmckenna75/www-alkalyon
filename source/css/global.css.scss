@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import "normalize";
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:600,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* global.css, imported first */
 
@@ -100,7 +100,7 @@ html, body {
 
 body {
     min-height: 100%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body>.wrapper {

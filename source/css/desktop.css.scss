@@ -1,3 +1,7 @@
+$current-bg: #2e2d3b;
+$hover-bg: #55475e;
+$inactive-bg: #2e2e2e;
+
 @media screen and (min-width: 701px) {
 
     .wrapper {
@@ -65,7 +69,8 @@
         display: inline-block;
         width: 19vw;
         height: 6.1848vw;
-        line-height: 2.1vw;
+        line-height: 6.1848vw;
+        vertical-align: center;
         padding: 0;
         margin: 0;
         background-size: 100% calc(6.1848vw);
@@ -79,28 +84,39 @@
       height: 2.8vw;
       line-height: 2.8vw;
       background-size: 100% auto;
+      background: $inactive-bg;
+      background-position: center 100px;
     }
 
     .nav .item.current {
       -webkit-filter: grayscale(0%) saturate(130%);
     }
 
-    .nav .item a.current {
-      color: #777;
-    }
-
     .nav .item .dropdown-content>a.current {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #ccc;
+      background-color: $current-bg;
     }
 
     .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {
       color: #777;
     }
 
-    .nav .item:hover a {
+    .nav .item:hover>a {
       color: #fff;
-      background-color: rgba(200, 150, 200, 0.25);
+      background-color: $hover-bg;
+    }
+
+    .nav .item.has-dropdown:hover .dropdown-content a {
+      color: #fff;
+      background-color: $inactive-bg;
+    }
+
+    .nav .item.current:hover a {
+      background-color: $current-bg;
+    }
+
+    .nav .item {
+      background-repeat: no-repeat;
+      background-color: $inactive-bg;
     }
 
     .nav .item:nth-child(1) {
@@ -149,7 +165,7 @@
     }
 
     .nav .item.current:hover {
-      -webkit-filter: saturate(100%) grayscale(0%);
+      -webkit-filter: grayscale(0%);
     }
 
     .nav>.item.has-dropdown:hover>.dropdown>.dropdown-head {
@@ -194,14 +210,13 @@
 
     .dropdown-content a {
         z-index: 100;
-        background-color: rgba(100,75,100,0.62);
         color: #fff;
         -webkit-transition: opacity linear 0.15s;
         transition: opacity linear 0.15s;
     }
 
     .nav .item:hover .dropdown-content a:hover {
-        background-color: rgba(155, 100, 155, 0.75);
+        background-color: $hover-bg;
         color: #fff;
     }
     /* end dropdown */
