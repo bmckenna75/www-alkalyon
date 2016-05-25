@@ -1,7 +1,7 @@
 PATH
   remote: /home/arcana/middleman-dexterity
   specs:
-    middleman-dexterity (0.0.3)
+    middleman-dexterity (0.1.0)
       middleman-core (>= 4.1.8)
       mini_magick (~> 4.5)
 
