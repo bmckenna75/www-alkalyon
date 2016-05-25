@@ -26,7 +26,8 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-  activate :middleman_simple_thumbnailer
+  #activate :middleman_simple_thumbnailer
+  activate :dexterity
 end
 
 ###
@@ -38,7 +39,7 @@ helpers do
 
   def lightbox_insert(image)
     answer = '<a href="/images/' + image["url"] + '" data-lightbox="' + image["set"] + '" data-title="' + image["title"] + '">'
-    answer += image_tag(image["url"], resize_to: data.gallery.config.thumb_width)
+    answer += image_tag( create_image_thumb(image["url"], data.gallery.config.resize_string))
     answer += '</a><p>' + image["caption"] + '</p>'
     return answer
   end
@@ -80,7 +81,8 @@ end
 configure :build do
   # Minify CSS on build
   #activate :minify_css
-  activate :middleman_simple_thumbnailer
+  temp = Hash.new
+  activate :dexterity
   activate :favicon_maker do |f|
     f.template_dir  = 'source/images'
     f.icons = {

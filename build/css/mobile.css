@@ -10,11 +10,17 @@
     background-position: bottom center; }
 
   /* line 12, mobile.css.scss */
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; }
+
+  /* line 18, mobile.css.scss */
   .nav-container {
     margin-left: auto;
     margin-right: auto; }
 
-  /* line 17, mobile.css.scss */
+  /* line 23, mobile.css.scss */
   .nav-head {
     position: fixed;
     top: 20vh;
@@ -28,7 +34,7 @@
     border-radius: 20px;
     z-index: 999; }
 
-  /* line 31, mobile.css.scss */
+  /* line 37, mobile.css.scss */
   .nav-head i {
     color: #fff;
     margin: 0;
@@ -39,7 +45,7 @@
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
 
-  /* line 42, mobile.css.scss */
+  /* line 48, mobile.css.scss */
   .nav {
     width: 10em;
     height: 100%;
@@ -47,30 +53,30 @@
     left: 0;
     top: 25vh; }
 
-  /* line 49, mobile.css.scss */
+  /* line 55, mobile.css.scss */
   .nav .item {
     width: 100%; }
 
-  /* line 52, mobile.css.scss */
+  /* line 58, mobile.css.scss */
   .arrow {
     font-size: 0.6em;
     position: absolute;
     top: 0.1em; }
 
-  /* line 59, mobile.css.scss */
+  /* line 65, mobile.css.scss */
   .nav .item {
     width: 100%;
     float: left; }
 
-  /* line 64, mobile.css.scss */
+  /* line 70, mobile.css.scss */
   .nav .item, .nav-head {
     background-color: rgba(55, 55, 55, 0.92); }
 
-  /* line 68, mobile.css.scss */
+  /* line 74, mobile.css.scss */
   .item.current, .item.current > a, a.current {
     background-color: rgba(185, 185, 185, 0.92); }
 
-  /* line 72, mobile.css.scss */
+  /* line 78, mobile.css.scss */
   .nav .item a, .nav-head a, .dropdown-head {
     width: 100%;
     min-height: 100%;
@@ -81,31 +87,31 @@
     display: inline-block;
     color: #ccc; }
 
-  /* line 82, mobile.css.scss */
+  /* line 88, mobile.css.scss */
   .nav .item .dropdown-content a {
     color: #ccc;
     /*font-size: 1.3em;*/
     background-color: rgba(200, 150, 200, 0.75);
     z-index: 1; }
 
-  /* line 88, mobile.css.scss */
+  /* line 94, mobile.css.scss */
   .nav .item .dropdown-content a.current {
     background-color: rgba(185, 185, 185, 0.92); }
 
-  /* line 91, mobile.css.scss */
+  /* line 97, mobile.css.scss */
   .header .header-pic {
     max-width: 100%;
     min-width: 100%; }
 
-  /* line 95, mobile.css.scss */
+  /* line 101, mobile.css.scss */
   .nav {
     border-top: 1px solid #777; }
 
-  /* line 98, mobile.css.scss */
+  /* line 104, mobile.css.scss */
   .after-content {
     padding-bottom: 50px; }
 
-  /* line 101, mobile.css.scss */
+  /* line 107, mobile.css.scss */
   .nav .dropdown-content {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -1,11 +1,10 @@
 GIT
-  remote: https://github.com/philiph/middleman-simple-thumbnailer.git
-  revision: e4751f8a0fcb2f793d5bf686f2ba47204590f8fc
-  branch: support-middleman-v4
+  remote: https://github.com/Arcaena/middleman-dexterity.git
+  revision: 7f221de9d9029324a34ca732e66cd699fe4f6aba
   specs:
-    middleman-simple-thumbnailer (2.0.0)
-      middleman-core (~> 4)
-      mini_magick (~> 4)
+    middleman-dexterity (0.0.2)
+      middleman-core (>= 4.1.8)
+      mini_magick (~> 4.5)
 
 GEM
   remote: https://rubygems.org/
@@ -137,9 +136,9 @@ PLATFORMS
 DEPENDENCIES
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)
+  middleman-dexterity!
   middleman-favicon-maker (>= 4.0)
   middleman-livereload
-  middleman-simple-thumbnailer!
   tzinfo-data
   wdm (~> 0.1.0)
 

@@ -94,8 +94,13 @@ $inactive-bg: #2e2e2e;
       background-color: $current-bg;
     }
 
-    .nav.roll-up .item a, .nav.roll-up .item .dropdown, .nav.roll-up .item .dropdown-content, .nav.roll-up .item .dropdown-head {
-      transition: opacity 0.1s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in;
+    .nav .item a {
+      background-color: $inactive-bg;
+    }
+
+    .nav .item a, .nav .item .dropdown, .nav .item .dropdown-content, .nav .item .dropdown-head {
+
+      transition: opacity 0.3s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in;
     }
 
     .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {

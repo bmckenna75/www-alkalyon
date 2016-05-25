@@ -14,4 +14,4 @@ gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-favicon-maker', '>= 4.0'
 
-gem 'middleman-simple-thumbnailer', :git => 'https://github.com/philiph/middleman-simple-thumbnailer.git', :branch => 'support-middleman-v4'
+gem 'middleman-dexterity', :git => 'https://github.com/Arcaena/middleman-dexterity.git'
