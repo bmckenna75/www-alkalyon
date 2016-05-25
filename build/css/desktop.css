@@ -80,7 +80,7 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     text-align: center;
-    transition: all 0.25s ease-in; }
+    transition: height 0.25s ease-in; }
 
   /* line 84, desktop.css.scss */
   .nav.roll-up .item {
@@ -96,70 +96,64 @@
     background-color: #2E2D3F; }
 
   /* line 97, desktop.css.scss */
-  .nav.roll-up .item {
-    transition: height; }
+  .nav.roll-up .item a, .nav.roll-up .item .dropdown, .nav.roll-up .item .dropdown-content, .nav.roll-up .item .dropdown-head {
+    transition: opacity 0.1s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in; }
 
   /* line 101, desktop.css.scss */
-  .nav.roll-up .item a, .nav.roll-up .item .dropdown, .nav.roll-up .item .dropdown-content, .nav.roll-up .item .dropdown-head {
-    transition: opacity 0.1s linear;
-    transition: color 0.45s ease-in;
-    transition: background 0.25s ease-out; }
-
-  /* line 107, desktop.css.scss */
   .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {
     color: #777;
     opacity: 1;
     background-color: #2e2e2e; }
 
-  /* line 113, desktop.css.scss */
+  /* line 107, desktop.css.scss */
   .nav.roll-up .item.current a {
     background-color: #2E2D3F; }
 
-  /* line 117, desktop.css.scss */
+  /* line 111, desktop.css.scss */
   .nav .item:hover > a {
     color: #fff;
     opacity: 1;
     background-color: #55475e; }
 
-  /* line 123, desktop.css.scss */
+  /* line 117, desktop.css.scss */
   .nav .item.has-dropdown:hover .dropdown-content a {
     color: #fff;
     background-color: #2e2e2e; }
 
-  /* line 128, desktop.css.scss */
+  /* line 122, desktop.css.scss */
   .nav .item.current:hover a {
     background-color: #2E2D3F; }
 
-  /* line 132, desktop.css.scss */
+  /* line 126, desktop.css.scss */
   .nav .item {
     background-repeat: no-repeat;
     background-color: #2e2e2e; }
 
-  /* line 137, desktop.css.scss */
+  /* line 131, desktop.css.scss */
   .nav .item:nth-child(1) {
     background-image: url("/images/nav/1.jpg"); }
 
-  /* line 140, desktop.css.scss */
+  /* line 134, desktop.css.scss */
   .nav .item:nth-child(2) {
     background-image: url("/images/nav/2.jpg"); }
 
-  /* line 143, desktop.css.scss */
+  /* line 137, desktop.css.scss */
   .nav .item:nth-child(3) {
     background-image: url("/images/nav/3.jpg"); }
 
-  /* line 146, desktop.css.scss */
+  /* line 140, desktop.css.scss */
   .nav .item:nth-child(4) {
     background-image: url("/images/nav/4.jpg"); }
 
-  /* line 149, desktop.css.scss */
+  /* line 143, desktop.css.scss */
   .nav .item:nth-child(5) {
     background-image: url("/images/nav/5.jpg"); }
 
-  /* line 153, desktop.css.scss */
+  /* line 147, desktop.css.scss */
   .nav-container {
     height: 6.1848vw; }
 
-  /* line 157, desktop.css.scss */
+  /* line 151, desktop.css.scss */
   .nav:not(.roll-up) .item.has-dropdown .dropdown-content {
     position: absolute;
     top: 0px;
@@ -167,7 +161,7 @@
     height: 3.0934vw;
     line-height: 3.0934vw; }
 
-  /* line 165, desktop.css.scss */
+  /* line 159, desktop.css.scss */
   .nav.roll-up .item.has-dropdown .dropdown-content {
     position: absolute;
     top: 0px;
@@ -175,24 +169,24 @@
     height: 2.8vw;
     line-height: 2.8vw; }
 
-  /* line 173, desktop.css.scss */
+  /* line 167, desktop.css.scss */
   .nav.roll-up .item.has-dropdown .dropdown-content a {
     float: left;
     width: 50%; }
 
-  /* line 178, desktop.css.scss */
+  /* line 172, desktop.css.scss */
   .nav .item:hover:not(.current) {
     -webkit-filter: grayscale(0%); }
 
-  /* line 182, desktop.css.scss */
+  /* line 176, desktop.css.scss */
   .nav .item.current:hover {
     -webkit-filter: grayscale(0%); }
 
-  /* line 186, desktop.css.scss */
+  /* line 180, desktop.css.scss */
   .nav > .item.has-dropdown:hover > .dropdown > .dropdown-head {
     color: transparent; }
 
-  /* line 190, desktop.css.scss */
+  /* line 184, desktop.css.scss */
   .nav .item a, .nav .item .dropdown-head {
     display: inline-block;
     width: 100%;
@@ -203,14 +197,14 @@
     font-size: 1em; }
 
   /* dropdown stuff */
-  /* line 200, desktop.css.scss */
+  /* line 194, desktop.css.scss */
   .dropdown {
     position: relative;
     display: inline-block;
     width: 100%;
     height: 100%; }
 
-  /* line 207, desktop.css.scss */
+  /* line 201, desktop.css.scss */
   .dropdown-content {
     opacity: 0;
     position: relative;
@@ -221,37 +215,37 @@
     transform: translateZ(0);
     -webkit-transform: translateZ(0); }
 
-  /* line 218, desktop.css.scss */
+  /* line 212, desktop.css.scss */
   .item.has-dropdown:hover .dropdown .dropdown-content {
     /*display: block; */
     opacity: 1 !important;
     z-index: 1;
     display: inline-block; }
 
-  /* line 225, desktop.css.scss */
+  /* line 219, desktop.css.scss */
   .dropdown-content a {
     z-index: 100;
     color: #fff;
     -webkit-transition: opacity linear 0.25s;
     transition: opacity linear 0.25s; }
 
-  /* line 232, desktop.css.scss */
+  /* line 226, desktop.css.scss */
   .nav .item:hover .dropdown-content a {
     opacity: 1; }
 
-  /* line 236, desktop.css.scss */
+  /* line 230, desktop.css.scss */
   .nav .item:hover .dropdown-content a:hover {
     background-color: #55475e;
     color: #fff; }
 
   /* end dropdown */ }
 @media screen and (min-width: 701px) and (max-width: 739px) {
-  /* line 244, desktop.css.scss */
+  /* line 238, desktop.css.scss */
   .content-container .content-block.col {
     margin-left: auto;
     margin-right: auto; } }
 @media screen and (min-width: 740px) {
-  /* line 251, desktop.css.scss */
+  /* line 245, desktop.css.scss */
   .content-container {
     display: -webkit-box;
     display: -ms-flexbox;

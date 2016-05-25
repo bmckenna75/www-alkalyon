@@ -5,6 +5,8 @@
 set :js_dir, 'js'
 set :css_dir, 'css'
 
+#activate :middleman_simple_thumbnailer
+
 # Per-page layout changes:
 #
 # With no layout
@@ -24,6 +26,7 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  activate :middleman_simple_thumbnailer
 end
 
 ###
@@ -32,6 +35,13 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+
+  def lightbox_insert(image)
+    answer = '<a href="/images/' + image["url"] + '" data-lightbox="' + image["set"] + '" data-title="' + image["title"] + '">'
+    answer += image_tag(image["url"], resize_to: data.gallery.config.thumb_width)
+    answer += '</a><p>' + image["caption"] + '</p>'
+    return answer
+  end
 
   def header_gen(link)
     answer = ""
@@ -70,7 +80,31 @@ end
 configure :build do
   # Minify CSS on build
   #activate :minify_css
+  activate :middleman_simple_thumbnailer
+  activate :favicon_maker do |f|
+    f.template_dir  = 'source/images'
+    f.icons = {
+      "_favicon_hires.png" => [
+        { icon: "apple-touch-icon-152x152-precomposed.png" },
+        { icon: "apple-touch-icon-114x114-precomposed.png" },
+        { icon: "apple-touch-icon-72x72-precomposed.png" },
+        { icon: "apple-touch-icon-57x57-precomposed.png" },
+        { icon: "apple-touch-icon.png", size: "57x57" },
+        { icon: "favicon-196x196.png" },
+        { icon: "favicon-160x160.png" },
+        { icon: "favicon-96x96.png" },
+        { icon: "mstile-144x144", format: :png },
+      ],
+      "_favicon_lores.png" => [
+        { icon: "favicon.png", size: "16x16" },
+        { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+        { icon: "favicon-32x32.png" },
+        { icon: "favicon-16x16.png" },
+      ]
+    }
+  end
 
   # Minify Javascript on build
   #activate :minify_javascript
+
 end

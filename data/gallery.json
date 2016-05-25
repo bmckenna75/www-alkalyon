@@ -1,0 +1,52 @@
+{
+  "_comment": "",
+  "config": {
+      "thumb_width": 400
+  },
+  "traditional": [
+    {
+      "url": "test-images/1.jpg",
+      "caption": "butt",
+      "title": "butts",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/2.jpg",
+      "caption": "butt2",
+      "title": "butts2",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/3.jpg",
+      "caption": "butt2",
+      "title": "butts2",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/4.jpg",
+      "caption": "butt2",
+      "title": "butts2",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/5.jpg",
+      "caption": "butt2",
+      "title": "butts2",
+      "set": "traditional"
+    }
+  ],
+  "digital": [
+    {
+      "url": "test-images/3.jpg",
+      "caption": "butt2",
+      "title": "butts2",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/4.jpg",
+      "caption": "butt2",
+      "title": "butts2",
+      "set": "traditional"
+    }
+  ]
+}

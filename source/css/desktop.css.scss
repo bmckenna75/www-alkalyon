@@ -78,7 +78,7 @@ $inactive-bg: #2e2e2e;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         text-align: center;
-        transition: all 0.25s ease-in;
+        transition: height 0.25s ease-in;
     }
 
     .nav.roll-up .item {
@@ -94,14 +94,8 @@ $inactive-bg: #2e2e2e;
       background-color: $current-bg;
     }
 
-    .nav.roll-up .item {
-      transition: height;
-    }
-
     .nav.roll-up .item a, .nav.roll-up .item .dropdown, .nav.roll-up .item .dropdown-content, .nav.roll-up .item .dropdown-head {
-      transition: opacity 0.1s linear;
-      transition: color 0.45s ease-in;
-      transition: background 0.25s ease-out;
+      transition: opacity 0.1s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in;
     }
 
     .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {

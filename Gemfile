@@ -12,6 +12,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
-gem 'middleman-favicon-maker', '~> 3.7'
+gem 'middleman-favicon-maker', '>= 4.0'
 
-#gem 'lightbox2-rails' # this errors out
+gem 'middleman-simple-thumbnailer', :git => 'https://github.com/philiph/middleman-simple-thumbnailer.git', :branch => 'support-middleman-v4'
