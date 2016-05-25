@@ -46,8 +46,8 @@ helpers do
 
 
   def lightbox_insert(image)
-    answer = '<a href="/images/' + image["url"] + '" data-lightbox="' + image["set"] + '" data-title="' + image["title"] + '">'
-    answer += image_tag( create_image_thumb(image["url"], data.gallery.config.resize_string))
+    answer = '<a href="' + config[:images_dir] + image["url"] + '" data-lightbox="' + image["set"] + '" data-title="' + image["title"] + '">'
+    answer +='<img src="' + create_image_thumb(image["url"], data.gallery.config.resize_string) + '"/>'
     answer += '</a><p>' + image["caption"] + '</p>'
     return answer
   end
