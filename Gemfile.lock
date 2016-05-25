@@ -1,8 +1,7 @@
-GIT
-  remote: https://github.com/Arcaena/middleman-dexterity.git
-  revision: 7f221de9d9029324a34ca732e66cd699fe4f6aba
+PATH
+  remote: /home/arcana/middleman-dexterity
   specs:
-    middleman-dexterity (0.0.2)
+    middleman-dexterity (0.0.3)
       middleman-core (>= 4.1.8)
       mini_magick (~> 4.5)
 
@@ -120,6 +119,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    redcarpet (3.3.4)
     sass (3.4.22)
     servolux (0.12.0)
     thor (0.19.1)
@@ -139,6 +139,7 @@ DEPENDENCIES
   middleman-dexterity!
   middleman-favicon-maker (>= 4.0)
   middleman-livereload
+  redcarpet
   tzinfo-data
   wdm (~> 0.1.0)
 

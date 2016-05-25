@@ -5,6 +5,8 @@
 set :js_dir, 'js'
 set :css_dir, 'css'
 
+set :markdown_engine, :redcarpet
+
 #activate :middleman_simple_thumbnailer
 
 # Per-page layout changes:
@@ -36,6 +38,12 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+
+  def parse_markdown(source_text)
+    #puts Tilt['markdown']
+    Tilt['markdown'].new { source_text }.render
+  end
+
 
   def lightbox_insert(image)
     answer = '<a href="/images/' + image["url"] + '" data-lightbox="' + image["set"] + '" data-title="' + image["title"] + '">'

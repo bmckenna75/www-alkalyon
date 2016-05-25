@@ -13,5 +13,7 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-favicon-maker', '>= 4.0'
+gem 'redcarpet'
 
-gem 'middleman-dexterity', :git => 'https://github.com/Arcaena/middleman-dexterity.git'
+#gem 'middleman-dexterity', :git => 'https://github.com/Arcaena/middleman-dexterity.git'
+gem 'middleman-dexterity', :path => '/home/arcana/middleman-dexterity'

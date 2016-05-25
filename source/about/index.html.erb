@@ -21,6 +21,8 @@ logo_name: logo.jpg
     <img src="<%= create_image_thumb '/images/test-images/5.jpg','150x' %>"/> <!-- width -->
     <img src="<%= create_image_thumb '/images/test-images/2.jpg','50x50' %>"/> <!-- target both -->
     <img src="<%= create_image_thumb '/images/test-images/<>.jpg','50x50' %>"/> <!-- target both -->
+    <%= partial '/about/test' %>
+    <%= parse_markdown("#test") %>
     </div>
     <%  data.gallery.traditional.each do |image| %>
       <div class="card"> <%= lightbox_insert image %> </div>
