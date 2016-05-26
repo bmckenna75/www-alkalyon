@@ -28,6 +28,7 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  activate :autoprefixer
   #activate :middleman_simple_thumbnailer
   activate :dexterity, :pre_clear_cache => false
 end
@@ -48,6 +49,13 @@ helpers do
   def lightbox_insert(image)
     answer = '<a href="/' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
     answer +='<img src="' + create_image_thumb(image["url"], data.gallery.config.thumb_resize_string) + '" title="' + image["title"] + '"/>'
+    answer += '</a><p>' + image["caption"] + '</p>'
+    return answer
+  end
+
+  def lightbox_insert_nothumb(image)
+    answer =  '<a href="/' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
+    answer +='<img src="/' + config[:images_dir] + '/' + image["url"] + '" title="' + image["title"] + '"/>'
     answer += '</a><p>' + image["caption"] + '</p>'
     return answer
   end
@@ -95,9 +103,9 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  #activate :minify_css
-  temp = Hash.new
   activate :dexterity
+  activate :autoprefixer
+  #activate :minify_css
   activate :favicon_maker do |f|
     f.template_dir  = 'source/images'
     f.icons = {

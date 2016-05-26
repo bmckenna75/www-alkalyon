@@ -2,33 +2,19 @@
 title: Certified Cat Artwork
 logo_name: logo.jpg
 ---
-<!--
-<div class="content-container">
-    <div class="content-block col">
-        <h1 class="content-header">left column</h1>
-        <p>put left column stuff here</p>
+<div class="tiles">
+    <div class="tile tile-head"> <h1 class="card-header">gallery stuff</h1> <p>cards overview text here (what're they for, etc, etc); they'll probably have a lightbox on them so you can scroll through horizontally or vertically; might make them more card-y in the future</p>
+        <img src="<%= create_image_thumb '/images/test-images/5.jpg','x100' %>"/> <!-- height -->
+        <img src="<%= create_image_thumb '/images/test-images/5.jpg','150x' %>"/> <!-- width -->
+        <img src="<%= create_image_thumb '/images/test-images/2.jpg','50x50' %>"/> <!-- target both -->
+        <img src="<%= create_image_thumb '/images/test-images/<>.jpg','50x50' %>"/> <!-- target both -->
+        <img src="<%= create_square_thumb '/images/test-images/2.jpg','200' %>"/>
+        <%= partial 'about/test' %>
+        <%= parse_markdown '##test magic parser' %>
     </div>
-    <div class="content-block col">
-        <h1 class="content-header">right column</h1>
-        <p> put right column content here</p>
-        <p> if you want to have one column, remove this element and remove the 'col' class from the other one.</p>
-   </div>
-</div>
--->
-<div class="tile tile-head"> <h1 class="card-header">gallery stuff</h1> <p>cards overview text here (what're they for, etc, etc); they'll probably have a lightbox on them so you can scroll through horizontally or vertically; might make them more card-y in the future</p>
-  <img src="<%= create_image_thumb '/images/test-images/5.jpg','x100' %>"/> <!-- height -->
-  <img src="<%= create_image_thumb '/images/test-images/5.jpg','150x' %>"/> <!-- width -->
-  <img src="<%= create_image_thumb '/images/test-images/2.jpg','50x50' %>"/> <!-- target both -->
-  <img src="<%= create_image_thumb '/images/test-images/<>.jpg','50x50' %>"/> <!-- target both -->
-
-  <img src="<%= create_square_thumb '/images/test-images/2.jpg','200' %>"/>
-
-  <%= partial 'about/test' %>
-  <%= parse_markdown '##test magic parser' %>
-
-</div>
-<div class="content-tiles">
-    <%  data.gallery.traditional.each do |image| %>
-      <div class="tile"> <%= lightbox_insert_tiles image  %> </div>
-    <% end %>
+    <div class="content-tiles">
+        <%  data.gallery.traditional.each do |image| %>
+          <div class="tile"> <%= lightbox_insert_tiles image  %> </div>
+        <% end %>
+    </div>
 </div>

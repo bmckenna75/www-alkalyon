@@ -9,15 +9,9 @@ $(document).ready(function() {
       $(".dropdown .arrow").toggleClass("rotate90");
     }
   });
-  if ($(window).width() > 700) {
-    $(".arrow").addClass("hidden");
-    $(".nav").addClass("flex");
-    $(".dropdown-content").removeClass("hidden");
-  } else {
-    $(".nav").addClass("hidden").removeClass("flex");
-    $(".dropdown-content").addClass("hidden");
-  }
+  checkW();
   $(window).scroll(function() { checkPos(); });
+  $(window).resize(function() { checkW(); });
   $('.scrollTop').click(function(){
     $('html, body').animate({scrollTop : 0},500);
     return false;
@@ -31,12 +25,7 @@ $(document).ready(function() {
       enabled: true,
       preload: [1,1]
     },
-    zoom: {
-      enabled: true, // By default it's false, so don't forget to enable it
-
-      duration: 300, // duration of the effect, in milliseconds
-      easing: 'ease-in-out', // CSS transition easing function
-  }
+    removalDelay: 250
   });
 });
 
@@ -73,15 +62,16 @@ function checkPos() {
   });
 }
 
-$(window).resize(function() {
-   if ($(window).width() > 700) {
+function checkW() {
+  if ($(window).width() > 700) {
     $(".arrow").addClass("hidden");
-    $(".nav").removeClass("hidden");
+    $(".nav").addClass("flex").removeClass("hidden");
     $(".dropdown-content").removeClass("hidden");
+    $(".body").addClass("wide").removeClass("mobile");
   } else {
     $(".nav").addClass("hidden").removeClass("flex");
-    $(".arrow").removeClass("hidden");
     $(".dropdown-content").addClass("hidden");
+    $(".body").addClass("mobile").removeClass("wide");
   }
-  checkPos();
-});
+ checkPos();
+}

@@ -1,5 +1,6 @@
 {
   "_comment": "resize_string should be [width]x[height]; either can be omitted, but not both (i.e. x100 or 100x)",
+  "_TODO": "have config.rb read in the gallery class and apply that class, then have the page call the magnific popup on that class for gallery stuff",
   "config": {
       "thumb_resize_string": "400x400",
       "square_resize_string": "400"
@@ -7,46 +8,58 @@
   "traditional": [
     {
       "url": "test-images/1.jpg",
-      "caption": "butt",
-      "title": "butts",
-      "set": "traditional"
+      "caption": "this is a hover caption",
+      "title": "look, an under-image caption!",
+      "gallery class": "magnific-popup"
     },
     {
       "url": "test-images/2.jpg",
-      "caption": "butt2",
-      "title": "butts2",
-      "set": "traditional"
+      "caption": "hoverrrrr",
+      "title": "murr hello",
+      "gallery class": "magnific-popup"
     },
     {
       "url": "test-images/3.jpg",
-      "caption": "butt2",
-      "title": "butts2",
-      "set": "traditional"
+      "caption": "?!",
+      "title": "!?",
+      "gallery class": "magnific-popup"
     },
     {
       "url": "test-images/4.jpg",
-      "caption": "butt2",
-      "title": "butts2",
-      "set": "traditional"
+      "caption": "ok",
+      "title": "why are you reading this",
+      "gallery class": "magnific-popup"
     },
     {
       "url": "test-images/5.jpg",
-      "caption": "butt2",
-      "title": "butts2",
-      "set": "traditional"
+      "caption": "lorum furry",
+      "title": "kess is cute <3",
+      "gallery class": "magnific-popup"
     }
   ],
   "digital": [
     {
-      "url": "test-images/3.jpg",
-      "caption": "butt2",
-      "title": "butts2",
+      "url": "test-images/fox.jpg",
+      "caption": "this is a fox",
+      "title": "how he do that face",
       "set": "traditional"
     },
     {
-      "url": "test-images/4.jpg",
-      "caption": "butt2",
-      "title": "butts2",
+      "url": "test-images/fox.jpg",
+      "caption": "helo",
+      "title": "me_irl",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/fox.jpg",
+      "caption": "weow",
+      "title": "weow",
+      "set": "traditional"
+    },
+    {
+      "url": "test-images/fox.jpg",
+      "caption": "final destination fox only no item",
+      "title": "comeonandslam",
       "set": "traditional"
     }
   ]

@@ -1,127 +1,132 @@
 @media screen and (max-width: 700px) {
+
+    // general tweaks first
+
     body {
         background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat;
+        &.index {
+          background: #220022;
+          background-size: auto 44vh;
+          background-position: bottom center;
+        }
     }
 
-    body.index {
-      background: #220022;
-      background-size: auto 44vh;
-      background-position: bottom center;
-    }
-
-    .card, .tile {
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-    }
-
-    .tile:not(.tile-head) {
-      background-color: #333;
-      padding: 10px 5px;
-      margin: 5px auto;
-    }
-
-    .tile-caption {
-      text-align: center;
-      color: #777;
-    }
-
-    .nav-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .nav-head {
-      position: fixed;
-      top: 20vh;
-      left: 0px;
-      background: rgb(0, 0, 0);
-      background: rgba(0, 0, 0, 0.7);
-      width: 40px;
-      height: 40px;
-      display: block;
-      text-decoration: none;
-      border-radius: 20px;
-      z-index: 999;
-    }
-
-    .nav-head i {
-      color: #fff;
-      margin: 0;
-      position: relative;
-      left: 11px;
-      top: 11px;
-      font-size: 19px;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-
-    .nav {
-        width: 10em;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 25vh;
-    }
-    .nav .item {
-        width: 100%;
-    }
-    .arrow {
-      font-size: 0.6em;
-      position: absolute;
-      top: 0.1em;
-    }
-
-
-    .nav .item {
-        width: 100%;
-        float: left;
-    }
-
-    .nav .item, .nav-head {
-        background-color: rgba(55, 55, 55, 0.92);
-    }
-
-    .item.current, .item.current>a, a.current{
-        background-color: rgba(185, 185, 185, 0.92);
-    }
-
-    .nav .item a, .nav-head a, .dropdown-head {
-        width: 100%;
-        min-height: 100%;
-        font-size: 1.5em;
-        text-align: center;
-        line-height: 1.5em;
-        text-decoration: none;
-        display: inline-block;
-        color: #ccc;
-    }
-    .nav .item .dropdown-content a {
-        color: #ccc;
-        /*font-size: 1.3em;*/
-        background-color: rgba(200, 150, 200, 0.75);
-        z-index: 1;
-    }
-    .nav .item .dropdown-content a.current {
-        background-color: rgba(185, 185, 185, 0.92);
-    }
+    // header stuff
     .header .header-pic {
         max-width: 100%;
         min-width: 100%;
     }
-    .nav {
-        border-top: 1px solid #777;
-    }
-    .nav .dropdown-content {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
+
+    // nav tweaks - floating .nav-head button with floating .nav body
+    // here be dragons
+
+    .nav-container {
+        margin-left: auto;
+        margin-right: auto;
+        .nav-head {
+            position: fixed;
+            top: 20vh;
+            left: 0px;
+            background-color: rgba(55, 55, 55, 0.92);
+            width: 40px;
+            height: 40px;
+            display: block;
+            text-decoration: none;
+            border-radius: 20px;
+            z-index: 999;
+            i {
+                color: #fff;
+                margin: 0;
+                position: relative;
+                left: 11px;
+                top: 11px;
+                font-size: 19px;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+        }
+        .nav {
+            width: 10em;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 25vh;
+            border-top: 1px solid #777;
+            .item {
+                width: 100%;
+                float: left;
+                background-color: rgba(55, 55, 55, 0.92);
+                &.current, &.current>a {
+                    background-color: rgba(185, 185, 185, 0.92);
+                }
+                .dropdown-content a {
+                    color: #ccc;
+                    /*font-size: 1.3em;*/
+                    background-color: rgba(200, 150, 200, 0.75);
+                    z-index: 1;
+                    &.current {
+                      background-color: rgba(185, 185, 185, 0.92);
+                    }
+                }
+            }
+            .dropdown-content {
+                display: flex;
                 flex-direction: column;
-        -webkit-flex-direction: column;
-        -webkit-align-items: center;
-        z-index: 1;
+                align-items: center;
+                z-index: 1;
+            }
+            a.current {
+                background-color: rgba(185, 185, 185, 0.92);
+            }
+            .arrow {
+                font-size: 0.6em;
+                position: absolute;
+                top: 0.1em;
+            }
+        }
+        .nav .item a, .nav-head a, .dropdown-head {
+            width: 100%;
+            min-height: 100%;
+            font-size: 1.5em;
+            text-align: center;
+            line-height: 1.5em;
+            text-decoration: none;
+            display: inline-block;
+            color: #ccc;
+        }
+    }
+
+    // content stuff, to ensure that they're nested properly for overriding
+
+    .content {
+        .cards, .tiles {
+          .card, .tile {
+              margin-left: auto;
+              margin-right: auto;
+              width: 80%;
+          }
+          // tile stuff - instead of hover captions, put em below
+          // tiles function the same as cards when on mobile
+          .tile {
+              .tile-caption {
+                  text-align: center;
+                  color: #777;
+                  visibility: visible;
+                  position: relative;
+                  opacity: 1;
+                  font-size: 1em;
+                  height: fit-content;
+                  background-color: transparent;
+              }
+              &:not(.tile-head) {
+                  background-color: #333;
+                  padding: 10px 5px;
+                  margin: 5px auto;
+              }
+              a {
+                  line-height: normal;
+              }
+          }
+        }
     }
 }

@@ -76,6 +76,7 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     text-align: center;
+    -webkit-transition: height 0.25s ease-in;
     transition: height 0.25s ease-in; }
 
   /* line 82, desktop.css.scss */
@@ -97,7 +98,8 @@
 
   /* line 99, desktop.css.scss */
   .nav .item a, .nav .item .dropdown, .nav .item .dropdown-content, .nav .item .dropdown-head {
-    transition: opacity 0.3s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in; }
+    -webkit-transition: opacity 0.3s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in, visibility 0.25s ease-out;
+    transition: opacity 0.3s linear, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in, visibility 0.25s ease-out; }
 
   /* line 104, desktop.css.scss */
   .nav.roll-up .item a, .nav.roll-up .item .dropdown-head {
@@ -238,43 +240,14 @@
     background-color: #55475e;
     color: #fff; }
 
-  /* end dropdown */
-  /* line 239, desktop.css.scss */
-  .tile {
-    position: relative; }
-
-  /* line 243, desktop.css.scss */
-  .tile .tile-caption {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.25s ease-out;
-    width: 100%;
-    height: 100%;
-    color: #777;
-    text-align: center;
-    background-color: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-
-  /* line 260, desktop.css.scss */
-  .tile .tile-caption .tile-caption-inner {
-    font-size: 2em; }
-
-  /* line 264, desktop.css.scss */
-  .tile:hover .tile-caption {
-    visibility: visible;
-    opacity: 0.75; } }
+  /* end dropdown */ }
 @media screen and (min-width: 701px) and (max-width: 739px) {
-  /* line 274, desktop.css.scss */
+  /* line 241, desktop.css.scss */
   .content-container .content-block.col {
     margin-left: auto;
     margin-right: auto; } }
 @media screen and (min-width: 740px) {
-  /* line 281, desktop.css.scss */
+  /* line 248, desktop.css.scss */
   .content-container {
     display: -webkit-box;
     display: -ms-flexbox;
