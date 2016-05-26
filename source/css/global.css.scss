@@ -222,6 +222,12 @@ body>.wrapper {
   line-height: 0em;
 }
 
+.content-tiles .tile img, .content-cards .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center {
     text-align: center;
 }

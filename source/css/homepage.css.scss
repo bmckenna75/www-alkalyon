@@ -12,7 +12,7 @@
 }
 
 .widget-container .widget-canvas {
-  width: 100%;
+  width: 100vw; 
   height: calc(100vh - 23.4375vw - 6.5vw);
   max-height: 450px;
   overflow: hidden;

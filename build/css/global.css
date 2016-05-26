@@ -616,20 +616,26 @@ body > .wrapper {
   line-height: 0em; }
 
 /* line 225, global.css.scss */
+.content-tiles .tile img, .content-cards .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 231, global.css.scss */
 .center {
   text-align: center; }
 
-/* line 229, global.css.scss */
+/* line 235, global.css.scss */
 .content-block img {
   max-width: 75%;
   /* height: auto; */
   max-height: 250px; }
 
-/* line 235, global.css.scss */
+/* line 241, global.css.scss */
 .clear {
   clear: both; }
 
-/* line 239, global.css.scss */
+/* line 245, global.css.scss */
 .footer-container {
   width: 100%;
   position: absolute;
@@ -642,7 +648,7 @@ body > .wrapper {
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em; }
 
-/* line 252, global.css.scss */
+/* line 258, global.css.scss */
 .footer-content {
   color: #888;
   width: 100%;
@@ -651,39 +657,39 @@ body > .wrapper {
   text-align: center;
   height: 1.75em; }
 
-/* line 261, global.css.scss */
+/* line 267, global.css.scss */
 a {
   color: #fff;
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear; }
 
-/* line 267, global.css.scss */
+/* line 273, global.css.scss */
 a:hover {
   color: #c3c; }
 
-/* line 271, global.css.scss */
+/* line 277, global.css.scss */
 .left {
   float: left;
   padding-left: 5px; }
 
-/* line 276, global.css.scss */
+/* line 282, global.css.scss */
 .right {
   float: right;
   padding-right: 5px; }
 
-/* line 281, global.css.scss */
+/* line 287, global.css.scss */
 .sig:not(:first-child)::after {
   content: " |"; }
 
-/* line 285, global.css.scss */
+/* line 291, global.css.scss */
 .nav {
   z-index: 999; }
 
-/* line 289, global.css.scss */
+/* line 295, global.css.scss */
 .hidden {
   display: none !important; }
 
-/* line 293, global.css.scss */
+/* line 299, global.css.scss */
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
