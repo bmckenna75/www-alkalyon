@@ -23,9 +23,7 @@ $inactive-bg: #2e2e2e;
         margin-right: auto;
         max-width: 40%;
     }
-    .after-content {
-        padding-bottom: 75px;
-    }
+
     body {
 /*        background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center; */
           background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat;
@@ -237,6 +235,39 @@ $inactive-bg: #2e2e2e;
         color: #fff;
     }
     /* end dropdown */
+
+    .tile {
+      position: relative;
+    }
+
+    .tile .tile-caption {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.25s ease-out;
+      width: 100%;
+      height: 100%;
+      color: #777;
+      text-align: center;
+      background-color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tile .tile-caption .tile-caption-inner {
+      font-size: 2em;
+    }
+
+    .tile:hover .tile-caption {
+      visibility: visible;
+      opacity: 0.75;
+    }
+
+
+
 }
 
 @media screen and (min-width: 701px) and (max-width: 739px) {

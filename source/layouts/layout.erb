@@ -30,7 +30,8 @@
 
     <%= javascript_include_tag :responsive %>
 
-    <%= stylesheet_link_tag :lightbox %>
+    <%= stylesheet_link_tag :'magnific-popup' %>
+    <%= javascript_include_tag :'jquery.magnific-popup' %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -42,6 +43,6 @@
         <%= partial 'layouts/footer' %>
     </div> <!-- wrapper -->
     <div class="scrollTop"><i class="fa fa-chevron-up"></i></div>
-    <%= javascript_include_tag :lightbox %>
+
   </body>
 </html>

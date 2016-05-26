@@ -1,7 +1,8 @@
 {
   "_comment": "resize_string should be [width]x[height]; either can be omitted, but not both (i.e. x100 or 100x)",
   "config": {
-      "resize_string": "400x"
+      "thumb_resize_string": "400x400",
+      "square_resize_string": "400"
   },
   "traditional": [
     {

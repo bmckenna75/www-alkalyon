@@ -29,7 +29,7 @@ page '/*.txt', layout: false
 configure :development do
   activate :livereload
   #activate :middleman_simple_thumbnailer
-  activate :dexterity
+  activate :dexterity, :pre_clear_cache => false
 end
 
 ###
@@ -46,9 +46,16 @@ helpers do
 
 
   def lightbox_insert(image)
-    answer = '<a href="' + config[:images_dir] + image["url"] + '" data-lightbox="' + image["set"] + '" data-title="' + image["title"] + '">'
-    answer +='<img src="' + create_image_thumb(image["url"], data.gallery.config.resize_string) + '"/>'
+    answer = '<a href="' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
+    answer +='<img src="' + create_image_thumb(image["url"], data.gallery.config.thumb_resize_string) + '" title="' + image["title"] + '"/>'
     answer += '</a><p>' + image["caption"] + '</p>'
+    return answer
+  end
+
+  def lightbox_insert_tiles(image)
+    answer = '<a href="' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
+    answer +='<img src="' + create_square_thumb(image["url"], data.gallery.config.square_resize_string) + '" title="' + image["title"] + '"/>'
+    answer += '</a><div class="tile-caption"><div class="tile-caption-inner">' + image["caption"] + '</div></div>'
     return answer
   end
 

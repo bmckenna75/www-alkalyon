@@ -522,13 +522,17 @@ body > .wrapper {
   margin-top: 50px; }
 
 /* line 132, global.css.scss */
+.after-content {
+  padding-bottom: 75px; }
+
+/* line 136, global.css.scss */
 .content-container {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content; }
 
-/* line 139, global.css.scss */
+/* line 143, global.css.scss */
 .content-block {
   width: 90%;
   margin-left: auto;
@@ -539,21 +543,23 @@ body > .wrapper {
   padding: 0.5em 1em;
   border-radius: 0.5em; }
 
-/* line 150, global.css.scss */
+/* line 154, global.css.scss */
 .content-header {
   text-align: center;
   margin-top: 0px; }
 
-/* line 155, global.css.scss */
-.content-cards {
+/* line 159, global.css.scss */
+.content-cards, .content-tiles {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  display: -webkit-flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
 
-/* line 164, global.css.scss */
+/* line 170, global.css.scss */
 .card {
   min-width: 300px;
   max-width: 50vw;
@@ -574,35 +580,56 @@ body > .wrapper {
   padding-right: 15px;
   padding-left: 15px; }
 
-/* line 185, global.css.scss */
-.card:last-child:nth-child(2n) {
+/* line 191, global.css.scss */
+.tile-head {
+  width: 80vw;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0px;
+  display: block;
+  background: #333;
+  border-radius: 0em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #777;
+  word-wrap: break-word;
+  padding: 0px 15px; }
+
+/* line 207, global.css.scss */
+.card:last-child:nth-child(2n + 1) {
   /* so that the last child, if it's on a row by itself, centers */
   margin-left: auto;
   margin-right: auto; }
 
-/* line 190, global.css.scss */
+/* line 212, global.css.scss */
 .card.head-card {
   width: 80vw;
   max-width: 100vw;
-  flex-grow: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  display: block; }
 
-/* line 198, global.css.scss */
+/* line 220, global.css.scss */
+.tile a {
+  display: block;
+  line-height: 0em; }
+
+/* line 225, global.css.scss */
 .center {
   text-align: center; }
 
-/* line 202, global.css.scss */
+/* line 229, global.css.scss */
 .content-block img {
   max-width: 75%;
   /* height: auto; */
   max-height: 250px; }
 
-/* line 208, global.css.scss */
+/* line 235, global.css.scss */
 .clear {
   clear: both; }
 
-/* line 212, global.css.scss */
+/* line 239, global.css.scss */
 .footer-container {
   width: 100%;
   position: absolute;
@@ -615,7 +642,7 @@ body > .wrapper {
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em; }
 
-/* line 225, global.css.scss */
+/* line 252, global.css.scss */
 .footer-content {
   color: #888;
   width: 100%;
@@ -624,39 +651,39 @@ body > .wrapper {
   text-align: center;
   height: 1.75em; }
 
-/* line 234, global.css.scss */
+/* line 261, global.css.scss */
 a {
   color: #fff;
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear; }
 
-/* line 240, global.css.scss */
+/* line 267, global.css.scss */
 a:hover {
   color: #c3c; }
 
-/* line 244, global.css.scss */
+/* line 271, global.css.scss */
 .left {
   float: left;
   padding-left: 5px; }
 
-/* line 249, global.css.scss */
+/* line 276, global.css.scss */
 .right {
   float: right;
   padding-right: 5px; }
 
-/* line 254, global.css.scss */
+/* line 281, global.css.scss */
 .sig:not(:first-child)::after {
   content: " |"; }
 
-/* line 258, global.css.scss */
+/* line 285, global.css.scss */
 .nav {
   z-index: 999; }
 
-/* line 262, global.css.scss */
+/* line 289, global.css.scss */
 .hidden {
   display: none !important; }
 
-/* line 266, global.css.scss */
+/* line 293, global.css.scss */
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
