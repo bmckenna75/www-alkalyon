@@ -39,6 +39,7 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
 
+  # I'd like to have this be more flexible and use the defined markdown thing but for some reason that breaks
   def parse_markdown(source_text)
     renderer = Redcarpet::Render::HTML.new
     extensions = {}
@@ -106,7 +107,7 @@ configure :build do
   activate :dexterity
 
   activate :autoprefixer
-
+  activate :imageoptim
   activate :favicon_maker do |f|
     f.template_dir  = 'source/images'
     f.icons = {
@@ -132,6 +133,6 @@ configure :build do
 
   # min on build - not enabling these for now while css and stuff has refactors (and eh, some people might get a kick out of it)
   activate :minify_javascript
-  #activate :minify_css
+  activate :minify_css
 
 end

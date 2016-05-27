@@ -98,6 +98,7 @@ body {
 
   .cards, .tiles, .cards .content-cards, .tiles .content-tiles {
     width: 100%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -109,6 +110,7 @@ body {
       display: block;
       margin-left: auto;
       margin-right: auto;
+      max-width: 100%;
     }
     .card {
       min-width: 300px;
@@ -162,6 +164,7 @@ body {
     // tiles
     .tile {
       position: relative;
+      max-width: 100%;
       .tile-caption {
         visibility: hidden;
         position: absolute;
