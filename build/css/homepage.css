@@ -24,136 +24,125 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+      -ms-flex-pack: center;
+          justify-content: center; }
 
-/* line 37, homepage.css.scss */
+/* line 28, homepage.css.scss */
 .widgets-before {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   /*flex-grow: 764.40; */ }
 
-/* line 43, homepage.css.scss */
+/* line 32, homepage.css.scss */
 .widgets-after {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   /*flex-grow: 759.42;*/ }
 
-/* line 50, homepage.css.scss */
+/* line 37, homepage.css.scss */
 .widget {
   display: block; }
-
-/* line 54, homepage.css.scss */
-.widget img {
-  filter: hue-rotate(0deg);
-  -webkit-filter: hue-rotate(0deg);
-  -webkit-transition: -webkit-filter 0.5s linear;
-  transition: filter 0.5s linear;
-  transition: filter 0.5s linear, -webkit-filter 0.5s linear;
-  transition: -webkit-filter 0.5s linear; }
-
-/* line 61, homepage.css.scss */
-.widget:hover img {
-  filter: hue-rotate(195deg);
-  -webkit-filter: hue-rotate(195deg); }
+  /* line 39, homepage.css.scss */
+  .widget img {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+    -webkit-transition: -webkit-filter 0.5s linear;
+    transition: -webkit-filter 0.5s linear;
+    transition: filter 0.5s linear;
+    transition: filter 0.5s linear, -webkit-filter 0.5s linear; }
+  /* line 43, homepage.css.scss */
+  .widget:hover {
+    -webkit-filter: hue-rotate(195deg);
+            filter: hue-rotate(195deg); }
 
 @media screen and (min-width: 701px) {
-  /* line 67, homepage.css.scss */
-  .nav .item {
-    background-size: 100% calc(6.5vw);
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: 20vw;
+  /* line 50, homepage.css.scss */
+  .index .nav-container {
     height: 6.5vw; }
+    /* line 53, homepage.css.scss */
+    .index .nav-container .nav .item {
+      background-size: 100% calc(6.5vw);
+      background-position: center top;
+      background-repeat: no-repeat;
+      width: 20vw;
+      height: 6.5vw; }
+      /* line 60, homepage.css.scss */
+      .index .nav-container .nav .item.has-dropdown .dropdown-content {
+        position: absolute;
+        top: 0px;
+        height: calc(6.5vw / 2);
+        line-height: calc(6.5vw / 2); }
+        /* line 65, homepage.css.scss */
+        .index .nav-container .nav .item.has-dropdown .dropdown-content a {
+          height: 100%;
+          line-height: calc(6.5vw / 2); }
 
-  /* line 75, homepage.css.scss */
-  .nav-container {
-    height: 6.5vw; }
-
-  /* line 79, homepage.css.scss */
-  .index .nav .item.has-dropdown .dropdown-content {
-    position: absolute;
-    top: 0px;
-    height: calc(6.5vw / 2);
-    line-height: calc(6.5vw / 2); }
-
-  /* line 86, homepage.css.scss */
-  .nav .item.has-dropdown .dropdown-content a {
-    height: 100%;
-    line-height: calc(6.5vw / 2); }
-
-  /* line 91, homepage.css.scss */
+  /* line 76, homepage.css.scss */
   .widget-tumblr {
     margin: auto 0vh auto 0vh; }
+    /* line 78, homepage.css.scss */
+    .widget-tumblr img {
+      height: 103px;
+      width: auto; }
 
-  /* line 94, homepage.css.scss */
-  .widget-tumblr img {
-    height: 103px;
-    width: auto; }
-
-  /* line 99, homepage.css.scss */
+  /* line 84, homepage.css.scss */
   .widget-twitter {
     margin: auto 57px auto 57px;
     -ms-flex-item-align: end;
-    align-self: flex-end; }
+        align-self: flex-end; }
+    /* line 87, homepage.css.scss */
+    .widget-twitter img {
+      height: 103px;
+      width: auto; }
 
-  /* line 104, homepage.css.scss */
-  .widget-twitter img {
-    height: 103px;
-    width: auto; }
-
-  /* line 109, homepage.css.scss */
+  /* line 93, homepage.css.scss */
   .widget-insta {
     margin: auto 0vh auto 0vh; }
-
-  /* line 112, homepage.css.scss */
-  .widget-insta img {
-    height: 106px;
-    width: auto; } }
+    /* line 95, homepage.css.scss */
+    .widget-insta img {
+      height: 106px;
+      width: auto; } }
 @media screen and (max-width: 700px) {
-  /* line 119, homepage.css.scss */
+  /* line 103, homepage.css.scss */
   .header {
     height: 23.4375vw; }
 
-  /* line 123, homepage.css.scss */
+  /* line 107, homepage.css.scss */
   .widget-container .widget-canvas {
     height: 45vh;
     background-size: auto 45vh; }
 
-  /* line 128, homepage.css.scss */
+  /* line 112, homepage.css.scss */
   .widget-tumblr {
     margin: auto 0vh auto 0vh; }
+    /* line 114, homepage.css.scss */
+    .widget-tumblr img {
+      height: 10.3vh;
+      width: auto; }
 
-  /* line 131, homepage.css.scss */
-  .widget-tumblr img {
-    height: 10.3vh;
-    width: auto; }
-
-  /* line 136, homepage.css.scss */
+  /* line 120, homepage.css.scss */
   .widget-twitter {
     margin: auto 5.7vh auto 5.7vh;
     -ms-flex-item-align: end;
-    align-self: flex-end; }
+        align-self: flex-end; }
+    /* line 123, homepage.css.scss */
+    .widget-twitter img {
+      height: 10.3vh;
+      width: auto; }
 
-  /* line 141, homepage.css.scss */
-  .widget-twitter img {
-    height: 10.3vh;
-    width: auto; }
-
-  /* line 146, homepage.css.scss */
+  /* line 129, homepage.css.scss */
   .widget-insta {
     margin: auto 0vh auto 0vh; }
-
-  /* line 149, homepage.css.scss */
-  .widget-insta img {
-    height: 10.6vh;
-    width: auto; } }
+    /* line 131, homepage.css.scss */
+    .widget-insta img {
+      height: 10.6vh;
+      width: auto; } }
