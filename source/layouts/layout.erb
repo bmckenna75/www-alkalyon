@@ -3,7 +3,7 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="keywords" content="artwork, art, cat, design">
     <meta name="description" content="<%= current_page.data.description || 'Certified Cat Artwork' %>">
@@ -35,8 +35,6 @@
     <%= stylesheet_link_tag :desktop , :media => "(min-width:701px)"%>
 
     <%= javascript_include_tag :responsive %>
-
-    <%= stylesheet_link_tag :'magnific-popup' %>
     <%= javascript_include_tag :'jquery.magnific-popup' %>
   </head>
 

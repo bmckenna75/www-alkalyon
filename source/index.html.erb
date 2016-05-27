@@ -8,7 +8,7 @@ layout: false
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="keywords" content="artwork, art, cat, design">
     <meta name="description" content="<%= current_page.data.description || 'Certified Cat Artwork' %>">
@@ -33,12 +33,11 @@ layout: false
     <title><%= current_page.data.title %></title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/872801506b.js"></script>
 
     <%= stylesheet_link_tag :global %>
-    <%= stylesheet_link_tag :mobile %>
-    <%= stylesheet_link_tag :desktop %>
-    <%= stylesheet_link_tag :homepage %>
+    <%= stylesheet_link_tag :mobile , :media => "(max-width:700px)" %>
+    <%= stylesheet_link_tag :desktop , :media => "(min-width:701px)"%>
+
     <%= javascript_include_tag :responsive %>
   </head>
 
