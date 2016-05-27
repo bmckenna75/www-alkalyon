@@ -4,6 +4,10 @@
 
   // general tweaks first
 
+  html, body {
+    max-width: 100%;
+  }
+
   body {
     background: $page_background;
     &.index {
@@ -109,29 +113,29 @@
       }
       .content-cards, .content-tiles {
         flex-direction: column;
+        flex-wrap: wrap;
+        .tile {
+          padding: 10px 5px;
+          margin: 5px auto;
+          background-color: $tile_m_bg_color;
+          .tile-caption {
+            text-align: center;
+            color: $tile_m_caption_color;
+            visibility: visible;
+            position: relative;
+            opacity: 1;
+            font-size: 1em;
+            height: fit-content;
+            background-color: transparent;
+          }
+          a {
+            line-height: normal;
+          }
+        }
       }
       // tile stuff - instead of hover captions, put em below
       // tiles function the same as cards when on mobile
-      .tile {
-        .tile-caption {
-          text-align: center;
-          color: $tile_m_caption_color;
-          visibility: visible;
-          position: relative;
-          opacity: 1;
-          font-size: 1em;
-          height: fit-content;
-          background-color: transparent;
-        }
-        &:not(.tile-head) {
-          background-color: $tile_m_bg_color;
-          padding: 10px 5px;
-          margin: 5px auto;
-        }
-        a {
-          line-height: normal;
-        }
-      }
+
     }
   }
 }
