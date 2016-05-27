@@ -40,8 +40,10 @@ end
 helpers do
 
   def parse_markdown(source_text)
-    #puts Tilt['markdown']
-    Tilt['markdown'].new { source_text }.render
+    renderer = Redcarpet::Render::HTML.new
+    extensions = {}
+    redcarpet = Redcarpet::Markdown.new(renderer, extensions)
+    redcarpet.render(source_text)
   end
 
 

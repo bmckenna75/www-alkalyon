@@ -10,7 +10,8 @@ logo_name: logo.jpg
         <img src="<%= create_image_thumb '/images/test-images/<>.jpg','50x50' %>"/> <!-- target both -->
         <img src="<%= create_square_thumb '/images/test-images/2.jpg','200' %>"/>
         <%= partial 'about/test' %>
-        <%= parse_markdown '##test magic parser' %>
+        <%= parse_markdown '##test magic inline markdown parser' %>
+        <%= parse_markdown "there's not really any content yet" %>
     </div>
     <div class="content-tiles">
         <%  data.gallery.traditional.each do |image| %>

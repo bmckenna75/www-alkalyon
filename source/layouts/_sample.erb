@@ -12,7 +12,11 @@
    </div>
 </div>
 <div class="cards">
-    <div class="card head-card"> <h1 class="card-header">gallery stuff</h1> <p>cards overview text here (what're they for, etc, etc); they'll probably have a lightbox on them so you can scroll through horizontally or vertically; might make them more card-y in the future</p></div>
+    <div class="card head-card">
+      <h1 class="card-header">gallery stuff</h1>
+      <p>cards overview text here (what're they for, etc, etc); they'll probably have a lightbox on them so you can scroll through horizontally or vertically; might make them more card-y in the future</p>
+      <%= parse_markdown '##there\'s not really any content to speak of yet, but the [about](/about/) page has some different stuff' %>
+    </div>
     <div class="content-cards">
         <% data.gallery.digital.each do |item| %>
         <div class="card"> <%= lightbox_insert_nothumb item %> </div>

@@ -15,11 +15,11 @@
     {
       "url": "test-images/2.jpg",
       "caption": "hoverrrrr",
-      "title": "murr hello",
+      "title": "helo",
       "gallery class": "magnific-popup"
     },
     {
-      "url": "test-images/3.jpg",
+      "url": "test-images/fox.jpg",
       "caption": "?!",
       "title": "!?",
       "gallery class": "magnific-popup"
@@ -32,8 +32,8 @@
     },
     {
       "url": "test-images/5.jpg",
-      "caption": "lorum furry",
-      "title": "kess is cute <3",
+      "caption": "lorum ipsum etc",
+      "title": "a b c d e f g h i j k l m n o p q r s t u v w x y z",
       "gallery class": "magnific-popup"
     }
   ],
