@@ -2,6 +2,11 @@
 //@import "normalize"; //not sure i really need that, we'll see
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+// if anyone ever wonders why I use _no_ IDs to select with, it's since the only real need for an ID is so an anchor takes you to it -
+// and then styling based on that introduces dependencies.
+// classes are also more modular, which is a major plus when doing templating work like this.
+
+
 // global.css, imported first
 
 // global element styling, may be overridden
@@ -12,10 +17,29 @@ img {
 
 a {
     color: #fff;
-    transition: color 0.5s linear;
+    transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+
     &:hover {
-      color: #c3c;
+        color: #c3c;
     }
+}
+
+
+
+@keyframes linkColorBreath {
+  to { color: #999; }
+}
+
+@-webkit-keyframes linkColorBreath {
+  to { color: #999; }
+}
+
+@keyframes linkColorHoverBreath {
+  from { color: #cfc; }
+}
+
+@-webkit-keyframes linkColorHoverBreath {
+  from { color: #cfc; }
 }
 
 html, body {
@@ -150,6 +174,9 @@ body {
                 margin-left: auto;
                 margin-right: auto;
                 display: block;
+                a {
+                  line-height: normal;
+                }
             }
         }
         .content-cards .card:last-child:nth-child(2n+1) {
@@ -207,6 +234,10 @@ body {
                 padding: 0px 15px;
                 img {
                     display: inline-block;
+                }
+                a {
+                  line-height: normal;
+                  display: inline-block;
                 }
             }
         }

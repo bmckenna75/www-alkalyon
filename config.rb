@@ -28,9 +28,8 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-  activate :autoprefixer
-  #activate :middleman_simple_thumbnailer
   activate :dexterity, :pre_clear_cache => false
+  activate :autoprefixer
 end
 
 ###
