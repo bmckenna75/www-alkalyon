@@ -2,6 +2,7 @@
 @import "theme";
 //@import "normalize"; //not sure i really need that, we'll see
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "font-awesome";
 
 // if anyone ever wonders why I use _no_ IDs to select with, it's since the only real need for an ID is so an anchor takes you to it -
 // and then styling based on that introduces dependencies.

@@ -16,6 +16,7 @@ gem 'middleman-favicon-maker', '>= 4.0'
 gem 'redcarpet'
 gem 'middleman-autoprefixer'
 gem 'middleman-imageoptim', :git => 'https://github.com/cleanenergyexperts/middleman-imageoptim.git'
+gem 'font-awesome-middleman'
 
 #gem 'middleman-dexterity', :git => 'https://github.com/Arcaena/middleman-dexterity.git'
 gem 'middleman-dexterity', :path => '/home/arcana/middleman-dexterity'

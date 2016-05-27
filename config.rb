@@ -4,6 +4,7 @@
 
 set :js_dir, 'js'
 set :css_dir, 'css'
+set :fonts_dir,  "fonts"
 
 set :markdown_engine, :redcarpet
 
@@ -30,6 +31,7 @@ configure :development do
   activate :livereload
   activate :dexterity, :pre_clear_cache => false
   activate :autoprefixer #kind wish I didn't need this, but I do :<
+  #activate :font_awesome
 end
 
 ###
