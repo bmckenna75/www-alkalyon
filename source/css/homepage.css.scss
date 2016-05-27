@@ -39,10 +39,11 @@
   img {
     filter: hue-rotate(0deg);
     transition: filter 0.5s linear;
+    &:hover {
+      filter: hue-rotate(195deg);
+    }
   }
-  &:hover {
-    filter: hue-rotate(195deg);
-  }
+
 }
 
 @media screen and (min-width: 701px) {
