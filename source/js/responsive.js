@@ -69,6 +69,7 @@ function checkW() {
     $(".dropdown-content").removeClass("hidden");
     $(".body").addClass("wide").removeClass("mobile");
   } else {
+    $(".arrow").removeClass("hidden");
     $(".nav").addClass("hidden").removeClass("flex");
     $(".dropdown-content").addClass("hidden");
     $(".body").addClass("mobile").removeClass("wide");

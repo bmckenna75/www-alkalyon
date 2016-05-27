@@ -29,7 +29,7 @@ page '/*.txt', layout: false
 configure :development do
   activate :livereload
   activate :dexterity, :pre_clear_cache => false
-  activate :autoprefixer
+  activate :autoprefixer #kind wish I didn't need this, but I do :<
 end
 
 ###
@@ -101,10 +101,10 @@ end
 
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
   activate :dexterity
+
   activate :autoprefixer
-  #activate :minify_css
+
   activate :favicon_maker do |f|
     f.template_dir  = 'source/images'
     f.icons = {
@@ -128,7 +128,8 @@ configure :build do
     }
   end
 
-  # Minify Javascript on build
-  #activate :minify_javascript
+  # min on build - not enabling these for now while css and stuff has refactors (and eh, some people might get a kick out of it)
+  activate :minify_javascript
+  #activate :minify_css
 
 end

@@ -1,21 +1,20 @@
 @media screen and (min-width: 701px) {
-  /* line 9, desktop.css.scss */
+  /* line 7, desktop.css.scss */
   body {
-    /*    background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center; */
-    background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat; }
+    background: #333333 url("http://i.imgur.com/wKgQEaW.png") repeat; }
 
-  /* line 16, desktop.css.scss */
+  /* line 13, desktop.css.scss */
   .wrapper {
     max-width: 95vw;
     margin: 0 auto; }
 
-  /* line 24, desktop.css.scss */
+  /* line 21, desktop.css.scss */
   .header .header-pic {
     width: 100%;
     /* max-width: 100%; */
     height: auto; }
 
-  /* line 33, desktop.css.scss */
+  /* line 30, desktop.css.scss */
   .sticky {
     position: fixed;
     top: 0;
@@ -39,15 +38,15 @@
               |--- dropdown-content
                 |--- ~a
   */
-  /* line 58, desktop.css.scss */
+  /* line 55, desktop.css.scss */
   .nav-container {
     background-color: transparent;
     min-height: 3em;
     height: 6.1848vw; }
-    /* line 62, desktop.css.scss */
+    /* line 59, desktop.css.scss */
     .nav-container .nav-head {
       display: none; }
-    /* line 65, desktop.css.scss */
+    /* line 62, desktop.css.scss */
     .nav-container .nav {
       list-style-type: none;
       margin: 0 auto 0 auto;
@@ -64,7 +63,7 @@
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-      /* line 73, desktop.css.scss */
+      /* line 70, desktop.css.scss */
       .nav-container .nav .item {
         background-repeat: no-repeat;
         background-color: #2e2e2e;
@@ -81,49 +80,54 @@
         text-align: center;
         -webkit-transition: height 0.25s ease-in;
         transition: height 0.25s ease-in; }
-        /* line 87, desktop.css.scss */
+        /* line 84, desktop.css.scss */
         .nav-container .nav .item:hover {
           opacity: 1; }
-          /* line 89, desktop.css.scss */
+          /* line 86, desktop.css.scss */
           .nav-container .nav .item:hover a {
             opacity: 1;
             background-color: #55475e;
-            color: #fff; }
-          /* line 94, desktop.css.scss */
+            color: #ffffff; }
+          /* line 91, desktop.css.scss */
           .nav-container .nav .item:hover:not(.current) {
             -webkit-filter: grayscale(0%);
                     filter: grayscale(0%); }
-          /* line 97, desktop.css.scss */
+          /* line 94, desktop.css.scss */
           .nav-container .nav .item:hover .dropdown-head {
             color: transparent; }
-          /* line 100, desktop.css.scss */
+          /* line 97, desktop.css.scss */
           .nav-container .nav .item:hover .dropdown-content {
             /*display: block; */
             opacity: 1;
             z-index: 1;
             display: inline-block; }
-            /* line 105, desktop.css.scss */
+            /* line 102, desktop.css.scss */
             .nav-container .nav .item:hover .dropdown-content a {
               background-color: #2e2e2e;
+              color: #bbbbbb;
               opacity: 1; }
-              /* line 108, desktop.css.scss */
+              /* line 106, desktop.css.scss */
+              .nav-container .nav .item:hover .dropdown-content a.current {
+                background-color: #2E2D3F; }
+              /* line 109, desktop.css.scss */
               .nav-container .nav .item:hover .dropdown-content a:hover {
+                color: #ffffff;
                 background-color: #55475e; }
-                /* line 110, desktop.css.scss */
+                /* line 112, desktop.css.scss */
                 .nav-container .nav .item:hover .dropdown-content a:hover.current {
                   background-color: #2E2D3F; }
-        /* line 117, desktop.css.scss */
+        /* line 119, desktop.css.scss */
         .nav-container .nav .item.current {
           -webkit-filter: grayscale(0%) saturate(130%);
                   filter: grayscale(0%) saturate(130%); }
-          /* line 120, desktop.css.scss */
+          /* line 122, desktop.css.scss */
           .nav-container .nav .item.current:hover a {
             background-color: #2E2D3F; }
-        /* line 125, desktop.css.scss */
+        /* line 127, desktop.css.scss */
         .nav-container .nav .item .dropdown, .nav-container .nav .item .dropdown-content, .nav-container .nav .item .dropdown-head, .nav-container .nav .item a {
           -webkit-transition: opacity 0.3s ease-out, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in, visibility 0.25s ease-out;
           transition: opacity 0.3s ease-out, color 0.45s ease-in, background 0.25s ease-out, height 0.25s ease-in, visibility 0.25s ease-out; }
-        /* line 132, desktop.css.scss */
+        /* line 134, desktop.css.scss */
         .nav-container .nav .item .dropdown-head, .nav-container .nav .item a {
           display: inline-block;
           width: 100%;
@@ -132,76 +136,83 @@
           color: transparent;
           opacity: 0;
           font-size: 1em; }
-        /* line 142, desktop.css.scss */
+        /* line 144, desktop.css.scss */
         .nav-container .nav .item:nth-child(1) {
           background-image: url("/images/nav/1.jpg"); }
-        /* line 145, desktop.css.scss */
+        /* line 147, desktop.css.scss */
         .nav-container .nav .item:nth-child(2) {
           background-image: url("/images/nav/2.jpg"); }
-        /* line 148, desktop.css.scss */
+        /* line 150, desktop.css.scss */
         .nav-container .nav .item:nth-child(3) {
           background-image: url("/images/nav/3.jpg"); }
-        /* line 151, desktop.css.scss */
+        /* line 153, desktop.css.scss */
         .nav-container .nav .item:nth-child(4) {
           background-image: url("/images/nav/4.jpg"); }
-        /* line 154, desktop.css.scss */
+        /* line 156, desktop.css.scss */
         .nav-container .nav .item:nth-child(5) {
           background-image: url("/images/nav/5.jpg"); }
-        /* line 157, desktop.css.scss */
+        /* line 159, desktop.css.scss */
         .nav-container .nav .item a {
           background-color: #2e2e2e; }
-      /* line 162, desktop.css.scss */
+      /* line 164, desktop.css.scss */
       .nav-container .nav.roll-up .item {
         height: 2.8vw;
         line-height: 2.8vw; }
-        /* line 165, desktop.css.scss */
+        /* line 167, desktop.css.scss */
         .nav-container .nav.roll-up .item .dropdown-head, .nav-container .nav.roll-up .item a {
-          color: #777;
+          color: #bbbbbb;
           opacity: 1;
           background-color: #2e2e2e; }
-        /* line 170, desktop.css.scss */
+        /* line 173, desktop.css.scss */
         .nav-container .nav.roll-up .item.current a {
           background-color: #2E2D3F; }
-        /* line 174, desktop.css.scss */
+        /* line 176, desktop.css.scss */
+        .nav-container .nav.roll-up .item.current:hover a {
+          background-color: #2E2D3F; }
+        /* line 181, desktop.css.scss */
         .nav-container .nav.roll-up .item.has-dropdown .dropdown-content {
           position: absolute;
           top: 0px;
           left: 0px;
           height: 2.8vw;
           line-height: 2.8vw; }
-          /* line 180, desktop.css.scss */
+          /* line 187, desktop.css.scss */
           .nav-container .nav.roll-up .item.has-dropdown .dropdown-content a {
             float: left;
             width: 50%; }
-        /* line 185, desktop.css.scss */
+        /* line 192, desktop.css.scss */
         .nav-container .nav.roll-up .item.has-dropdown:hover .dropdown-content a {
-          color: #fff;
+          color: #bbbbbb;
           background-color: #2e2e2e; }
-          /* line 189, desktop.css.scss */
+          /* line 196, desktop.css.scss */
           .nav-container .nav.roll-up .item.has-dropdown:hover .dropdown-content a:hover {
-            background-color: #55475e; }
-            /* line 191, desktop.css.scss */
+            background-color: #55475e;
+            color: #ffffff; }
+            /* line 199, desktop.css.scss */
             .nav-container .nav.roll-up .item.has-dropdown:hover .dropdown-content a:hover.current {
               background-color: #2E2D3F; }
-        /* line 197, desktop.css.scss */
+          /* line 203, desktop.css.scss */
+          .nav-container .nav.roll-up .item.has-dropdown:hover .dropdown-content a.current {
+            background-color: #2E2D3F; }
+        /* line 208, desktop.css.scss */
         .nav-container .nav.roll-up .item:hover a {
-          color: #fff;
+          color: #ffffff;
           opacity: 1;
           background-color: #55475e; }
-      /* line 205, desktop.css.scss */
+      /* line 216, desktop.css.scss */
       .nav-container .nav:not(.roll-up) .item.has-dropdown .dropdown-content {
         position: absolute;
         top: 0px;
         left: 0px;
         height: 3.0934vw;
         line-height: 3.0934vw; }
-      /* line 213, desktop.css.scss */
+      /* line 224, desktop.css.scss */
       .nav-container .nav .dropdown {
         position: relative;
         display: inline-block;
         width: 100%;
         height: 100%; }
-      /* line 219, desktop.css.scss */
+      /* line 230, desktop.css.scss */
       .nav-container .nav .dropdown-content {
         opacity: 0;
         position: relative;
@@ -211,15 +222,15 @@
         /* see http://stackoverflow.com/a/17353755 - fraction height on hover causes a weird jitter, after .roll-up has been removed once... */
         -webkit-transform: translateZ(0);
                 transform: translateZ(0); }
-        /* line 226, desktop.css.scss */
+        /* line 237, desktop.css.scss */
         .nav-container .nav .dropdown-content a {
           z-index: 100;
-          color: #fff; }
-          /* line 230, desktop.css.scss */
+          color: #bbbbbb; }
+          /* line 241, desktop.css.scss */
           .nav-container .nav .dropdown-content a.current {
             background-color: #2E2D3F; }
 
-  /* line 240, desktop.css.scss */
+  /* line 251, desktop.css.scss */
   .content-block.col {
     height: 100%;
     -webkit-box-flex: 1;
@@ -230,12 +241,12 @@
     min-width: 45%;
     max-width: 45%; } }
 @media screen and (min-width: 701px) and (max-width: 739px) {
-  /* line 251, desktop.css.scss */
+  /* line 262, desktop.css.scss */
   .content-container .content-block.col {
     margin-left: auto;
     margin-right: auto; } }
 @media screen and (min-width: 740px) {
-  /* line 258, desktop.css.scss */
+  /* line 269, desktop.css.scss */
   .content-container {
     display: -webkit-box;
     display: -ms-flexbox;

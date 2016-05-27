@@ -1,23 +1,23 @@
 @media screen and (max-width: 700px) {
-  /* line 5, mobile.css.scss */
+  /* line 7, mobile.css.scss */
   body {
-    background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat; }
-    /* line 7, mobile.css.scss */
+    background: #333333 url("http://i.imgur.com/wKgQEaW.png") repeat; }
+    /* line 9, mobile.css.scss */
     body.index {
       background: #220022;
       background-size: auto 44vh;
       background-position: bottom center; }
 
-  /* line 15, mobile.css.scss */
+  /* line 17, mobile.css.scss */
   .header .header-pic {
     max-width: 100%;
     min-width: 100%; }
 
-  /* line 23, mobile.css.scss */
+  /* line 25, mobile.css.scss */
   .nav-container {
     margin-left: auto;
     margin-right: auto; }
-    /* line 26, mobile.css.scss */
+    /* line 28, mobile.css.scss */
     .nav-container .nav-head {
       position: fixed;
       top: 20vh;
@@ -29,9 +29,9 @@
       text-decoration: none;
       border-radius: 20px;
       z-index: 999; }
-      /* line 37, mobile.css.scss */
+      /* line 39, mobile.css.scss */
       .nav-container .nav-head i {
-        color: #fff;
+        color: #bbbbbb;
         margin: 0;
         position: relative;
         left: 11px;
@@ -39,32 +39,31 @@
         font-size: 19px;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
-    /* line 48, mobile.css.scss */
+    /* line 50, mobile.css.scss */
     .nav-container .nav {
       width: 10em;
       height: 100%;
       position: fixed;
       left: 0;
-      top: 25vh;
-      border-top: 1px solid #777; }
-      /* line 55, mobile.css.scss */
+      top: 25vh; }
+      /* line 56, mobile.css.scss */
       .nav-container .nav .item {
         width: 100%;
         float: left;
         background-color: rgba(55, 55, 55, 0.92); }
-        /* line 59, mobile.css.scss */
+        /* line 60, mobile.css.scss */
         .nav-container .nav .item.current, .nav-container .nav .item.current > a {
-          background-color: rgba(185, 185, 185, 0.92); }
-        /* line 62, mobile.css.scss */
+          background-color: #2E2D3F; }
+        /* line 63, mobile.css.scss */
         .nav-container .nav .item .dropdown-content a {
-          color: #ccc;
+          color: #bbbbbb;
           /*font-size: 1.3em;*/
-          background-color: rgba(200, 150, 200, 0.75);
+          background-color: #55475e;
           z-index: 1; }
-          /* line 67, mobile.css.scss */
+          /* line 68, mobile.css.scss */
           .nav-container .nav .item .dropdown-content a.current {
-            background-color: rgba(185, 185, 185, 0.92); }
-      /* line 72, mobile.css.scss */
+            background-color: #2E2D3F; }
+      /* line 73, mobile.css.scss */
       .nav-container .nav .dropdown-content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -77,15 +76,15 @@
             -ms-flex-align: center;
                 align-items: center;
         z-index: 1; }
-      /* line 78, mobile.css.scss */
+      /* line 79, mobile.css.scss */
       .nav-container .nav a.current {
-        background-color: rgba(185, 185, 185, 0.92); }
-      /* line 81, mobile.css.scss */
+        background-color: #2E2D3F; }
+      /* line 82, mobile.css.scss */
       .nav-container .nav .arrow {
         font-size: 0.6em;
         position: absolute;
         top: 0.1em; }
-    /* line 87, mobile.css.scss */
+    /* line 88, mobile.css.scss */
     .nav-container .nav .item a, .nav-container .nav-head a, .nav-container .dropdown-head {
       width: 100%;
       min-height: 100%;
@@ -94,17 +93,17 @@
       line-height: 1.5em;
       text-decoration: none;
       display: inline-block;
-      color: #ccc; }
+      color: #bbbbbb; }
 
-  /* line 103, mobile.css.scss */
+  /* line 104, mobile.css.scss */
   .content .cards .card, .content .cards .tile, .content .tiles .card, .content .tiles .tile {
     margin-left: auto;
     margin-right: auto;
     width: 80%; }
-  /* line 111, mobile.css.scss */
+  /* line 112, mobile.css.scss */
   .content .cards .tile .tile-caption, .content .tiles .tile .tile-caption {
     text-align: center;
-    color: #777;
+    color: #777777;
     visibility: visible;
     position: relative;
     opacity: 1;
@@ -113,11 +112,11 @@
     height: -moz-fit-content;
     height: fit-content;
     background-color: transparent; }
-  /* line 121, mobile.css.scss */
+  /* line 122, mobile.css.scss */
   .content .cards .tile:not(.tile-head), .content .tiles .tile:not(.tile-head) {
-    background-color: #333;
+    background-color: #333333;
     padding: 10px 5px;
     margin: 5px auto; }
-  /* line 126, mobile.css.scss */
+  /* line 127, mobile.css.scss */
   .content .cards .tile a, .content .tiles .tile a {
     line-height: normal; } }

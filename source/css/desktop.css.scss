@@ -1,14 +1,11 @@
-$current-bg: #2E2D3F;
-$hover-bg: #55475e;
-$inactive-bg: #2e2e2e;
+@import "theme";
 
 @media screen and (min-width: 701px) {
 
   // general hacks
 
   body {
-/*    background: rgba(0,0,0,0) url("/images/bg.png") no-repeat fixed center; */
-      background: #222 url("http://i.imgur.com/wKgQEaW.png") repeat;
+      background: $page_background;
   }
 
   // encapsulating stuff
@@ -56,7 +53,7 @@ $inactive-bg: #2e2e2e;
   */
 
   .nav-container {
-    background-color: rgba(0,0,0,0.0);
+    background-color: $nav_cont_bg;
     min-height: 3em;
     height: 6.1848vw; // i forget how i came up with this lol
     .nav-head {
@@ -72,7 +69,7 @@ $inactive-bg: #2e2e2e;
       justify-content: center;
       .item {
         background-repeat: no-repeat;
-        background-color: $inactive-bg;
+        background-color: $nav_item_inactive;
         background-size: 100% 6.1848vw;
         display: inline-block;
         width: 19vw;
@@ -88,8 +85,8 @@ $inactive-bg: #2e2e2e;
             opacity: 1;
             a {
               opacity: 1;
-              background-color: $hover-bg;
-              color: #fff;
+              background-color: $nav_item_hover;
+              color: $nav_item_hover_text;
             }
           &:not(.current) {
             filter: grayscale(0%);
@@ -103,12 +100,17 @@ $inactive-bg: #2e2e2e;
             z-index: 1;
             display: inline-block;
             a {
-              background-color: $inactive-bg;
+              background-color: $nav_drop_inactive;
+              color: $nav_drop_text;
               opacity: 1;
+              &.current {
+                background-color: $nav_drop_current;
+              }
               &:hover {
-                background-color: $hover-bg;
+                color: $nav_drop_hover_text;
+                background-color: $nav_drop_hover;
                 &.current {
-                  background-color: $current-bg;
+                  background-color: $nav_drop_current;
                 }
               }
             }
@@ -118,7 +120,7 @@ $inactive-bg: #2e2e2e;
           filter: grayscale(0%) saturate(130%);
           &:hover {
             a {
-                background-color: $current-bg;
+                background-color: $nav_item_current;
               }
           }
         }
@@ -155,7 +157,7 @@ $inactive-bg: #2e2e2e;
           background-image: url("/images/nav/5.jpg");
         }
         a {
-          background-color: $inactive-bg;
+          background-color: $nav_item_inactive;
         }
       }
       &.roll-up {
@@ -163,12 +165,17 @@ $inactive-bg: #2e2e2e;
           height: 2.8vw;
           line-height: 2.8vw;
           .dropdown-head, a {
-            color: #777;
+            color: $nav_roll_drop_text;
             opacity: 1;
-            background-color: $inactive-bg;
+            background-color: $nav_roll_drop_inactive;
           }
-          &.current a {
-            background-color: $current-bg;
+          &.current {
+            a {
+              background-color: $nav_roll_current;
+            }
+            &:hover a {
+              background-color: $nav_roll_current;
+            }
           }
           &.has-dropdown {
             .dropdown-content {
@@ -184,20 +191,24 @@ $inactive-bg: #2e2e2e;
             }
             &:hover .dropdown-content a { //.dropdown-content is unneccessary, but is clearer wtf I'm selecting
               // hovering the "dropdown" (if I can even call it that still), selecting both (now-visible) links
-              color: #fff;
-              background-color: $inactive-bg;
+              color: $nav_roll_drop_text;
+              background-color: $nav_roll_drop_inactive;
               &:hover {
-                background-color: $hover-bg;
+                background-color: $nav_roll_drop_hover;
+                color: $nav_roll_drop_hover_text;
                 &.current {
-                  background-color: $current-bg;
+                  background-color: $nav_roll_drop_current;
                 }
+              }
+              &.current {
+                background-color: $nav_roll_drop_current;
               }
             }
           }
           &:hover a {
-            color: #fff;
+            color: $nav_roll_item_hover_text;
             opacity: 1;
-            background-color: $hover-bg;
+            background-color: $nav_roll_item_hover_bg;
           }
         }
       }
@@ -225,10 +236,10 @@ $inactive-bg: #2e2e2e;
           transform: translateZ(0);
         a {
             z-index: 100;
-            color: #fff;
+            color: $nav_drop_text;
             //transition: opacity ease-out 0.25s; ?!
           &.current {
-            background-color: $current-bg;
+            background-color: $nav_drop_current;
           }
         }
       }

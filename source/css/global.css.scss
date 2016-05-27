@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "theme";
 //@import "normalize"; //not sure i really need that, we'll see
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -16,30 +17,12 @@ img {
 }
 
 a {
-    color: #fff;
-    transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  color: $global_link_color;
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
 
-    &:hover {
-        color: #c3c;
-    }
-}
-
-
-
-@keyframes linkColorBreath {
-  to { color: #999; }
-}
-
-@-webkit-keyframes linkColorBreath {
-  to { color: #999; }
-}
-
-@keyframes linkColorHoverBreath {
-  from { color: #cfc; }
-}
-
-@-webkit-keyframes linkColorHoverBreath {
-  from { color: #cfc; }
+  &:hover {
+    color: $global_link_hover;
+  }
 }
 
 html, body {
@@ -64,20 +47,12 @@ body {
 // header (pic)
 
 .header {
-    width: 100%;
-    .header-pic {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .title {
-      background-color: rgba(255, 255, 255, 0.82);
-    }
-    .title, .title a {
-      text-align: center;
-      text-decoration: none;
-      color: #111;
-    }
+  width: 100%;
+  .header-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // nav thing - needs to be on top
@@ -89,285 +64,284 @@ body {
 // content styles
 
 .content {
-    margin-top: 50px;
-    color: #bbb;
-    .content-container {
-        // only contains content blocks, which are meant to just have text.
-        //    Has mostly been replaced by content-cards
-        width: 100%;
-        height: fit-content;
-        .content-block {
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 1em;
-            background-color: rgba(100, 100, 100, 0.75);
-            padding: 0.5em 1em;
-            border-radius: 0.5em;
-            .content-header {
-                text-align: center;
-                margin-top: 0px;
-            }
-            img {
-                max-width: 75%;
-                /* height: auto; */
-                max-height: 250px;
-            }
-        }
+  margin-top: 50px;
+  color: $content_default_col;
+  .content-container {
+    // only contains content blocks, which are meant to just have text.
+    //  Has mostly been replaced by content-cards
+    width: 100%;
+    height: fit-content;
+    .content-block {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
+      background-color: $content_block_bg;
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+      .content-header {
+        text-align: center;
+        margin-top: 0px;
+      }
+      img {
+        max-width: 75%;
+        /* height: auto; */
+        max-height: 250px;
+      }
     }
+  }
 
-    // cards and tiles
-    //    cards have gaps between them and are generally larger;
-    //    tiles... tile up against eachother with no gaps.
+  // cards and tiles
+  //  cards have gaps between them and are generally larger;
+  //  tiles... tile up against eachother with no gaps.
 
 
-    .cards, .tiles, .cards .content-cards, .tiles .content-tiles {
-        width: 100%;
+  .cards, .tiles, .cards .content-cards, .tiles .content-tiles {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card img, .tile img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card {
+      min-width: 300px;
+      max-width: 50vw;
+      width: 35vw;
+      flex-grow: 1;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 10px 0px;
+      display: inline-block;
+      background: $card_bg_color;
+      border-radius: 0.4em;
+      margin-bottom: 10px;
+      text-align: center;
+      color: $card_text_color;
+      visibility: hidden;
+      opacity: 0;
+      word-wrap: break-word;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      &.visible {
+        animation-name: fade-in;
+        -webkit-animation-name: fade-in;
+
+        animation-duration: 600ms;
+        -webkit-animation-duration: 600ms;
+
+        animation-timing-function: ease-out;
+        -webkit-animation-timing-function: ease-out;
+
+        visibility: visible;
+        opacity: 1;
+      }
+      &.head-card {
+        width: 80vw;
+        max-width: 90vw;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .card img, .tile img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        display: block;
+        a {
+          line-height: normal;
         }
-        .card {
-            min-width: 300px;
-            max-width: 50vw;
-            width: 35vw;
-            flex-grow: 1;
-            margin-left: 15px;
-            margin-right: 15px;
-            padding: 10px 0px;
-            display: inline-block;
-            background: #444;
-            border-radius: 0.4em;
-            margin-bottom: 10px;
-            text-align: center;
-            color: #bbb;
-            visibility: hidden;
-            opacity: 0;
-            word-wrap: break-word;
-            padding-right: 15px;
-            padding-left: 15px;
-
-            &.visible {
-                animation-name: fade-in;
-                -webkit-animation-name: fade-in;
-
-                animation-duration: 600ms;
-                -webkit-animation-duration: 600ms;
-
-                animation-timing-function: ease-out;
-                -webkit-animation-timing-function: ease-out;
-
-                visibility: visible;
-                opacity: 1;
-            }
-            &.head-card {
-                width: 80vw;
-                max-width: 100vw;
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                a {
-                  line-height: normal;
-                }
-            }
-        }
-        .content-cards .card:last-child:nth-child(2n+1) {
-        //so that the last child, if it's on a row by itself, centers (first element )
-            margin-left: auto;
-            margin-right: auto;
-        }
-        // tiles
-        .tile {
-            position: relative;
-            .tile-caption {
-                visibility: hidden;
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
-                width: 100%;
-                height: 100%;
-                color: #777;
-                text-align: center;
-                background-color: #111;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                .tile-caption-inner {
-                    font-size: 2em;
-                }
-            }
-            &:hover .tile-caption {
-              visibility: visible;
-              opacity: 0.75;
-            }
-            a {
-              display: block;
-              line-height: 0em;
-              text-decoration: none;
-              &:focus {
-                outline-color: transparent;
-              }
-            }
-            &.tile-head {
-                width: 80vw;
-                max-width: 100vw;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 10px 0px;
-                display: block;
-                background: #333;
-                border-radius: 0em;
-                margin-bottom: 10px;
-                text-align: center;
-                color: #bbb;
-                word-wrap: break-word;
-                padding: 0px 15px;
-                img {
-                    display: inline-block;
-                }
-                a {
-                  line-height: normal;
-                  display: inline-block;
-                }
-            }
-        }
+      }
     }
+    .content-cards .card:last-child:nth-child(2n+1) {
+    //so that the last child, if it's on a row by itself, centers (first element )
+      margin-left: auto;
+      margin-right: auto;
+    }
+    // tiles
+    .tile {
+      position: relative;
+      .tile-caption {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+        width: 100%;
+        height: 100%;
+        color: $tile_caption_color;
+        text-align: center;
+        background-color: $tile_hov_caption_bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tile-caption-inner {
+          font-size: 2em;
+        }
+      }
+      &:hover .tile-caption {
+        visibility: visible;
+        opacity: 0.75;
+      }
+      a {
+        display: block;
+        line-height: 0em;
+        text-decoration: none;
+        &:focus {
+        outline-color: transparent;
+        }
+      }
+      &.tile-head {
+        width: 80vw;
+        max-width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 0px;
+        display: block;
+        background: $tile_head_bg;
+        border-radius: 0em;
+        margin-bottom: 10px;
+        text-align: center;
+        color: $tile_head_text;
+        word-wrap: break-word;
+        padding: 0px 15px;
+        img {
+          display: inline-block;
+        }
+        a {
+          line-height: normal;
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
 
 // can't pad/margin the footer and padding the content / content containers can be unreliable since flexbox,
 //  so it's easiest to just add an after-content div with the padding we need to seperate the footer and content
 
 .after-content {
-    padding-bottom: 75px;
+  padding-bottom: 75px;
 }
 
 // footer css
 .footer {
-    .footer-container {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(50, 50, 50, 0.85);
-        height: fit-content;
-        border-top-right-radius: 0.5em;
-        border-top-left-radius: 0.5em;
-    }
+  .footer-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $footer_bg;
+    height: fit-content;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+  }
 
-    .footer-content {
-        color: #888;
-        width: 100%;
-        line-height: 1.75em;
-        vertical-align: middle;
-        text-align: center;
-        height: 1.75em;
-    }
+  .footer-content {
+    color: $footer_color;
+    width: 100%;
+    line-height: 1.75em;
+    vertical-align: middle;
+    text-align: center;
+    height: 1.75em;
+  }
 
-    // separators between floats
+  // separators between floats
 
-    .sig.right:not(:first-child)::after {
-        content: " |";
-    }
-    .sig.left:not(:last-child)::after {
-        content: " |";
-    }
+  .sig.right:not(:first-child)::after {
+    content: " |";
+  }
+  .sig.left:not(:last-child)::after {
+    content: " |";
+  }
 }
 
 
 // scroll to top stuff
 
 .scrollTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-decoration: none;
-    border-radius: 35px;
-    display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: $scrolltop_bg;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  border-radius: 35px;
+  display: none;
 
+  i {
+    color: $scrolltop_icon_col;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    background: $scrolltop_bg_hover;
     i {
-        color: #fff;
-        margin: 0;
-        position: relative;
-        left: 16px;
-        top: 13px;
-        font-size: 19px;
-        transition: all 0.3s ease;
+      color: $scrolltop_icon_hov;
+      top: 5px;
     }
-    &:hover {
-        background: rgba(0, 0, 0, 0.9);
-        i {
-            color: #fff;
-            top: 5px;
-        }
-    }
+  }
 }
 
 
 // general css classes
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .left {
-    float: left;
-    padding-left: 5px;
+  float: left;
+  padding-left: 5px;
 }
 
 .right {
-      float: right;
-      padding-right: 5px;
+    float: right;
+    padding-right: 5px;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .flex {
-    display: flex;
-    max-width: 100%;
+  display: flex;
+  max-width: 100%;
 }
 
 // transforms
 
 .rotate90 {
-    transform: rotate(90deg);
-    display: inline-block;
+  transform: rotate(90deg);
+  display: inline-block;
 }
 
 @keyframes fade-in {
 from {
-    opacity: 0;
+  opacity: 0;
   }
   to {
-    opacity: 1;
+  opacity: 1;
   }
 }
 
 @-webkit-keyframes fade-in {
   from {
-    opacity: 0;
+  opacity: 0;
   }
   to {
-    opacity: 1;
+  opacity: 1;
   }
 }

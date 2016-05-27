@@ -1,0 +1,97 @@
+////////////////////////
+//   Theme Settings   //
+////////////////////////
+
+//todo: flesh out the remaining colors (i.e. make them more consistent) and add them back into the main css
+
+// defining some colors for reuse
+$clear                       : rgba(000, 000, 000, 0.00);
+$transparent_black           : rgba(000, 000, 000, 0.70);
+$semitransparent_black       : rgba(000, 000, 000, 0.90);
+$transparent_dark_gray       : rgba(050, 050, 050, 0.85);
+$semitransparent_dark_gray   : rgba(055, 055, 055, 0.92);
+$transparent_mid_gray        : rgba(100, 100, 100, 0.75);
+$semitransparent_lite_gray   : rgba(185, 185, 185, 0.92);
+$transparent_lite_purple     : rgba(200, 150, 200, 0.75);
+
+$actually_black              : #000000; // I feel dirty when I use css_spec defined colors
+$basically_black             : #111111;
+$soft_blue                   : #2E2D3F;
+$soft_purple                 : #55475e;
+$darker_gray                 : #2e2e2e; // needs to be drop only so it has contrast
+$light_white                 : #bbbbbb;
+$light_gray                  : #777777;
+$dark_gray                   : #333333;
+$white                       : #ffffff; // don't judge
+$lime                        : #33cc33;
+$fuchsia                     : #cc33cc;
+
+// the colors used in the navbar
+
+$current_bg:                   $soft_blue;
+$hover_bg:                     $soft_purple;
+$inactive_bg:                  $darker_gray;
+
+// global_ish stuff
+$page_background:              $dark_gray url("http://i.imgur.com/wKgQEaW.png") repeat;
+$global_link_color:            $white;
+$global_link_hover:            $fuchsia;
+
+//nav stuff
+//mobile
+$nav_m_bg_color:               $semitransparent_dark_gray;
+$nav_m_item_color:             $semitransparent_dark_gray;
+$nav_m_cur_color:              $soft_blue;
+$nav_m_drop_color:             $soft_purple;
+$nav_m_drop_cur_color:         $soft_blue;
+$nav_m_text_color:             $light_white;
+//desktop
+$nav_cont_bg:                  $clear;
+
+$nav_item_inactive:            $inactive_bg;
+$nav_item_hover:               $hover_bg;
+$nav_item_current:             $current_bg;
+$nav_item_text:                $clear;
+$nav_item_hover_text:          $white;
+
+$nav_drop_text:                $light_white;
+$nav_drop_inactive:            $inactive_bg;
+$nav_drop_current:             $current_bg;
+$nav_drop_hover:               $hover_bg;
+$nav_drop_hover_text:          $white;
+
+$nav_roll_drop_text:           $light_gray;
+$nav_roll_drop_inactive:       $inactive_bg;
+$nav_roll_current:             $current_bg;
+$nav_roll_drop_text:           $light_white;
+$nav_roll_drop_hover:          $hover_bg;
+$nav_roll_drop_hover_text:     $white;
+$nav_roll_drop_current:        $current_bg;
+$nav_roll_item_hover_text:     $white;
+$nav_roll_item_hover_bg:       $hover_bg;
+
+// content stuff
+$content_default_col:          $light_white;
+$content_block_bg:             $transparent_mid_gray;
+
+// card stuff
+$card_bg_color:                $dark_gray;
+$card_text_color:              $light_white;
+
+// tile stuff
+$tile_m_caption_color:         $light_gray;
+$tile_m_bg_color:              $dark_gray;
+$tile_caption_color:           $light_gray;
+$tile_hov_caption_bg:          $basically_black;
+$tile_head_text:               $light_white;
+$tile_head_bg:                 $dark_gray;
+
+// footer stuff
+$footer_bg:                    $transparent_dark_gray;
+$footer_color:                 $light_gray;
+
+// scrolltop stuff
+$scrolltop_bg:                 $transparent_black;
+$scrolltop_bg_hover:           $semitransparent_black;
+$scrolltop_icon_col:           $white;
+$scrolltop_icon_hov:           $fuchsia;
