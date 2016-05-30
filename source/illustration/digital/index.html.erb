@@ -1,6 +1,13 @@
 ---
 title: Certified Cat Artwork
 logo_name: logo.jpg
+description: Digital Illustrations
 ---
 
-<%= partial '/layouts/sample' %>
+<div class="tiles">
+    <div class="content-tiles">
+        <%  data.gallery.digital.each do |image| %>
+          <div class="tile"> <%= lightbox_insert_tiles image  %> </div>
+        <% end %>
+    </div>
+</div>

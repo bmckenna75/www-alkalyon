@@ -1,30 +1,38 @@
 ---
-build/images/preview.png: 2016-05-27 20:25:38.140584248 -04:00
-build/images/widgets/instawidget.png: 2016-05-27 17:52:23.147220874 -04:00
-build/images/widgets/widget-container.jpg: 2016-05-27 17:52:22.313887538 -04:00
-build/images/widgets/tumblrwidget.png: 2016-05-27 17:52:23.233887541 -04:00
-build/images/widgets/twitterwidget.png: 2016-05-27 17:52:23.063887540 -04:00
-build/images/nav/4.jpg: 2016-05-27 17:52:22.213887538 -04:00
-build/images/nav/3.jpg: 2016-05-27 17:52:22.213887538 -04:00
-build/images/nav/5.jpg: 2016-05-27 17:52:22.220554204 -04:00
-build/images/nav/1.jpg: 2016-05-27 17:52:22.213887538 -04:00
-build/images/nav/2.jpg: 2016-05-27 17:52:22.253887537 -04:00
-build/images/test-images/<>.jpg: 2016-05-27 17:52:22.420554205 -04:00
-build/images/test-images/4.jpg: 2016-05-27 17:52:22.697220872 -04:00
-build/images/test-images/4_square_400x400.jpg: 2016-05-27 20:25:37.167250911 -04:00
-build/images/test-images/1_square_400x400.jpg: 2016-05-27 20:25:37.200584245 -04:00
-build/images/test-images/3.jpg: 2016-05-27 17:52:22.430554204 -04:00
-build/images/test-images/5_x100.jpg: 2016-05-27 20:25:37.220584245 -04:00
-build/images/test-images/5.jpg: 2016-05-27 17:52:22.453887538 -04:00
-build/images/test-images/2_50x50.jpg: 2016-05-27 20:25:37.330584245 -04:00
-build/images/test-images/1.jpg: 2016-05-27 17:52:22.583887538 -04:00
-build/images/test-images/5_square_400x400.jpg: 2016-05-27 20:25:37.367250912 -04:00
-build/images/test-images/fox.jpg: 2016-05-27 17:52:22.520554205 -04:00
-build/images/test-images/2.jpg: 2016-05-27 17:52:23.110554207 -04:00
-build/images/test-images/fox_square_400x400.jpg: 2016-05-27 20:25:37.477250913 -04:00
-build/images/test-images/5_150x.jpg: 2016-05-27 20:25:37.497250912 -04:00
-build/images/test-images/2_square_400x400.jpg: 2016-05-27 20:25:37.550584246 -04:00
-build/images/test-images/<>_50x50.jpg: 2016-05-27 20:25:37.557250913 -04:00
-build/images/test-images/2_square_200x200.jpg: 2016-05-27 20:25:37.590584246 -04:00
-build/images/bg.jpg: 2016-05-27 17:52:23.177220874 -04:00
-build/images/logo.jpg: 2016-05-27 17:52:22.717220872 -04:00
+build/images/digital/zefaapostpost.jpg: 2016-05-29 23:03:57.624528054 -05:00
+build/images/digital/endlessforest_square_400x400.jpg: 2016-05-29 23:03:57.314520824
+  -05:00
+build/images/digital/catcurve.jpg: 2016-05-29 23:03:57.547859599 -05:00
+build/images/digital/catcurve_square_400x400.jpg: 2016-05-29 23:03:57.304520591 -05:00
+build/images/digital/endlessforest.jpg: 2016-05-29 23:03:57.677862630 -05:00
+build/images/digital/zefaapostpost_square_400x400.jpg: 2016-05-29 23:03:57.334521291
+  -05:00
+build/images/preview.png: 2016-05-29 23:03:58.561216567 -05:00
+build/images/widgets/instawidget.png: 2016-05-29 23:03:59.144563509 -05:00
+build/images/widgets/widget-container.jpg: 2016-05-29 23:03:57.437857034 -05:00
+build/images/widgets/tumblrwidget.png: 2016-05-29 23:03:59.041227764 -05:00
+build/images/widgets/twitterwidget.png: 2016-05-29 23:03:59.011227064 -05:00
+build/images/nav/4.jpg: 2016-05-29 23:03:57.484524789 -05:00
+build/images/nav/3.jpg: 2016-05-29 23:03:57.537859365 -05:00
+build/images/nav/5.jpg: 2016-05-29 23:03:57.571193476 -05:00
+build/images/nav/1.jpg: 2016-05-29 23:03:57.584527121 -05:00
+build/images/nav/2.jpg: 2016-05-29 23:03:57.617861231 -05:00
+build/images/traditional/Starmaker-August-5-2012.jpg: 2016-05-29 23:03:57.624528054
+  -05:00
+build/images/traditional/forestAug-10-2012.jpg: 2016-05-29 23:03:58.061204903 -05:00
+build/images/traditional/1-15-2013 greatmushroomforest_square_400x400.jpg: 2016-05-29
+  23:03:54.591124021 -05:00
+build/images/traditional/Starmaker-August-5-2012_square_400x400.jpg: 2016-05-29 23:03:57.697863097
+  -05:00
+build/images/traditional/forestAug-10-2012_square_400x400.jpg: 2016-05-29 23:03:55.394476071
+  -05:00
+build/images/traditional/wolferst.jpg: 2016-05-29 23:03:58.191207936 -05:00
+build/images/traditional/wolferst_square_400x400.jpg: 2016-05-29 23:03:56.901177853
+  -05:00
+build/images/traditional/parade- aug28-2012.jpg: 2016-05-29 23:03:57.811199073 -05:00
+build/images/traditional/1-15-2013 greatmushroomforest.jpg: 2016-05-29 23:03:57.941202104
+  -05:00
+build/images/traditional/parade- aug28-2012_square_400x400.jpg: 2016-05-29 23:03:57.891200939
+  -05:00
+build/images/bg.jpg: 2016-05-29 23:03:58.621217966 -05:00
+build/images/logo.jpg: 2016-05-29 23:03:58.067871725 -05:00

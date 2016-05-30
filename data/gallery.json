@@ -7,59 +7,53 @@
   },
   "traditional": [
     {
-      "url": "test-images/1.jpg",
-      "caption": "this is a hover caption",
-      "title": "look, an under-image caption!",
+      "url": "traditional/1-15-2013 greatmushroomforest.jpg",
+      "caption": "great mushroom forest",
+      "title": "description",
       "gallery class": "magnific-popup"
     },
     {
-      "url": "test-images/2.jpg",
-      "caption": "hoverrrrr",
-      "title": "helo",
+      "url": "traditional/forestAug-10-2012.jpg",
+      "caption": "forest",
+      "title": "description",
       "gallery class": "magnific-popup"
     },
     {
-      "url": "test-images/fox.jpg",
-      "caption": "?!",
-      "title": "!?",
+      "url": "traditional/parade- aug28-2012.jpg",
+      "caption": "parade",
+      "title": "description",
       "gallery class": "magnific-popup"
     },
     {
-      "url": "test-images/4.jpg",
-      "caption": "ok",
-      "title": "why are you reading this",
+      "url": "traditional/Starmaker-August-5-2012.jpg",
+      "caption": "starmaker",
+      "title": "description",
       "gallery class": "magnific-popup"
     },
     {
-      "url": "test-images/5.jpg",
-      "caption": "lorum ipsum etc",
-      "title": "a b c d e f g h i j k l m n o p q r s t u v w x y z",
+      "url": "traditional/wolferst.jpg",
+      "caption": "wolfrest",
+      "title": "description",
       "gallery class": "magnific-popup"
     }
   ],
   "digital": [
     {
-      "url": "test-images/fox.jpg",
-      "caption": "this is a fox",
-      "title": "how he do that face",
+      "url": "digital/catcurve.jpg",
+      "caption": "cat curve",
+      "title": "description",
       "set": "traditional"
     },
     {
-      "url": "test-images/fox.jpg",
-      "caption": "helo",
-      "title": "me_irl",
+      "url": "digital/endlessforest.jpg",
+      "caption": "endless forest",
+      "title": "description",
       "set": "traditional"
     },
     {
-      "url": "test-images/fox.jpg",
-      "caption": "weow",
-      "title": "weow",
-      "set": "traditional"
-    },
-    {
-      "url": "test-images/fox.jpg",
-      "caption": "final destination fox only no item",
-      "title": "comeonandslam",
+      "url": "digital/zefaapostpost.jpg",
+      "caption": "zefaa",
+      "title": "description",
       "set": "traditional"
     }
   ]
