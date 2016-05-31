@@ -1,0 +1,28 @@
+{
+  "_comment": "",
+  "_TODO": "",
+  "config": {
+  },
+  "projects": [
+    {
+      "image": "preview.png",
+      "description": "this is project number one, and this is its description"
+    },
+    {
+      "image": "preview.png",
+      "description": "this is project number two, and this is its description"
+    },
+    {
+      "image": "preview.png",
+      "description": "this is project number three, and this is its description"
+    },
+    {
+      "image": "preview.png",
+      "description": "this is project number four, and this is its description"
+    },
+    {
+      "image": "preview.png",
+      "description": "this is project number five, and this is its description"
+    }
+  ]
+}

@@ -4,20 +4,11 @@ logo_name: logo.jpg
 ---
 
 <div class="projects">
-  <div class="projects-icons">
-    <div class="project-icon project-1"><%= image_tag 'preview.png' %></div>
-    <div class="project-icon-spacer"></div>
-    <div class="project-icon project-2"><%= image_tag 'preview.png' %></div>
-    <div class="project-icon-spacer"></div>
-    <div class="project-icon project-3"><%= image_tag 'preview.png' %></div>
-  </div>
-  <div class="project-indicator hidden"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
-  <div class="project-text empty">
-    <div class="project-1 project-description collapsed">this is project number one, and this is its description</div>
-    <div class="project-2 project-description collapsed">this is project number two, and this is its description</div>
-    <div class="project-3 project-description collapsed">this is project number three, and this is its description</div>
-  </div>
-</div>
+  <% data.projects.projects do |proj| %>
+      <%= projects_gen proj %>
+  <% end %>
+
+<%# honestly I'm just gonna leave that script inline down there %>
 
 <script>
 var lastProj = "project-1";
@@ -26,31 +17,35 @@ $(window).resize(function() {
   $(".project-indicator").css("left", $(".project-icon." + lastProj).offset().left);
 });
 $(".project-icon").on('click', function() {
-  var proj = $(this).attr("class").split(' ');
-  proj.splice(proj.indexOf("project-icon"), 1)[0];
-  lastProj = proj;
-  console.log(lastProj);
-  if ($(".expanded").length != 0) {
-    if ($(".expanded").hasClass(proj)) {
-      $(".expanded").fadeOut(200).removeClass("expanded").addClass("collapsed");
-      $(".project-text").slideUp().addClass("empty").removeClass("rollDown");
-      $(".project-indicator").addClass("hidden");
-    } else {
+
+  if ($(this).hasClass("active")) {
+    $(".expanded").fadeOut(200).removeClass("expanded").addClass("collapsed");
+    $(".project-text").slideUp().addClass("empty").removeClass("rollDown");
+    $(".project-indicator").addClass("hidden");
+    $(".active").removeClass("active");
+  } else {
+    var proj = $(this).attr("class").split(' ');
+    proj.splice(proj.indexOf("project-icon"), 1)[0];
+    lastProj = proj;
+    if ($(".expanded").length != 0) {
       $(".project-indicator").css("left", $(".project-icon." + proj).offset().left);
       $(".expanded").fadeOut(300, function() {
         $(".project-description." + proj).fadeIn(400, function() {
           $(this).removeClass("collapsed").addClass("expanded");
         });
       }).removeClass("expanded").addClass("collapsed");
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+    } else {
+      $(".project-indicator").css("left", $(".project-icon." + proj).offset().left);
+      $(".project-description." + proj).show().removeClass("collapsed").addClass("expanded");
+      $(".project-text").slideDown(200, function() {
+        $(this).removeClass("empty").addClass("rollDown");
+        $('html, body').animate({scrollTop : $(".project-text").offset().top}, 1200);
+        $(".project-indicator").removeClass("hidden").css("top", $(".project-text").offset().top -$(".project-indicator").height() );
+      });
+      $(this).addClass("active");
     }
-  } else {
-    $(".project-indicator").css("left", $(".project-icon." + proj).offset().left);
-    $(".project-description." + proj).show().removeClass("collapsed").addClass("expanded");
-    $(".project-text").slideDown(200, function() {
-      $(this).removeClass("empty").addClass("rollDown");
-      $('html, body').animate({scrollTop : $(".project-text").offset().top}, 700);
-      $(".project-indicator").removeClass("hidden").css("top", $(".project-text").offset().top -$(".project-indicator").height() );
-    });
   }
 });
 </script>

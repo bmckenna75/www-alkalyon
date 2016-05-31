@@ -18,9 +18,13 @@
   }
 
   // header stuff
-  .header .header-pic {
-    max-width: 100%;
-    min-width: 100%;
+  .header {
+    .header-pic {
+      width: 100vw;
+    }
+    .logo-container {
+      margin-left: 0px;
+    }
   }
 
   // nav tweaks - floating .nav-head button with floating .nav body
@@ -133,9 +137,28 @@
           }
         }
       }
-      // tile stuff - instead of hover captions, put em below
-      // tiles function the same as cards when on mobile
-
+    }
+    .projects {
+      .projects-icons {
+        overflow-x: scroll;
+        white-space: nowrap;
+        background-color: rgba(0,0,0,0.15);
+        .project-icon-spacer {
+          width: 2%;
+          display: inline-block;
+        }
+      }
+      .project-text {
+        margin-left: 0px;
+        .project-description {
+          &.expanded {
+            width: 95%;
+          }
+        }
+      }
+      .project-indicator {
+        display: none;
+      }
     }
   }
 }

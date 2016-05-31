@@ -49,24 +49,34 @@ helpers do
     redcarpet.render(source_text)
   end
 
+  def projects_gen(projects)
+    icons = '<div class="projects-icons">'
+    descriptions = '<div class="project-indicator hidden"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+    <div class="project-text empty">'
+    projects.each.with_index(1) do |proj, i|
+      icons += '<div class="project-icon project-' + i.to_s + '">' + image_tag(proj.image) + '</div><div class="project-icon-spacer"></div>'
+      descriptions += '<div class="project-' + i.to_s + ' project-description collapsed">' + proj.description + '</div>'
+    end
+    return icons + '</div>' + descriptions + '</div>'
+  end
 
   def lightbox_insert(image)
     answer = '<a href="/' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
-    answer +='<img src="' + create_image_thumb(image["url"], data.gallery.config.thumb_resize_string) + '" title="' + image["title"] + '"/>'
+    answer +='<img src="' + create_image_thumb(image["url"], data.gallery.config.thumb_resize_string) + '" title="' + image["title"] + '" alt="' + image["caption"] + '"/>'
     answer += '</a><p>' + image["caption"] + '</p>'
     return answer
   end
 
   def lightbox_insert_nothumb(image)
     answer =  '<a href="/' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
-    answer +='<img src="/' + config[:images_dir] + '/' + image["url"] + '" title="' + image["title"] + '"/>'
+    answer +='<img src="/' + config[:images_dir] + '/' + image["url"] + '" title="' + image["title"] + '" alt="' + image["caption"] + '"/>'
     answer += '</a><p>' + image["caption"] + '</p>'
     return answer
   end
 
   def lightbox_insert_tiles(image)
     answer = '<a href="/' + config[:images_dir] + '/' + image["url"] + '" class="magnific-popup" title="' + image["title"] + '">'
-    answer +='<img src="' + create_square_thumb(image["url"], data.gallery.config.square_resize_string) + '" title="' + image["title"] + '"/>'
+    answer +='<img src="' + create_square_thumb(image["url"], data.gallery.config.square_resize_string) + '" title="' + image["title"] + '" alt="' + image["caption"] + '"/>'
     answer += '<div class="tile-caption"><div class="tile-caption-inner">' + image["caption"] + '</div></div></a>'
     return answer
   end
@@ -133,8 +143,9 @@ configure :build do
     }
   end
 
-  # min on build - not enabling these for now while css and stuff has refactors (and eh, some people might get a kick out of it)
+  # min on build
   activate :minify_javascript
   activate :minify_css
+  activate :automatic_alt_tags
 
 end

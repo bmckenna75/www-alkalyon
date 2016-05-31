@@ -50,13 +50,16 @@ body {
   width: 100%;
   .logo-container {
     width: 100vw;
-    margin-left: -2.5vw;
     .logo {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
   }
+}
+
+body:not(.index) .header .logo-container {
+  margin-left: -2.5vw;
 }
 
 // nav thing - needs to be on top
@@ -224,6 +227,73 @@ body {
       }
     }
   }
+}
+
+// projects
+
+.projects {
+  width: 100%;
+  .projects-icons {
+    width: 100%;
+    .project-icon {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
+      &.active img {
+        filter: grayscale(0%);
+      }
+      img {
+        filter: grayscale(100%);
+        transition: filter 0.8s ease-in-out;
+      }
+    }
+    .project-icon-spacer {
+      flex-shrink: 1;
+      width: 5%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .project-text {
+    background-color: $project_text_bg;
+    width: 100vw;
+    height: 20vh;
+    margin-left: -2.5vw;
+    margin-top: 1vh;
+    padding-top: 2vh;
+    text-align: center;
+    font-size: 1.5em;
+    &.empty {
+      display: none;
+    }
+    .project-description {
+      &.expanded {
+        width: 40%;
+        height: 20vh;
+        overflow-y: scroll;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 100px;
+      }
+    }
+  }
+  .project-indicator {
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    left: 0;
+    transition: left 0.6s ease-in-out;
+    i {
+      width: 100%;
+      height: 100%;
+      font-size: 5vh;
+      color: $project_indic_color;
+    }
+  }
+}
+.collapsed {
+  display: none;
 }
 
 // can't pad/margin the footer and padding the content / content containers can be unreliable since flexbox,
