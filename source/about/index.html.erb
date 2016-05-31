@@ -5,14 +5,10 @@ description: about meeeeeeeee
 ---
 
 <div class="cards">
-    <div class="card card-head"> <h1 class="card-header">about cercat</h1> <p>cards overview text here (what're they for, etc, etc); they'll probably have a lightbox on them so you can scroll through horizontally or vertically; might make them more card-y in the future</p>
-        <%= partial 'about/test' %>
-        <%= parse_markdown '##test magic inline markdown parser' %>
-        <%= parse_markdown "there's not really any content yet" %>
-    </div>
     <div class="content-cards">
         <div class="card">some stuff here</div>
         <div class="card">some more stuff here</div>
         <div class="card">maybe one more thing here</div>
+        <div class="card"><%= parse_markdown '##test magic inline markdown parser' %></div>
     </div>
 </div>

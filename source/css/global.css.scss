@@ -48,10 +48,14 @@ body {
 
 .header {
   width: 100%;
-  .header-pic {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .logo-container {
+    width: 100vw;
+    margin-left: -2.5vw;
+    .logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 

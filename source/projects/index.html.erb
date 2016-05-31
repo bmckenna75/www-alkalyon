@@ -3,4 +3,34 @@ title: Certified Cat Artwork
 logo_name: logo.jpg
 ---
 
-<%= partial '/layouts/sample' %>
+<div class="projects">
+  <div class="projects-icons">
+    <div class="project-icon project-1"><%= image_tag 'preview.png' %></div>
+    <div class="project-icon project-2"><%= image_tag 'preview.png' %></div>
+    <div class="project-icon project-3"><%= image_tag 'preview.png' %></div>
+  </div>
+  <div class="project-text collapsed">
+    <div class="project-1 project-description collapsed">this is project number one, and this is its description</div>
+    <div class="project-2 project-description collapsed">this is project number two, and this is its description</div>
+    <div class="project-3 project-description collapsed">this is project number three, and this is its description</div>
+  </div>
+</div>
+
+<script>
+$(".project-icon").on('click', function() {
+  var proj = $(this).attr("class").split(' ');
+  proj.splice(proj.indexOf("project-icon"), 1)[0];
+  if ($(".expanded").length != 0) {
+    if ($(".expanded").hasClass(proj)) {
+      $(".project-text").slideUp().addClass("collapsed");
+      $(".expanded").hide("slide", {direction: "down" }, 200).removeClass("collapsed").addClass("expanded").removeClass("expanded").addClass("collapsed");
+    } else {
+      $(".expanded").hide("slide", { direction: "left" }, 200);
+      $(".project-description." + proj).show("slide", {direction: "right" }, 200).removeClass("collapsed").addClass("expanded");
+    }
+  } else {
+    $(".project-text").slideDown().removeClass("collapsed");
+    $(".project-description." + proj).show("slide", {direction: "down" }, 200).removeClass("collapsed").addClass("expanded").removeClass("collapsed").addClass("expanded");
+  }
+});
+</script>
