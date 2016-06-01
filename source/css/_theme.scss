@@ -26,15 +26,20 @@ $white                       : #ffffff; // don't judge
 $lime                        : #33cc33;
 $fuchsia                     : #cc33cc;
 
+$clay_gray                   : #a5afbf;
+$very_pale_orange            : #e5d9cf;
+$off_gray                    : #40444a;
+$slightly_off_off_gray       : #40444d;
+
 // the colors used in the navbar
 
-$current_bg:                   $soft_blue;
-$hover_bg:                     $soft_purple;
-$inactive_bg:                  $darker_gray;
+$current_bg:                   $slightly_off_off_gray;
+$hover_bg:                     $light_gray;
+$inactive_bg:                  #444444;
 
 // global_ish stuff
-$page_background:              $dark_gray url("http://i.imgur.com/wKgQEaW.png") repeat;
-$global_link_color:            $white;
+$page_background:              $dark_gray url("/images/bg.jpg") repeat;
+$global_link_color:            $very_pale_orange;
 $global_link_hover:            $fuchsia;
 
 //nav stuff
@@ -51,48 +56,50 @@ $nav_cont_bg:                  $clear;
 $nav_item_inactive:            $inactive_bg;
 $nav_item_hover:               $hover_bg;
 $nav_item_current:             $current_bg;
+$nav_item_current_text:        $light_white;
 $nav_item_text:                $clear;
-$nav_item_hover_text:          $white;
+$nav_item_hover_text:          $dark_gray;
 
 $nav_drop_text:                $light_white;
 $nav_drop_inactive:            $inactive_bg;
 $nav_drop_current:             $current_bg;
+$nav_drop_current_text:        $light_gray;
+$nav_drop_current_text_hover:  $light_white;
 $nav_drop_hover:               $hover_bg;
-$nav_drop_hover_text:          $white;
+$nav_drop_hover_text:          $dark_gray;
 
 $nav_roll_drop_text:           $light_gray;
 $nav_roll_drop_inactive:       $inactive_bg;
 $nav_roll_current:             $current_bg;
-$nav_roll_drop_text:           $light_white;
 $nav_roll_drop_hover:          $hover_bg;
-$nav_roll_drop_hover_text:     $white;
+$nav_roll_drop_hover_text:     $light_white;
 $nav_roll_drop_current:        $current_bg;
-$nav_roll_item_hover_text:     $white;
+$nav_roll_item_hover_text:     $light_white;
 $nav_roll_item_hover_bg:       $hover_bg;
 
 // content stuff
-$content_default_col:          $light_white;
-$content_block_bg:             $transparent_mid_gray;
+$content_default_col:          $very_pale_orange;
+$content_block_bg:             $off_gray;
 
 // projects stuff
 
-$project_text_bg:             $current_bg;
+$project_text_bg:              $off_gray;
 $project_indic_color:          $current_bg;
 
 // card stuff
-$card_bg_color:                $dark_gray;
-$card_text_color:              $light_white;
+$card_bg_color:                $off_gray;
+$card_text_color:              $very_pale_orange;
 
 // tile stuff
-$tile_m_caption_color:         $light_gray;
-$tile_m_bg_color:              $dark_gray;
+$tile_m_caption_color:         $very_pale_orange;
+$tile_m_bg_color:              $off_gray;
 $tile_caption_color:           $light_gray;
 $tile_hov_caption_bg:          $basically_black;
-$tile_head_text:               $light_white;
-$tile_head_bg:                 $dark_gray;
+$tile_head_text:               $very_pale_orange;
+$tile_head_bg:                 $off_gray;
 
 // footer stuff
-$footer_bg:                    $transparent_dark_gray;
+$footer_bg:                    $off_gray;
 $footer_color:                 $light_gray;
 
 // scrolltop stuff

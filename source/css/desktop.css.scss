@@ -113,6 +113,7 @@
                 background-color: $nav_drop_hover;
                 &.current {
                   background-color: $nav_drop_current;
+                  color: $nav_drop_current_text_hover;
                 }
               }
             }
@@ -123,6 +124,7 @@
           &:hover {
             a {
                 background-color: $nav_item_current;
+                color: $nav_item_current_text;
               }
           }
         }
