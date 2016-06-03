@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/Arcaena/middleman-dexterity.git
+  revision: 694ab126d653dae42950540ce973628a108e3510
+  specs:
+    middleman-dexterity (0.2.0)
+      middleman-core (>= 4.1.8)
+      mini_magick (~> 4.5)
+
+GIT
   remote: https://github.com/cleanenergyexperts/middleman-imageoptim.git
   revision: e79aa4f0949333b3f8c4c2ebe0e828c93d3b4c61
   specs:
@@ -6,13 +14,6 @@ GIT
       image_optim (~> 0.20.2)
       image_optim_pack (~> 0.2.1)
       middleman-core (>= 3.1)
-
-PATH
-  remote: /home/arcana/middleman-dexterity
-  specs:
-    middleman-dexterity (0.2.0)
-      middleman-core (>= 4.1.8)
-      mini_magick (~> 4.5)
 
 GEM
   remote: https://rubygems.org/
