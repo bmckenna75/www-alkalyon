@@ -17,7 +17,9 @@ $(window).resize(function() {
   $(".project-indicator").css("left", $(".project-icon." + lastProj).offset().left);
 });
 $(".project-icon").on('click', function() {
-
+  if ($(':animated').length > 0) {
+    return false;
+  }
   if ($(this).hasClass("active")) {
     $(".expanded").fadeOut(200).removeClass("expanded").addClass("collapsed");
     $(".project-text").slideUp().addClass("empty").removeClass("rollDown");
@@ -41,7 +43,7 @@ $(".project-icon").on('click', function() {
       $(".project-description." + proj).show().removeClass("collapsed").addClass("expanded");
       $(".project-text").slideDown(200, function() {
         $(this).removeClass("empty").addClass("rollDown");
-        $('html, body').animate({scrollTop : $(".project-text").offset().top}, 1200);
+        $('html, body').animate({scrollTop : $(".project-text").offset().top}, 600);
         $(".project-indicator").removeClass("hidden").css("top", $(".project-text").offset().top -$(".project-indicator").height() );
       });
       $(this).addClass("active");

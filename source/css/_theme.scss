@@ -34,7 +34,7 @@ $slightly_off_off_gray       : #40444d;
 // the colors used in the navbar
 
 $current_bg:                   $slightly_off_off_gray;
-$hover_bg:                     $light_gray;
+$hover_bg:                     $soft_purple;
 $inactive_bg:                  #444444;
 
 // global_ish stuff
@@ -58,7 +58,7 @@ $nav_item_hover:               $hover_bg;
 $nav_item_current:             $current_bg;
 $nav_item_current_text:        $light_white;
 $nav_item_text:                $clear;
-$nav_item_hover_text:          $dark_gray;
+$nav_item_hover_text:          $light_white;
 
 $nav_drop_text:                $light_white;
 $nav_drop_inactive:            $inactive_bg;
@@ -66,7 +66,7 @@ $nav_drop_current:             $current_bg;
 $nav_drop_current_text:        $light_gray;
 $nav_drop_current_text_hover:  $light_white;
 $nav_drop_hover:               $hover_bg;
-$nav_drop_hover_text:          $dark_gray;
+$nav_drop_hover_text:          $light_white;
 
 $nav_roll_drop_text:           $light_gray;
 $nav_roll_drop_inactive:       $inactive_bg;

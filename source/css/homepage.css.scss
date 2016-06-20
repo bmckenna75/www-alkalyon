@@ -40,7 +40,7 @@
     filter: hue-rotate(0deg);
     transition: filter 0.5s linear;
     &:hover {
-      filter: hue-rotate(195deg);
+      filter: hue-rotate(45deg);
     }
   }
 
@@ -61,11 +61,11 @@
             .dropdown-content {
               position: absolute;
               top: 0px;
-              height: calc(6.5vw / 2);
-              line-height: calc(6.5vw / 2);
+              height: calc((6.5vw / 2) + 1px);
+              line-height: calc((6.5vw / 2) + 1px);
               a {
                 height: 100%;
-                line-height: calc(6.5vw / 2);
+                line-height: calc((6.5vw / 2) + 1px);
               }
             }
           }

@@ -85,6 +85,7 @@
         transition: height 0.25s ease-in;
         &:hover {
             opacity: 1;
+            background-color: $nav_item_hover;
             a {
               opacity: 1;
               background-color: $nav_item_hover;
@@ -121,6 +122,7 @@
         }
         &.current {
           filter: grayscale(0%) saturate(130%);
+          background-color: $nav_item_current;
           &:hover {
             a {
                 background-color: $nav_item_current;
@@ -146,19 +148,19 @@
         }
         // nav backgrounds
         &:nth-child(1) {
-          background-image: url("/images/nav/1.jpg");
+          background-image: url("/images/nav/1.png");
         }
         &:nth-child(2) {
-          background-image: url("/images/nav/2.jpg");
+          background-image: url("/images/nav/2.png");
         }
         &:nth-child(3) {
-          background-image: url("/images/nav/3.jpg");
+          background-image: url("/images/nav/3.png");
         }
         &:nth-child(4) {
-          background-image: url("/images/nav/4.jpg");
+          background-image: url("/images/nav/4.png");
         }
         &:nth-child(5) {
-          background-image: url("/images/nav/5.jpg");
+          background-image: url("/images/nav/5.png");
         }
         a {
           background-color: $nav_item_inactive;
@@ -193,19 +195,21 @@
                   width: 50%;
               }
             }
-            &:hover .dropdown-content a { //.dropdown-content is unneccessary, but is clearer wtf I'm selecting
-              // hovering the "dropdown" (if I can even call it that still), selecting both (now-visible) links
-              color: $nav_roll_drop_text;
-              background-color: $nav_roll_drop_inactive;
-              &:hover {
-                background-color: $nav_roll_drop_hover;
-                color: $nav_roll_drop_hover_text;
+            &:hover {
+              .dropdown-content a { //.dropdown-content is unneccessary, but is clearer wtf I'm selecting
+                // hovering the "dropdown" (if I can even call it that still), selecting both (now-visible) links
+                color: $nav_roll_drop_text;
+                background-color: $nav_roll_drop_inactive;
+                &:hover {
+                  background-color: $nav_roll_drop_hover;
+                  color: $nav_roll_drop_hover_text;
+                  &.current {
+                    background-color: $nav_roll_drop_current;
+                  }
+                }
                 &.current {
                   background-color: $nav_roll_drop_current;
                 }
-              }
-              &.current {
-                background-color: $nav_roll_drop_current;
               }
             }
           }
@@ -217,12 +221,17 @@
         }
       }
       &:not(.roll-up) {
-        .item.has-dropdown .dropdown-content { // ...why did I even put the .item.has-dropdown in there? (probably to override something but still)
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          height: 3.0934vw;
-          line-height: 3.0934vw;
+        .item.has-dropdown {
+          &:hover {
+            background-color: $nav_item_inactive;
+          }
+          .dropdown-content { // ...why did I even put the .item.has-dropdown in there? (probably to override something but still)
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 3.0934vw;
+            line-height: 3.0934vw;
+          }
         }
       }
       .dropdown {
