@@ -3,4 +3,32 @@ title: Alka
 logo_name: logo.jpg
 ---
 
-<%= partial '/layouts/sample' %>
+<div class="content-container">
+    <div class="content-block fit">
+        <h1 class="content-header">Contact</h1>
+        <div class="contact-form">
+          <form id="contactForm">
+
+              <%# actual forms people see %>
+
+              <input type="email"    id="form-email" name="_replyto" placeholder="Your email" autofocus />
+              <input type="text"     id="form-name"  name="name"     placeholder="Your name" />
+              <textarea              id="form-text"  name="text"     placeholder="Your message" rows="1" cols="20" wrap="hard"></textarea>
+
+              <%# hidden things %>
+              <input type="text"   name="_gotcha"  placeholder="gotcha, sucker" id="gotcha" />
+
+              <%# button %>
+
+              <button type="button" id="sendMessage">Send</button>
+          </form>
+        </div>
+    </div>
+</div>
+
+<div class="contact-message-container">
+  <div class="contact-message">
+    placeholder message
+  </div>
+  <button type="button" id="contact-message-dismiss">Dismiss</button>
+</div>

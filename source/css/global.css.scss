@@ -86,6 +86,86 @@ body:not(.index) .header .logo-container {
       background-color: $content_block_bg;
       padding: 0.5em 1em;
       border-radius: 0.5em;
+      &.fit {
+        width: fit-content;
+      }
+      .contact-form {
+        margin-left: auto;
+        margin-right: auto;
+        #gotcha {
+          display: none;
+        }
+        form {
+          .failed {
+            outline: 1px solid orange !important;
+          }
+          input {
+            display: block;
+            margin: 0 auto;
+            padding: 1vh 0;
+            text-align: center;
+
+            background-color: #555;
+            color: #ccc;
+            border: none;
+
+            transition: all 0.30s ease-in-out;
+            outline: none;
+            box-shadow: none;
+            &:focus {
+              box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+              padding: 3px 0px 3px 3px;
+              margin: 8px auto 8px auto;
+              outline: 1px solid rgba(81, 203, 238, 1);
+            }
+          }
+          #form-text {
+            font-family: "Montserrat", sans-serif;
+            word-wrap: break-word;
+            display: block;
+
+            padding: 1vh 0;
+            margin: 0 auto;
+            text-align: center;
+
+            background-color: #555;
+            color: #ccc;
+            border: none;
+
+            transition:  all 0.30s ease-in-out;
+            outline: none;
+            box-shadow: none;
+            &:focus {
+              text-align: left;
+              box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+              padding: 3px 0px 3px 3px;
+              margin: 8px auto 8px auto;
+              outline: 1px solid rgba(81, 203, 238, 1);
+            }
+          }
+          button {
+            display: block;
+
+            margin: 0 auto;
+            background: #666;
+            color: #ccc;
+            border: none;
+            transition: all 0.30s ease-in-out;
+            outline: none;
+            box-shadow: none;
+            &:focus{
+              box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+              padding: 3px 0px 3px 3px;
+              margin: 8px auto 8px auto;
+              border: 1px solid rgba(81, 203, 238, 1);
+            }
+            &:hover {
+              background: #999;
+              color: #333;
+            }
+          }
+        }
+      }
       h1 {
         text-align: center;
         margin-top: 0px;
@@ -371,6 +451,42 @@ body:not(.index) .header .logo-container {
   }
 }
 
+// contact message stuff
+
+.contact-message-container {
+  background-color: rgba(0,0,0,0.75);
+  position: fixed;
+  z-index: 999;
+  display: inline-block;
+  display: none;
+  .contact-message {
+    padding-top: 1em;
+    text-align: center;
+    font-size: 2em;
+    color: #ccc;
+    white-space: pre-line;
+  }
+  #contact-message-dismiss {
+    background-color: #444;
+    color: #ccc;
+    border: none;
+    font-size: 3vh;
+    transition: background-color 0.25s ease-in-out;
+    &:hover {
+      background-color: #888;
+    }
+  }
+  &::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: -1; // ????
+    content: "";
+  }
+}
 
 // general css classes
 

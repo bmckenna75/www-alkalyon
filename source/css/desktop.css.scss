@@ -281,6 +281,56 @@
   }
 }
 
+// contact stuff
+
+.contact-form {
+  width: 20vw;
+  min-height: 30vh;
+  form {
+    input {
+      width: 15vw;
+      height: 5vh;
+      line-height: 2.5vh;
+      font-size: 1.5em;
+    }
+    #form-text {
+      width: 15vw;
+      height: 5vh;
+      line-height: 5vh;
+      font-size: 1.5em;
+      &:focus {
+        height: 25vh;
+        font-size: 1em;
+        line-height: 1.5em;
+      }
+    }
+    button {
+      width: 15vw;
+      height: 5vh;
+      line-height: 2.5vh;
+      font-size: 2.5vh;
+    }
+  }
+}
+
+.contact-message-container {
+  width: 30vw;
+  left: 35vw;
+  right: 35vw;
+  height: 30vh;
+  top: 35vh;
+  bottom: 35vh;
+  #contact-message-dismiss {
+    width: 30vw;
+    height: 5vh;
+    position: fixed;
+    bottom: 35vh;
+    top: 60vh;
+    left: 35vw;
+    right: 35vw;
+  }
+}
+
 @media screen and (min-width: 701px) and (max-width: 739px) {
   .content-container .content-block.col {
     margin-left: auto;

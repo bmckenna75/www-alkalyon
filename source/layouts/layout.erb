@@ -40,6 +40,11 @@
     <%= javascript_include_tag :responsive %>
     <%= javascript_include_tag :'jquery.magnific-popup' %>
     <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>
+
+    <% if current_page.path == 'contact/index.html' %>
+      <%= javascript_include_tag :contact %>
+    <% end %>
+
   </head>
 
   <body class="<%= page_classes %>">

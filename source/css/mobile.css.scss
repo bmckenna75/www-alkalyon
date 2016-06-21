@@ -165,4 +165,50 @@
       }
     }
   }
+  // contact stuff
+  .contact-form {
+    width: 100%;
+    min-height: 30vh;
+    form {
+      input {
+        width: 75%;
+        height: 2em;
+        line-height: 1.5em;
+        font-size: 1.5em;
+      }
+      #form-text {
+        width: 75%;
+        height: 2em;
+        line-height: 1.5em;
+        font-size: 1.25em;
+        &:focus {
+          height: 20em;
+        }
+      }
+      button {
+        width: 75%;
+        height: 2em;
+        line-height: 1.5em;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .contact-message-container {
+    width: 70vw;
+    left: 15vw;
+    right: 15vw;
+    height: 70vh;
+    top: 15vh;
+    bottom: 15vh;
+    #contact-message-dismiss {
+      width: 70vw;
+      height: 5vh;
+      position: fixed;
+      bottom: 15vh;
+      top: 80vh;
+      left: 15vw;
+      right: 15vw;
+    }
+  }
 }
