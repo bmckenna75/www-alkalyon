@@ -56,7 +56,7 @@ $(document).ready(function(){
             name: f_name,
             message: f_text,
             //_replyto: f_email,
-            _subject: "Contact Form Submission: ajax",
+            _subject: "Contact Form Submission",
             _format: "plain",
             _gotcha: f_gotcha
           },
