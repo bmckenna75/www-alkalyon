@@ -8,52 +8,52 @@
   "traditional": [
     {
       "url": "traditional/1-15-2013_greatmushroomforest.jpg",
-      "caption": "great mushroom forest",
-      "title": "description",
+      "caption": "Mushroom forest",
+      "title": "Personal work, fantasy conceptual ideas.",
       "gallery class": "magnific-popup"
     },
     {
       "url": "traditional/forestAug-10-2012.jpg",
-      "caption": "forest",
-      "title": "description",
+      "caption": "Raire",
+      "title": "Personal work of a character in my projects.",
       "gallery class": "magnific-popup"
     },
     {
       "url": "traditional/parade_aug28-2012.jpg",
-      "caption": "parade",
-      "title": "description",
+      "caption": "Floats",
+      "title": "First attempt at watercolor, kept mainly for sentimental reasons.",
       "gallery class": "magnific-popup"
     },
     {
       "url": "traditional/Starmaker-August-5-2012.jpg",
-      "caption": "starmaker",
-      "title": "description",
+      "caption": "Starmaker",
+      "title": "Commission for a friend",
       "gallery class": "magnific-popup"
     },
     {
       "url": "traditional/wolferst.jpg",
-      "caption": "wolfrest",
-      "title": "description",
+      "caption": "Pack Leader",
+      "title": "Personal work, experiments with line and pattern.",
       "gallery class": "magnific-popup"
     }
   ],
   "digital": [
     {
       "url": "digital/catcurve.jpg",
-      "caption": "cat curve",
-      "title": "description",
+      "caption": "Jordan",
+      "title": "Portrait commission of a close friend's cat",
       "set": "traditional"
     },
     {
       "url": "digital/endlessforest.jpg",
-      "caption": "endless forest",
-      "title": "description",
+      "caption": "Forest Spirit",
+      "title": "Personal work, sketch of an old worldbuilding idea",
       "set": "traditional"
     },
     {
       "url": "digital/zefaapostpost.jpg",
-      "caption": "zefaa",
-      "title": "description",
+      "caption": "Purifier",
+      "title": "Commission for a client's character concept",
       "set": "traditional"
     }
   ]
