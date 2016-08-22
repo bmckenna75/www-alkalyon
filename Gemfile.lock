@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/Arcaena/middleman-dexterity.git
+  remote: https://github.com/chrjguill/middleman-dexterity.git
   revision: 694ab126d653dae42950540ce973628a108e3510
   specs:
     middleman-dexterity (0.2.0)
