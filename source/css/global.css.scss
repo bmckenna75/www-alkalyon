@@ -82,7 +82,7 @@ body {
 //
 // These values were tweaked from there to give a much more aesthetically pleasing view.
 // anim time is just 4 * (one cycle). Currently one cycle is 2.66s, so 2.66 / 5.33 / 8s / 10.66s are when each one finishes
-
+// note: added a 1s initial delay before the anims start
 
 @keyframes logoGlowFade {
 	0% {
@@ -117,16 +117,16 @@ body {
 }
 
 .logo-lay1 {
-  animation-delay: 0s;
+  animation-delay: 1s;
 }
 .logo-lay2 {
-  animation-delay: 2.66s;
+  animation-delay: 3.66s;
 }
 .logo-lay3 {
-  animation-delay: 5.33s;
+  animation-delay: 6.33s;
 }
 .logo-lay4 {
-  animation-delay: 8s;
+  animation-delay: 9s;
 }
 
 body:not(.index) .header .logo-container {
