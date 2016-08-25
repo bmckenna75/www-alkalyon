@@ -50,7 +50,14 @@ body {
   width: 100%;
   .logo-container {
     width: 100vw;
-    .logo {
+		height: 23.4375vw;
+		position: relative;
+    .logo-base, .logo-lay1, .logo-lay2, .logo-lay3, .logo-lay4 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -58,8 +65,76 @@ body {
   }
 }
 
+//
+// specs on animation given:
+// 5 frames to fade in, 0.5s at full glow, 5 frames out
+// at 60fps this gives us 1/12s in, 6/12s at, 1/12s out, for a total of 8/12 or 0.66s.
+// For simplicity's sake I gave each letter 24% of the keyframe and offset them each by 0.66s
+//
+// These numbers will probably change before being committed, but those were the original specs. Original vals were:
+// 0%: opacity 0,
+// 2%:  1,
+// 12:  1,
+// 22:  1,
+// 24:  0,
+// 100: 0
+// with an anim duration of 2.66s, and delays of 0, 0.66, 1.33, and 2s.
+//
+// These values were tweaked from there to give a much more aesthetically pleasing view.
+// anim time is just 4 * (one cycle). Currently one cycle is 2.66s, so 2.66 / 5.33 / 8s / 10.66s are when each one finishes
+
+
+@keyframes logoGlowFade {
+	0% {
+		opacity: 0;
+	}
+	7% {
+		opacity: 1;
+	}
+	11% {
+		opacity: 0.82;
+	}
+	12% {
+		opacity: 0.8;
+	}
+	13% {
+		opacity: 0.82;
+	}
+	17% {
+		opacity: 1;
+	}
+	24% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.logo-lay1, .logo-lay2, .logo-lay3, .logo-lay4 {
+	animation: logoGlowFade 10.66s infinite ease-in-out;
+	opacity: 0;
+}
+
+.logo-lay1 {
+  animation-delay: 0s;
+}
+.logo-lay2 {
+  animation-delay: 2.66s;
+}
+.logo-lay3 {
+  animation-delay: 5.33s;
+}
+.logo-lay4 {
+  animation-delay: 8s;
+}
+
 body:not(.index) .header .logo-container {
   margin-left: -2.5vw;
+}
+
+body:not(.index) .header .nav-container {
+	margin-left: -2.5vw;
 }
 
 // nav thing - needs to be on top
