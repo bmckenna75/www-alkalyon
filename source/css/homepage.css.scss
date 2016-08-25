@@ -3,7 +3,7 @@
   max-height: 1080px;
   width: 100vw;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0;
 }
 
@@ -13,6 +13,7 @@
 
 .widget-container .widget-canvas {
   width: 100vw;
+	max-width: 1920px;
   height: calc(100vh - 23.4375vw - 6.5vw);
   max-height: 450px;
   overflow: hidden;
@@ -52,20 +53,23 @@
       height: 6.5vw;
       .nav {
         .item {
-          background-size: 100%  calc(6.5vw);;
+          background-size: cover;
           background-position: center top;
           background-repeat: no-repeat;
           width: 20vw;
+					max-width: 384px;
           height: 6.5vw;
+					max-height: 125px;
           &.has-dropdown {
             .dropdown-content {
               position: absolute;
               top: 0px;
-              height: calc((6.5vw / 2) + 1px);
-              line-height: calc((6.5vw / 2) + 1px);
+              height: 6.5vw;
+							max-height: 125px;
+              //line-height: 125px;
               a {
                 height: 100%;
-                line-height: calc((6.5vw / 2) + 1px);
+                //line-height: 125px;
               }
             }
           }

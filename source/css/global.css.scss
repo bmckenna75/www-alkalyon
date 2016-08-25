@@ -50,7 +50,9 @@ body {
   width: 100%;
   .logo-container {
     width: 100vw;
+		max-width: 1920px;
 		height: 23.4375vw;
+		max-height: 450px;
 		position: relative;
     .logo-base, .logo-lay1, .logo-lay2, .logo-lay3, .logo-lay4 {
 			position: absolute;
@@ -58,7 +60,7 @@ body {
 			left: 0;
 			right: 0;
 			bottom: 0;
-      display: block;
+      //display: block;
       margin-left: auto;
       margin-right: auto;
     }
