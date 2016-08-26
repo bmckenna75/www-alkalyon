@@ -64,12 +64,18 @@
             .dropdown-content {
               position: absolute;
               top: 0px;
-              height: 6.5vw;
-							max-height: 125px;
-              //line-height: 125px;
+              height: calc((6.5vw / 2) + 1px);
+							max-height: calc(1920px * 0.065 / 2 + 1px);
+              line-height: calc((6.5vw / 2) + 1px);
+							@media (min-width: 1920px) {
+								line-height: calc(1920px * 0.065 / 2 + 1px);
+							}
               a {
                 height: 100%;
-                //line-height: 125px;
+                line-height: calc((6.5vw / 2) + 1px);
+								@media (min-width: 1920px) {
+									line-height: calc(1920px * 0.065 / 2 + 1px);
+								}
               }
             }
           }
