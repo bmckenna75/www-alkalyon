@@ -15,15 +15,19 @@
       background-size: auto 44vh;
       background-position: bottom center;
     }
+		&:not(.index) {
+			.header {
+				.logo-container {
+					margin-left: 0px;
+				}
+			}
+		}
   }
 
   // header stuff
   .header {
     .header-pic {
       width: 100vw;
-    }
-    .logo-container {
-      margin-left: 0px;
     }
   }
 
