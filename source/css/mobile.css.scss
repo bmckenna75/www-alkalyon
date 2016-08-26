@@ -2,19 +2,19 @@
 
 @media screen and (max-width: 700px) {
 
-  // general tweaks first
+	// general tweaks first
 
-  html, body {
-    max-width: 100%;
-  }
+	html, body {
+		max-width: 100%;
+	}
 
-  body {
-    background: $page_background;
-    &.index {
-      background: #220022;
-      background-size: auto 44vh;
-      background-position: bottom center;
-    }
+	body {
+		background: $page_background;
+		&.index {
+			background: #220022;
+			background-size: auto 44vh;
+			background-position: bottom center;
+		}
 		&:not(.index) {
 			.header {
 				.logo-container {
@@ -22,197 +22,197 @@
 				}
 			}
 		}
-  }
+	}
 
-  // header stuff
-  .header {
-    .header-pic {
-      width: 100vw;
-    }
-  }
+	// header stuff
+	.header {
+		.header-pic {
+			width: 100vw;
+		}
+	}
 
-  // nav tweaks - floating .nav-head button with floating .nav body
-  // here be dragons
+	// nav tweaks - floating .nav-head button with floating .nav body
+	// here be dragons
 
-  .nav-container {
-    margin-left: auto;
-    margin-right: auto;
-    .nav-head {
-      position: fixed;
-      top: 20vh;
-      left: 0px;
-      background-color: $nav_m_bg_color;
-      width: 40px;
-      height: 40px;
-      display: block;
-      text-decoration: none;
-      border-radius: 20px;
-      z-index: 999;
-      i {
-        color: $nav_m_text_color;
-        margin: 0;
-        position: relative;
-        left: 11px;
-        top: 11px;
-        font-size: 19px;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-      }
-    }
-    .nav {
-      width: 10em;
-      height: 100%;
-      position: fixed;
-      left: 0;
-      top: 25vh;
-      .item {
-        width: 100%;
-        float: left;
-        background-color: $nav_m_item_color;
-        &.current, &.current>a {
-          background-color: $nav_m_cur_color;
-        }
-        .dropdown-content a {
-          color: $nav_m_text_color;
-          /*font-size: 1.3em;*/
-          background-color: $nav_m_drop_color;
-          z-index: 1;
-          &.current {
-            background-color:  $nav_m_drop_cur_color;
-          }
-        }
-      }
-      .dropdown-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: 1;
-      }
-      a.current {
-        background-color: $nav_m_cur_color;
-      }
-      .arrow {
-        font-size: 0.6em;
-        position: absolute;
-        top: 0.1em;
-      }
-    }
-    .nav .item a, .nav-head a, .dropdown-head {
-      width: 100%;
-      min-height: 100%;
-      font-size: 1.5em;
-      text-align: center;
-      line-height: 1.5em;
-      text-decoration: none;
-      display: inline-block;
-      color: $nav_m_text_color;
-    }
-  }
+	.nav-container {
+		margin-left: auto;
+		margin-right: auto;
+		.nav-head {
+			position: fixed;
+			top: 20vh;
+			left: 0px;
+			background-color: $nav_m_bg_color;
+			width: 40px;
+			height: 40px;
+			display: block;
+			text-decoration: none;
+			border-radius: 20px;
+			z-index: 999;
+			i {
+				color: $nav_m_text_color;
+				margin: 0;
+				position: relative;
+				left: 11px;
+				top: 11px;
+				font-size: 19px;
+				-webkit-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+			}
+		}
+		.nav {
+			width: 10em;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 25vh;
+			.item {
+				width: 100%;
+				float: left;
+				background-color: $nav_m_item_color;
+				&.current, &.current>a {
+					background-color: $nav_m_cur_color;
+				}
+				.dropdown-content a {
+					color: $nav_m_text_color;
+					/*font-size: 1.3em;*/
+					background-color: $nav_m_drop_color;
+					z-index: 1;
+					&.current {
+						background-color:	$nav_m_drop_cur_color;
+					}
+				}
+			}
+			.dropdown-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				z-index: 1;
+			}
+			a.current {
+				background-color: $nav_m_cur_color;
+			}
+			.arrow {
+				font-size: 0.6em;
+				position: absolute;
+				top: 0.1em;
+			}
+		}
+		.nav .item a, .nav-head a, .dropdown-head {
+			width: 100%;
+			min-height: 100%;
+			font-size: 1.5em;
+			text-align: center;
+			line-height: 1.5em;
+			text-decoration: none;
+			display: inline-block;
+			color: $nav_m_text_color;
+		}
+	}
 
-  // content stuff, to ensure that they're nested properly for overriding
+	// content stuff, to ensure that they're nested properly for overriding
 
-  .content {
-    .cards, .tiles {
-      .card, .tile {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80vw;
-        flex-direction: column;
-      }
-      .content-cards, .content-tiles {
-        flex-direction: column;
-        flex-wrap: wrap;
-        .tile {
-          padding: 10px 5px;
-          margin: 5px auto;
-          background-color: $tile_m_bg_color;
-          .tile-caption {
-            text-align: center;
-            color: $tile_m_caption_color;
-            visibility: visible;
-            position: relative;
-            opacity: 1;
-            font-size: 1em;
-            height: fit-content;
-            background-color: transparent;
-          }
-          a {
-            line-height: normal;
-          }
-        }
-        .card {
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-    }
-    .projects {
-      .projects-icons {
-        overflow-x: scroll;
-        white-space: nowrap;
-        background-color: rgba(0,0,0,0.15);
-        .project-icon-spacer {
-          width: 2%;
-          display: inline-block;
-        }
-      }
-      .project-text {
-        margin-left: 0px;
-        .project-description {
-          &.expanded {
-            width: 95%;
-          }
-        }
-      }
-      .project-indicator {
-        display: none;
-      }
-    }
-  }
-  // contact stuff
-  .contact-form {
-    width: 100%;
-    min-height: 30vh;
-    form {
-      input {
-        width: 75%;
-        height: 2em;
-        line-height: 1.5em;
-        font-size: 1.5em;
-      }
-      #form-text {
-        width: 75%;
-        height: 2em;
-        line-height: 1.5em;
-        font-size: 1.25em;
-        &:focus {
-          height: 20em;
-        }
-      }
-      button {
-        width: 75%;
-        height: 2em;
-        line-height: 1.5em;
-        font-size: 1.5em;
-      }
-    }
-  }
+	.content {
+		.cards, .tiles {
+			.card, .tile {
+				margin-left: auto;
+				margin-right: auto;
+				width: 80vw;
+				flex-direction: column;
+			}
+			.content-cards, .content-tiles {
+				flex-direction: column;
+				flex-wrap: wrap;
+				.tile {
+					padding: 10px 5px;
+					margin: 5px auto;
+					background-color: $tile_m_bg_color;
+					.tile-caption {
+						text-align: center;
+						color: $tile_m_caption_color;
+						visibility: visible;
+						position: relative;
+						opacity: 1;
+						font-size: 1em;
+						height: fit-content;
+						background-color: transparent;
+					}
+					a {
+						line-height: normal;
+					}
+				}
+				.card {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+		.projects {
+			.projects-icons {
+				overflow-x: scroll;
+				white-space: nowrap;
+				background-color: rgba(0,0,0,0.15);
+				.project-icon-spacer {
+					width: 2%;
+					display: inline-block;
+				}
+			}
+			.project-text {
+				margin-left: 0px;
+				.project-description {
+					&.expanded {
+						width: 95%;
+					}
+				}
+			}
+			.project-indicator {
+				display: none;
+			}
+		}
+	}
+	// contact stuff
+	.contact-form {
+		width: 100%;
+		min-height: 30vh;
+		form {
+			input {
+				width: 75%;
+				height: 2em;
+				line-height: 1.5em;
+				font-size: 1.5em;
+			}
+			#form-text {
+				width: 75%;
+				height: 2em;
+				line-height: 1.5em;
+				font-size: 1.25em;
+				&:focus {
+					height: 20em;
+				}
+			}
+			button {
+				width: 75%;
+				height: 2em;
+				line-height: 1.5em;
+				font-size: 1.5em;
+			}
+		}
+	}
 
-  .contact-message-container {
-    width: 70vw;
-    left: 15vw;
-    right: 15vw;
-    height: 70vh;
-    top: 15vh;
-    bottom: 15vh;
-    #contact-message-dismiss {
-      width: 70vw;
-      height: 5vh;
-      position: fixed;
-      bottom: 15vh;
-      top: 80vh;
-      left: 15vw;
-      right: 15vw;
-    }
-  }
+	.contact-message-container {
+		width: 70vw;
+		left: 15vw;
+		right: 15vw;
+		height: 70vh;
+		top: 15vh;
+		bottom: 15vh;
+		#contact-message-dismiss {
+			width: 70vw;
+			height: 5vh;
+			position: fixed;
+			bottom: 15vh;
+			top: 80vh;
+			left: 15vw;
+			right: 15vw;
+		}
+	}
 }

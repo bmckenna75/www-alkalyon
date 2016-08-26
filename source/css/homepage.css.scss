@@ -1,147 +1,147 @@
 .wrapper {
-  height: 100vh;
-  max-height: 1080px;
-  width: 100vw;
-  max-width: 1920px;
-  margin: auto;
-  padding: 0;
+	height: 100vh;
+	max-height: 1080px;
+	width: 100vw;
+	max-width: 1920px;
+	margin: auto;
+	padding: 0;
 }
 
 .widgets {
-  position: relative;
+	position: relative;
 }
 
 .widget-container .widget-canvas {
-  width: 100vw;
+	width: 100vw;
 	max-width: 1920px;
-  height: calc(100vh - 23.4375vw - 6.5vw);
-  max-height: 450px;
-  overflow: hidden;
-  background-image: url("/images/widgets/widget-container.jpg");
-  background-size: auto auto;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+	height: calc(100vh - 23.4375vw - 6.5vw);
+	max-height: 450px;
+	overflow: hidden;
+	background-image: url("/images/widgets/widget-container.jpg");
+	background-size: auto auto;
+	background-position: center center;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .widgets-before {
-  flex-grow: 1;
-  /*flex-grow: 764.40; */
+	flex-grow: 1;
+	/*flex-grow: 764.40; */
 }
 .widgets-after {
-  flex-grow: 1;
-  /*flex-grow: 759.42;*/
+	flex-grow: 1;
+	/*flex-grow: 759.42;*/
 }
 
 .widget {
-  display: block;
-  img {
-    filter: hue-rotate(0deg);
-    transition: filter 0.5s linear;
-    &:hover {
-      filter: hue-rotate(45deg);
-    }
-  }
+	display: block;
+	img {
+		filter: hue-rotate(0deg);
+		transition: filter 0.5s linear;
+		&:hover {
+			filter: hue-rotate(45deg);
+		}
+	}
 
 }
 
 @media screen and (min-width: 701px) {
-  .index {
-    .nav-container {
-      height: 6.5vw;
-      .nav {
-        .item {
-          background-size: cover;
-          background-position: center top;
-          background-repeat: no-repeat;
-          width: 20vw;
+	.index {
+		.nav-container {
+			height: 6.5vw;
+			.nav {
+				.item {
+					background-size: cover;
+					background-position: center top;
+					background-repeat: no-repeat;
+					width: 20vw;
 					max-width: 384px;
-          height: 6.5vw;
+					height: 6.5vw;
 					max-height: 125px;
-          &.has-dropdown {
-            .dropdown-content {
-              position: absolute;
-              top: 0px;
-              height: calc((6.5vw / 2) + 1px);
+					&.has-dropdown {
+						.dropdown-content {
+							position: absolute;
+							top: 0px;
+							height: calc((6.5vw / 2) + 1px);
 							max-height: calc(1920px * 0.065 / 2 + 1px);
-              line-height: calc((6.5vw / 2) + 1px);
+							line-height: calc((6.5vw / 2) + 1px);
 							@media (min-width: 1920px) {
 								line-height: calc(1920px * 0.065 / 2 + 1px);
 							}
-              a {
-                height: 100%;
-                line-height: calc((6.5vw / 2) + 1px);
+							a {
+								height: 100%;
+								line-height: calc((6.5vw / 2) + 1px);
 								@media (min-width: 1920px) {
 									line-height: calc(1920px * 0.065 / 2 + 1px);
 								}
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
-  .widget-tumblr {
-    margin: auto 0vh auto 0vh;
-    img {
-      height: 103px;
-      width: auto;
-    }
-  }
+	.widget-tumblr {
+		margin: auto 0vh auto 0vh;
+		img {
+			height: 103px;
+			width: auto;
+		}
+	}
 
-  .widget-twitter {
-    margin: auto 57px auto 57px;
-    align-self: flex-end;
-    img {
-      height: 103px;
-      width: auto;
-    }
-  }
+	.widget-twitter {
+		margin: auto 57px auto 57px;
+		align-self: flex-end;
+		img {
+			height: 103px;
+			width: auto;
+		}
+	}
 
-  .widget-insta {
-    margin: auto 0vh auto 0vh;
-    img {
-      height: 106px;
-      width: auto;
-    }
-  }
+	.widget-insta {
+		margin: auto 0vh auto 0vh;
+		img {
+			height: 106px;
+			width: auto;
+		}
+	}
 }
 
 @media screen and (max-width: 700px) {
-  .header {
-    height: 23.4375vw;
-  }
+	.header {
+		height: 23.4375vw;
+	}
 
-  .widget-container .widget-canvas {
-    height: 45vh;
-    background-size: auto 45vh;
-  }
+	.widget-container .widget-canvas {
+		height: 45vh;
+		background-size: auto 45vh;
+	}
 
-  .widget-tumblr {
-    margin: auto 0vh auto 0vh;
-    img {
-      height: 10.3vh;
-      width: auto;
-    }
-  }
+	.widget-tumblr {
+		margin: auto 0vh auto 0vh;
+		img {
+			height: 10.3vh;
+			width: auto;
+		}
+	}
 
-  .widget-twitter {
-    margin: auto 5.7vh auto 5.7vh;
-    align-self: flex-end;
-    img {
-      height: 10.3vh;
-      width: auto;
-    }
-  }
+	.widget-twitter {
+		margin: auto 5.7vh auto 5.7vh;
+		align-self: flex-end;
+		img {
+			height: 10.3vh;
+			width: auto;
+		}
+	}
 
-  .widget-insta {
-    margin: auto 0vh auto 0vh;
-    img {
-      height: 10.6vh;
-      width: auto;
-    }
-  }
+	.widget-insta {
+		margin: auto 0vh auto 0vh;
+		img {
+			height: 10.6vh;
+			width: auto;
+		}
+	}
 }

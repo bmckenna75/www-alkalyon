@@ -14,57 +14,57 @@
 // global element styling, may be overridden
 
 img {
-  max-width: 100vw;
+	max-width: 100vw;
 }
 
 a {
-  color: $global_link_color;
-  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
+	color: $global_link_color;
+	transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
 
-  &:hover {
-    color: $global_link_hover;
-  }
+	&:hover {
+		color: $global_link_hover;
+	}
 }
 
 html, body {
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
 }
 
 body {
-  min-height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  &>.wrapper {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
-    position: relative;
-  }
+	min-height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	&>.wrapper {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		min-height: 100%;
+		position: relative;
+	}
 }
 
 // header (pic)
 
 .header {
-  width: 100%;
-  .logo-container {
-    width: 100vw;
+	width: 100%;
+	.logo-container {
+		width: 100vw;
 		max-width: 1920px;
 		height: 23.4375vw;
 		max-height: 450px;
 		position: relative;
-    .logo-base, .logo-lay1, .logo-lay2, .logo-lay3, .logo-lay4 {
+		.logo-base, .logo-lay1, .logo-lay2, .logo-lay3, .logo-lay4 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
-      //display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+			//display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 //
@@ -75,10 +75,10 @@ body {
 //
 // These numbers will probably change before being committed, but those were the original specs. Original vals were:
 // 0%: opacity 0,
-// 2%:  1,
-// 12:  1,
-// 22:  1,
-// 24:  0,
+// 2%:	1,
+// 12:	1,
+// 22:	1,
+// 24:	0,
 // 100: 0
 // with an anim duration of 2.66s, and delays of 0, 0.66, 1.33, and 2s.
 //
@@ -119,20 +119,20 @@ body {
 }
 
 .logo-lay1 {
-  animation-delay: 1s;
+	animation-delay: 1s;
 }
 .logo-lay2 {
-  animation-delay: 3.66s;
+	animation-delay: 3.66s;
 }
 .logo-lay3 {
-  animation-delay: 6.33s;
+	animation-delay: 6.33s;
 }
 .logo-lay4 {
-  animation-delay: 9s;
+	animation-delay: 9s;
 }
 
 body:not(.index) .header .logo-container {
-  margin-left: -2.5vw;
+	margin-left: -2.5vw;
 }
 
 body:not(.index) .header .nav-container {
@@ -142,487 +142,487 @@ body:not(.index) .header .nav-container {
 // nav thing - needs to be on top
 
 .nav {
-  z-index: 999;
+	z-index: 999;
 }
 
 // content styles
 
 .content {
-  margin-top: 50px;
-  color: $content_default_col;
-  .content-container {
-    // only contains content blocks, which are meant to just have text.
-    //  Has mostly been replaced by content-cards
-    width: 100%;
-    height: fit-content;
-    .content-block {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 1em;
-      background-color: $content_block_bg;
-      padding: 0.5em 1em;
-      border-radius: 0.5em;
-      &.fit {
-        width: fit-content;
-      }
-      &.justify p {
-        text-align: justify;
-        text-align-last: inherit;
-      }
-      .contact-form {
-        margin-left: auto;
-        margin-right: auto;
-        #gotcha {
-          display: none;
-        }
-        form {
-          .failed {
-            outline: 1px solid orange !important;
-          }
-          input {
-            display: block;
-            margin: 0 auto;
-            padding: 1vh 0;
-            text-align: center;
+	margin-top: 50px;
+	color: $content_default_col;
+	.content-container {
+		// only contains content blocks, which are meant to just have text.
+		//	Has mostly been replaced by content-cards
+		width: 100%;
+		height: fit-content;
+		.content-block {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1em;
+			background-color: $content_block_bg;
+			padding: 0.5em 1em;
+			border-radius: 0.5em;
+			&.fit {
+				width: fit-content;
+			}
+			&.justify p {
+				text-align: justify;
+				text-align-last: inherit;
+			}
+			.contact-form {
+				margin-left: auto;
+				margin-right: auto;
+				#gotcha {
+					display: none;
+				}
+				form {
+					.failed {
+						outline: 1px solid orange !important;
+					}
+					input {
+						display: block;
+						margin: 0 auto;
+						padding: 1vh 0;
+						text-align: center;
 
-            background-color: #555;
-            color: #ccc;
-            border: none;
+						background-color: #555;
+						color: #ccc;
+						border: none;
 
-            transition: all 0.30s ease-in-out;
-            outline: none;
-            box-shadow: none;
-            &:focus {
-              box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-              padding: 3px 0px 3px 3px;
-              margin: 8px auto 8px auto;
-              outline: 1px solid rgba(81, 203, 238, 1);
-            }
-          }
-          #form-text {
-            font-family: "Montserrat", sans-serif;
-            word-wrap: break-word;
-            display: block;
+						transition: all 0.30s ease-in-out;
+						outline: none;
+						box-shadow: none;
+						&:focus {
+							box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							padding: 3px 0px 3px 3px;
+							margin: 8px auto 8px auto;
+							outline: 1px solid rgba(81, 203, 238, 1);
+						}
+					}
+					#form-text {
+						font-family: "Montserrat", sans-serif;
+						word-wrap: break-word;
+						display: block;
 
-            padding: 1vh 0;
-            margin: 0 auto;
-            text-align: center;
+						padding: 1vh 0;
+						margin: 0 auto;
+						text-align: center;
 
-            background-color: #555;
-            color: #ccc;
-            border: none;
+						background-color: #555;
+						color: #ccc;
+						border: none;
 
-            transition:  all 0.30s ease-in-out;
-            outline: none;
-            box-shadow: none;
-            &:focus {
-              text-align: left;
-              box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-              padding: 3px 0px 3px 3px;
-              margin: 8px auto 8px auto;
-              outline: 1px solid rgba(81, 203, 238, 1);
-            }
-          }
-          button {
-            display: block;
+						transition:	all 0.30s ease-in-out;
+						outline: none;
+						box-shadow: none;
+						&:focus {
+							text-align: left;
+							box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							padding: 3px 0px 3px 3px;
+							margin: 8px auto 8px auto;
+							outline: 1px solid rgba(81, 203, 238, 1);
+						}
+					}
+					button {
+						display: block;
 
-            margin: 0 auto;
-            background: #666;
-            color: #ccc;
-            border: none;
-            transition: all 0.30s ease-in-out;
-            outline: none;
-            box-shadow: none;
-            &:focus{
-              box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-              padding: 3px 0px 3px 3px;
-              margin: 8px auto 8px auto;
-              border: 1px solid rgba(81, 203, 238, 1);
-            }
-            &:hover {
-              background: #999;
-              color: #333;
-            }
-          }
-        }
-      }
-      h1 {
-        text-align: center;
-        margin-top: 0px;
-      }
-      img {
-        max-width: 75%;
-        /* height: auto; */
-        max-height: 250px;
-      }
-      p {
-        text-align: center;
-      }
-    }
-  }
+						margin: 0 auto;
+						background: #666;
+						color: #ccc;
+						border: none;
+						transition: all 0.30s ease-in-out;
+						outline: none;
+						box-shadow: none;
+						&:focus{
+							box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							padding: 3px 0px 3px 3px;
+							margin: 8px auto 8px auto;
+							border: 1px solid rgba(81, 203, 238, 1);
+						}
+						&:hover {
+							background: #999;
+							color: #333;
+						}
+					}
+				}
+			}
+			h1 {
+				text-align: center;
+				margin-top: 0px;
+			}
+			img {
+				max-width: 75%;
+				/* height: auto; */
+				max-height: 250px;
+			}
+			p {
+				text-align: center;
+			}
+		}
+	}
 
-  // cards and tiles
-  //  cards have gaps between them and are generally larger;
-  //  tiles... tile up against eachother with no gaps.
+	// cards and tiles
+	//	cards have gaps between them and are generally larger;
+	//	tiles... tile up against eachother with no gaps.
 
 
-  .cards, .tiles, .cards .content-cards, .tiles .content-tiles {
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+	.cards, .tiles, .cards .content-cards, .tiles .content-tiles {
+		width: 100%;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 
-    .card img, .tile img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%;
-    }
-    .card {
-      min-width: 300px;
-      max-width: 50vw;
-      width: 35vw;
-      flex-grow: 1;
-      margin-left: 15px;
-      margin-right: 15px;
-      padding: 10px 0px;
-      display: inline-block;
-      background: $card_bg_color;
-      border-radius: 0.4em;
-      margin-bottom: 10px;
-      text-align: center;
-      color: $card_text_color;
-      visibility: hidden;
-      opacity: 0;
-      word-wrap: break-word;
-      padding-right: 15px;
-      padding-left: 15px;
+		.card img, .tile img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 100%;
+		}
+		.card {
+			min-width: 300px;
+			max-width: 50vw;
+			width: 35vw;
+			flex-grow: 1;
+			margin-left: 15px;
+			margin-right: 15px;
+			padding: 10px 0px;
+			display: inline-block;
+			background: $card_bg_color;
+			border-radius: 0.4em;
+			margin-bottom: 10px;
+			text-align: center;
+			color: $card_text_color;
+			visibility: hidden;
+			opacity: 0;
+			word-wrap: break-word;
+			padding-right: 15px;
+			padding-left: 15px;
 
-      &.visible {
-        animation-name: fade-in;
-        -webkit-animation-name: fade-in;
+			&.visible {
+				animation-name: fade-in;
+				-webkit-animation-name: fade-in;
 
-        animation-duration: 600ms;
-        -webkit-animation-duration: 600ms;
+				animation-duration: 600ms;
+				-webkit-animation-duration: 600ms;
 
-        animation-timing-function: ease-out;
-        -webkit-animation-timing-function: ease-out;
+				animation-timing-function: ease-out;
+				-webkit-animation-timing-function: ease-out;
 
-        visibility: visible;
-        opacity: 1;
-      }
-      &.head-card {
-        width: 80vw;
-        max-width: 90vw;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        a {
-          line-height: normal;
-        }
-      }
-    }
-    .content-cards .card:last-child:nth-child(2n+1) {
-    //so that the last child, if it's on a row by itself, centers (first element )
-      margin-left: auto;
-      margin-right: auto;
-    }
-    // tiles
-    .tile {
-      position: relative;
-      max-width: 100%;
-      .tile-caption {
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
-        width: 100%;
-        height: 100%;
-        color: $tile_caption_color;
-        text-align: center;
-        background-color: $tile_hov_caption_bg;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .tile-caption-inner {
-          font-size: 2em;
-        }
-      }
-      &:hover .tile-caption {
-        visibility: visible;
-        opacity: 0.75;
-      }
-      a {
-        display: block;
-        line-height: 0em;
-        text-decoration: none;
-        &:focus {
-        outline-color: transparent;
-        }
-      }
-      &.head-tile {
-        width: 80vw;
-        max-width: 100vw;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px 0px;
-        display: block;
-        background: $tile_head_bg;
-        border-radius: 0em;
-        margin-bottom: 10px;
-        text-align: center;
-        color: $tile_head_text;
-        word-wrap: break-word;
-        padding: 0px 15px;
-        img {
-          display: inline-block;
-        }
-        a {
-          line-height: normal;
-          display: inline-block;
-        }
-      }
-    }
-  }
+				visibility: visible;
+				opacity: 1;
+			}
+			&.head-card {
+				width: 80vw;
+				max-width: 90vw;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				a {
+					line-height: normal;
+				}
+			}
+		}
+		.content-cards .card:last-child:nth-child(2n+1) {
+		//so that the last child, if it's on a row by itself, centers (first element )
+			margin-left: auto;
+			margin-right: auto;
+		}
+		// tiles
+		.tile {
+			position: relative;
+			max-width: 100%;
+			.tile-caption {
+				visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+				width: 100%;
+				height: 100%;
+				color: $tile_caption_color;
+				text-align: center;
+				background-color: $tile_hov_caption_bg;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.tile-caption-inner {
+					font-size: 2em;
+				}
+			}
+			&:hover .tile-caption {
+				visibility: visible;
+				opacity: 0.75;
+			}
+			a {
+				display: block;
+				line-height: 0em;
+				text-decoration: none;
+				&:focus {
+				outline-color: transparent;
+				}
+			}
+			&.head-tile {
+				width: 80vw;
+				max-width: 100vw;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 10px 0px;
+				display: block;
+				background: $tile_head_bg;
+				border-radius: 0em;
+				margin-bottom: 10px;
+				text-align: center;
+				color: $tile_head_text;
+				word-wrap: break-word;
+				padding: 0px 15px;
+				img {
+					display: inline-block;
+				}
+				a {
+					line-height: normal;
+					display: inline-block;
+				}
+			}
+		}
+	}
 }
 
 // projects
 
 .projects {
-  width: 100%;
-  .projects-icons {
-    width: 100%;
-    .project-icon {
-      display: inline-block;
-      margin-left: 0;
-      margin-right: 0;
-      &.active img {
-        filter: grayscale(0%);
-      }
-      img {
-        filter: grayscale(100%);
-        transition: filter 0.8s ease-in-out;
-      }
-    }
-    .project-icon-spacer {
-      flex-shrink: 1;
-      width: 5%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-  .project-text {
-    background-color: $project_text_bg;
-    width: 100vw;
-    height: 20vh;
-    //margin-left: -2.5vw;
+	width: 100%;
+	.projects-icons {
+		width: 100%;
+		.project-icon {
+			display: inline-block;
+			margin-left: 0;
+			margin-right: 0;
+			&.active img {
+				filter: grayscale(0%);
+			}
+			img {
+				filter: grayscale(100%);
+				transition: filter 0.8s ease-in-out;
+			}
+		}
+		.project-icon-spacer {
+			flex-shrink: 1;
+			width: 5%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.project-text {
+		background-color: $project_text_bg;
+		width: 100vw;
+		height: 20vh;
+		//margin-left: -2.5vw;
 		position: fixed;
 		left: 0;
 		right: 0;
-    margin-top: 1vh;
-    padding-top: 2vh;
-    text-align: center;
-    font-size: 1.5em;
-    &.empty {
-      display: none;
-    }
-    .project-description {
-      &.expanded {
-        width: 40%;
-        height: 20vh;
-        overflow-y: scroll;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        min-height: 100px;
-      }
-    }
-  }
-  .project-indicator {
-    position: fixed;
-    width: 3vh;
-    height: 3vh;
-    left: 0;
-    transition: left 0.6s ease-in-out;
-    i {
-      width: 100%;
-      height: 100%;
-      font-size: 5vh;
-      color: $project_indic_color;
-    }
-  }
+		margin-top: 1vh;
+		padding-top: 2vh;
+		text-align: center;
+		font-size: 1.5em;
+		&.empty {
+			display: none;
+		}
+		.project-description {
+			&.expanded {
+				width: 40%;
+				height: 20vh;
+				overflow-y: scroll;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				min-height: 100px;
+			}
+		}
+	}
+	.project-indicator {
+		position: fixed;
+		width: 3vh;
+		height: 3vh;
+		left: 0;
+		transition: left 0.6s ease-in-out;
+		i {
+			width: 100%;
+			height: 100%;
+			font-size: 5vh;
+			color: $project_indic_color;
+		}
+	}
 }
 .collapsed {
-  display: none;
+	display: none;
 }
 
 // can't pad/margin the footer and padding the content / content containers can be unreliable since flexbox,
-//  so it's easiest to just add an after-content div with the padding we need to seperate the footer and content
+//	so it's easiest to just add an after-content div with the padding we need to seperate the footer and content
 
 .after-content {
-  padding-bottom: 75px;
+	padding-bottom: 75px;
 }
 
 // footer css
 .footer {
-  .footer-container {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: $footer_bg;
-    height: fit-content;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-  }
+	.footer-container {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: $footer_bg;
+		height: fit-content;
+		border-top-right-radius: 0.5em;
+		border-top-left-radius: 0.5em;
+	}
 
-  .footer-content {
-    color: $footer_color;
-    width: 100%;
-    line-height: 1.75em;
-    vertical-align: middle;
-    text-align: center;
-    height: 1.75em;
-  }
+	.footer-content {
+		color: $footer_color;
+		width: 100%;
+		line-height: 1.75em;
+		vertical-align: middle;
+		text-align: center;
+		height: 1.75em;
+	}
 
-  // separators between floats
+	// separators between floats
 
-  .sig.right:not(:first-child)::after {
-    content: " |";
-  }
-  .sig.left:not(:last-child)::after {
-    content: " |";
-  }
+	.sig.right:not(:first-child)::after {
+		content: " |";
+	}
+	.sig.left:not(:last-child)::after {
+		content: " |";
+	}
 }
 
 
 // scroll to top stuff
 
 .scrollTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: $scrolltop_bg;
-  width: 50px;
-  height: 50px;
-  display: block;
-  text-decoration: none;
-  border-radius: 35px;
-  display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: $scrolltop_bg;
+	width: 50px;
+	height: 50px;
+	display: block;
+	text-decoration: none;
+	border-radius: 35px;
+	display: none;
 
-  i {
-    color: $scrolltop_icon_col;
-    margin: 0;
-    position: relative;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
-    transition: all 0.3s ease;
-  }
-  &:hover {
-    background: $scrolltop_bg_hover;
-    i {
-      color: $scrolltop_icon_hov;
-      top: 5px;
-    }
-  }
+	i {
+		color: $scrolltop_icon_col;
+		margin: 0;
+		position: relative;
+		left: 16px;
+		top: 13px;
+		font-size: 19px;
+		transition: all 0.3s ease;
+	}
+	&:hover {
+		background: $scrolltop_bg_hover;
+		i {
+			color: $scrolltop_icon_hov;
+			top: 5px;
+		}
+	}
 }
 
 // contact message stuff
 
 .contact-message-container {
-  background-color: rgba(0,0,0,0.75);
-  position: fixed;
-  z-index: 999;
-  display: inline-block;
-  display: none;
-  .contact-message {
-    padding-top: 1em;
-    text-align: center;
-    font-size: 2em;
-    color: #ccc;
-    white-space: pre-line;
-    text-align: center;
-  }
-  #contact-message-dismiss {
-    background-color: #444;
-    color: #ccc;
-    border: none;
-    font-size: 3vh;
-    transition: background-color 0.25s ease-in-out;
-    &:hover {
-      background-color: #888;
-    }
-  }
-  &::after {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.45);
-    z-index: -1; // ????
-    content: "";
-  }
+	background-color: rgba(0,0,0,0.75);
+	position: fixed;
+	z-index: 999;
+	display: inline-block;
+	display: none;
+	.contact-message {
+		padding-top: 1em;
+		text-align: center;
+		font-size: 2em;
+		color: #ccc;
+		white-space: pre-line;
+		text-align: center;
+	}
+	#contact-message-dismiss {
+		background-color: #444;
+		color: #ccc;
+		border: none;
+		font-size: 3vh;
+		transition: background-color 0.25s ease-in-out;
+		&:hover {
+			background-color: #888;
+		}
+	}
+	&::after {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.45);
+		z-index: -1; // ????
+		content: "";
+	}
 }
 
 // general css classes
 
 .center {
-  text-align: center;
+	text-align: center;
 }
 
 .clear {
-  clear: both;
+	clear: both;
 }
 
 .left {
-  float: left;
-  padding-left: 5px;
+	float: left;
+	padding-left: 5px;
 }
 
 .right {
-    float: right;
-    padding-right: 5px;
+		float: right;
+		padding-right: 5px;
 }
 
 .hidden {
-  display: none !important;
+	display: none !important;
 }
 
 .flex {
-  display: flex;
-  max-width: 100%;
+	display: flex;
+	max-width: 100%;
 }
 
 // transforms
 
 .rotate90 {
-  transform: rotate(90deg);
-  display: inline-block;
+	transform: rotate(90deg);
+	display: inline-block;
 }
 
 @keyframes fade-in {
 from {
-  opacity: 0;
-  }
-  to {
-  opacity: 1;
-  }
+	opacity: 0;
+	}
+	to {
+	opacity: 1;
+	}
 }
 
 @-webkit-keyframes fade-in {
-  from {
-  opacity: 0;
-  }
-  to {
-  opacity: 1;
-  }
+	from {
+	opacity: 0;
+	}
+	to {
+	opacity: 1;
+	}
 }
