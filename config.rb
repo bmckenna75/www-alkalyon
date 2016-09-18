@@ -119,7 +119,7 @@ configure :build do
   activate :dexterity
 
   activate :autoprefixer
-  activate :imageoptim
+  #activate :imageoptim
   activate :favicon_maker do |f|
     f.template_dir  = 'source/images'
     f.icons = {
