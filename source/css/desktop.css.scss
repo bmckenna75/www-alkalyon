@@ -40,7 +40,7 @@
 	}
 
 	/*
-		~ indicates that there might be multiple/they're in no particular order.
+		~ indicates that there might be multiple/they're in no particular order.  ' // to make vim stop highlighting strings >.>
 		|--- header
 			|--- header-pic
 			|--- nav-container
@@ -236,11 +236,18 @@
 						position: absolute;
 						top: 0px;
 						left: 0px;
-						height: 3.0934vw;
-						max-height: calc(1920px * 0.030934);
-						line-height: 3.0934vw;
-						@media (min-width: 1920px ) {
-							line-height: calc(1920px * 0.030934);
+						height: calc((6.5vw / 2) + 1px);
+						max-height: calc(1920px * 0.065 / 2 + 0.5px);
+						line-height: calc((6.5vw / 2) + 1px);
+						@media (min-width: 1920px) {
+							line-height: calc(1920px * 0.065 / 2 + 1px);
+						}
+						a {
+							height: 100%;
+							line-height: calc((6.5vw / 2) + 1px);
+							@media (min-width: 1920px) {
+								line-height: calc(1920px * 0.065 / 2 + 1px);
+							}
 						}
 					}
 				}

@@ -18,5 +18,8 @@ gem 'middleman-autoprefixer'
 gem 'middleman-imageoptim', :git => 'https://github.com/cleanenergyexperts/middleman-imageoptim.git'
 gem 'font-awesome-middleman'
 
+gem 'execjs'
+gem 'therubyracer'
+
 gem 'middleman-dexterity', :git => 'https://github.com/chrjguill/middleman-dexterity.git'
 #gem 'middleman-dexterity', :path => '/home/arcana/middleman-dexterity'
