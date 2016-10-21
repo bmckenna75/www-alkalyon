@@ -7,3 +7,4 @@
   * You MAY NOT copy, redistribute, or alter my work without explicit permission from me, or claim my work as your own, nor are you allowed to remove my signature from the piece, should it be present.
   * You MAY NOT duplicate my work with an intent to distribute, commercial or otherwise, unless agreed upon.
   * You MAY duplicate the work that you've commissioned for your own non-commercial purposes or upload my work to social media/art blogs/etc. as long as you do not claim credit for the work and it remains unaltered.
+  * If you reupload/reblog/repost/etc. my work, you must credit either my website ([http://alkalyon.com](http://alkalyon.com)), Tumblr ([http://alkalyon.tumblr.com/](http://alkalyon.tumblr.com)) or Twitter ([https://twitter.com/alkalyon](https://twitter.com/alkalyon)).
