@@ -1,63 +1,63 @@
 {
-  "_comment": "resize_string should be [width]x[height]; either can be omitted, but not both (i.e. x100 or 100x)",
-  "_TODO": "have config.rb read in the gallery class and apply that class, then have the page call the magnific popup on that class for gallery stuff",
+	"_comment": "resize_string should be [width]x[height]; either can be omitted, but not both (i.e. x100 or 100x)",
+	"_TODO": "have config.rb read in the gallery class and apply that class, then have the page call the magnific popup on that class for gallery stuff",
 	"template": {
 		"url": "[traditional|digital]/[filename]",
 		"caption": "this is what shows up on hover",
 		"title": "this is what shows up on click"
 	},
-  "config": {
-      "thumb_resize_string": "400x400",
-      "square_resize_string": "400"
-  },
-  "traditional": [
-    {
-      "url": "traditional/1-15-2013_greatmushroomforest.jpg",
-      "caption": "Mushroom Forest",
-      "title": "Personal work, fantasy conceptual ideas."
-    },
-    {
-      "url": "traditional/forestAug-10-2012.jpg",
-      "caption": "Raire",
-      "title": "Personal work of a character in my projects."
-    },
-    {
-      "url": "traditional/parade_aug28-2012.jpg",
-      "caption": "Floats",
-      "title": "First attempt at watercolor, kept mainly for sentimental reasons."
-    },
-    {
-      "url": "traditional/Starmaker-August-5-2012.jpg",
-      "caption": "Starmaker",
-      "title": "Commission for a friend."
-    },
-    {
-      "url": "traditional/wolferst.jpg",
-      "caption": "Pack Leader",
-      "title": "Personal work, experiments with line and pattern."
-    }
-  ],
-  "digital": [
-    {
-      "url": "digital/catcurve.jpg",
-      "caption": "Jordan",
-      "title": "Portrait commission of a close friend's cat."
-    },
-    {
-      "url": "digital/endlessforest.jpg",
-      "caption": "Forest Spirit",
-      "title": "Personal work, sketch of an old worldbuilding idea."
-    },
-    {
-      "url": "digital/zefaapostpost.jpg",
-      "caption": "Purifier",
-      "title": "Commission for a client's character concept."
-    },
+	"config": {
+		"thumb_resize_string": "400x400",
+		"square_resize_string": "400"
+	},
+	"traditional": [
 		{
-      "url": "digital/rainy1x.png",
-      "caption": "LCD Rain",
-      "title": "Portrait and color practice."
-    },
+			"url": "traditional/1-15-2013_greatmushroomforest.jpg",
+			"caption": "Mushroom Forest",
+			"title": "Personal work, fantasy conceptual ideas."
+		},
+		{
+			"url": "traditional/forestAug-10-2012.jpg",
+			"caption": "Raire",
+			"title": "Personal work of a character in my projects."
+		},
+		{
+			"url": "traditional/parade_aug28-2012.jpg",
+			"caption": "Floats",
+			"title": "First attempt at watercolor, kept mainly for sentimental reasons."
+		},
+		{
+			"url": "traditional/Starmaker-August-5-2012.jpg",
+			"caption": "Starmaker",
+			"title": "Commission for a friend."
+		},
+		{
+			"url": "traditional/wolferst.jpg",
+			"caption": "Pack Leader",
+			"title": "Personal work, experiments with line and pattern."
+		}
+	],
+	"digital": [
+		{
+			"url": "digital/catcurve.jpg",
+			"caption": "Jordan",
+			"title": "Portrait commission of a close friend's cat."
+		},
+		{
+			"url": "digital/endlessforest.jpg",
+			"caption": "Forest Spirit",
+			"title": "Personal work, sketch of an old worldbuilding idea."
+		},
+		{
+			"url": "digital/zefaapostpost.jpg",
+			"caption": "Purifier",
+			"title": "Commission for a client's character concept."
+		},
+		{
+			"url": "digital/rainy1x.png",
+			"caption": "LCD Rain",
+			"title": "Portrait and color practice."
+		},
 		{
 			"url": "digital/tower.jpg",
 			"caption": "Tower",
@@ -72,6 +72,11 @@
 			"url": "digital/q-diamond.png",
 			"caption": "Queen of Diamonds",
 			"title": "Part of a 4-color deck of cards project."
+		},
+		{
+			"url": "digital/princeoftheforest.png",
+			"caption": "Prince",
+			"title": "Random doodle."
 		}
-  ]
+	]
 }
