@@ -74,9 +74,14 @@
 			"title": "Part of a 4-color deck of cards project."
 		},
 		{
-			"url": "digital/princeoftheforest.png",
+			"url":     "digital/princeoftheforest.png",
 			"caption": "Prince",
-			"title": "Random doodle."
+			"title":   "Random doodle."
+		},
+		{
+			"url":     "digital/rayderkxs.png",
+			"caption": "The Journey Home",
+			"title":   "Character + scene commission for a client."
 		}
 	]
 }
