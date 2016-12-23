@@ -39,44 +39,14 @@
 	],
 	"digital": [
 		{
-			"url": "digital/catcurve.jpg",
-			"caption": "Jordan",
-			"title": "Portrait commission of a close friend's cat."
+			"url":     "digital/ladyoflake.png",
+			"caption": "Lady of the Lake",
+			"title":   "Speedpaint, 1.5h."
 		},
 		{
-			"url": "digital/endlessforest.jpg",
-			"caption": "Forest Spirit",
-			"title": "Personal work, sketch of an old worldbuilding idea."
-		},
-		{
-			"url": "digital/zefaapostpost.jpg",
-			"caption": "Purifier",
-			"title": "Commission for a client's character concept."
-		},
-		{
-			"url": "digital/rainy1x.png",
-			"caption": "LCD Rain",
-			"title": "Portrait and color practice."
-		},
-		{
-			"url": "digital/tower.jpg",
-			"caption": "Tower",
-			"title": "Practice with foliage brushes."
-		},
-		{
-			"url": "digital/werewolf1.png",
-			"caption": "Sentinel",
-			"title": "Lycanthropy with a fabulous tail."
-		},
-		{
-			"url": "digital/q-diamond.png",
-			"caption": "Queen of Diamonds",
-			"title": "Part of a 4-color deck of cards project."
-		},
-		{
-			"url":     "digital/princeoftheforest.png",
-			"caption": "Prince",
-			"title":   "Random doodle."
+			"url":     "digital/wanderredo.png",
+			"caption": "Wanderlust",
+			"title":   "Personal Work."
 		},
 		{
 			"url":     "digital/rayderkxs.png",
@@ -84,9 +54,44 @@
 			"title":   "Character + scene commission for a client."
 		},
 		{
-			"url":     "digital/wanderredo.png",
-			"caption": "Wanderlust",
-			"title":   "Personal Work."
+			"url":     "digital/princeoftheforest.png",
+			"caption": "Prince",
+			"title":   "Random doodle."
+		},
+		{
+			"url": "digital/q-diamond.png",
+			"caption": "Queen of Diamonds",
+			"title": "Part of a 4-color deck of cards project."
+		},
+		{
+			"url": "digital/werewolf1.png",
+			"caption": "Sentinel",
+			"title": "Lycanthropy with a fabulous tail."
+		},
+		{
+			"url": "digital/tower.jpg",
+			"caption": "Tower",
+			"title": "Practice with foliage brushes."
+		},
+		{
+			"url": "digital/rainy1x.png",
+			"caption": "LCD Rain",
+			"title": "Portrait and color practice."
+		},
+		{
+			"url": "digital/zefaapostpost.jpg",
+			"caption": "Purifier",
+			"title": "Commission for a client's character concept."
+		},
+		{
+			"url": "digital/endlessforest.jpg",
+			"caption": "Forest Spirit",
+			"title": "Personal work, sketch of an old worldbuilding idea."
+		},
+		{
+			"url": "digital/catcurve.jpg",
+			"caption": "Jordan",
+			"title": "Portrait commission of a close friend's cat."
 		}
 	]
 }
