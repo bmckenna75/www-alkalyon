@@ -10,34 +10,7 @@
 		"thumb_resize_string": "400x400",
 		"square_resize_string": "400"
 	},
-	"traditional": [
-		{
-			"url": "traditional/1-15-2013_greatmushroomforest.jpg",
-			"caption": "Mushroom Forest",
-			"title": "Personal work, fantasy conceptual ideas."
-		},
-		{
-			"url": "traditional/forestAug-10-2012.jpg",
-			"caption": "Raire",
-			"title": "Personal work of a character in my projects."
-		},
-		{
-			"url": "traditional/parade_aug28-2012.jpg",
-			"caption": "Floats",
-			"title": "First attempt at watercolor, kept mainly for sentimental reasons."
-		},
-		{
-			"url": "traditional/Starmaker-August-5-2012.jpg",
-			"caption": "Starmaker",
-			"title": "Commission for a friend."
-		},
-		{
-			"url": "traditional/wolferst.jpg",
-			"caption": "Pack Leader",
-			"title": "Personal work, experiments with line and pattern."
-		}
-	],
-	"digital": [
+	"art": [
 		{
 			"url":     "digital/ladyoflake.png",
 			"caption": "Lady of the Lake",
@@ -49,14 +22,19 @@
 			"title":   "Personal Work."
 		},
 		{
+			"url": "traditional/wolferst.jpg",
+			"caption": "Pack Leader",
+			"title": "Personal work, experiments with line and pattern."
+		},
+		{
+			"url": "traditional/1-15-2013_greatmushroomforest.jpg",
+			"caption": "Mushroom Forest",
+			"title": "Personal work, fantasy conceptual ideas."
+		},
+		{
 			"url":     "digital/rayderkxs.png",
 			"caption": "The Journey Home",
 			"title":   "Character + scene commission for a client."
-		},
-		{
-			"url":     "digital/princeoftheforest.png",
-			"caption": "Prince",
-			"title":   "Random doodle."
 		},
 		{
 			"url": "digital/q-diamond.png",
@@ -84,9 +62,19 @@
 			"title": "Commission for a client's character concept."
 		},
 		{
-			"url": "digital/endlessforest.jpg",
-			"caption": "Forest Spirit",
-			"title": "Personal work, sketch of an old worldbuilding idea."
+			"url": "traditional/forestAug-10-2012.jpg",
+			"caption": "Raire",
+			"title": "Personal work of a character in my projects."
+		},
+		{
+			"url": "traditional/parade_aug28-2012.jpg",
+			"caption": "Floats",
+			"title": "First attempt at watercolor, kept mainly for sentimental reasons."
+		},
+		{
+			"url": "traditional/Starmaker-August-5-2012.jpg",
+			"caption": "Starmaker",
+			"title": "Commission for a friend."
 		},
 		{
 			"url": "digital/catcurve.jpg",

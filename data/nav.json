@@ -1,12 +1,8 @@
 {
   "_comment": "first item in dropdown is the title, 2nd is the dropdowns url prefix, others are the url/titles of the subpages.",
   "nav_data": {
-    "dropdown": [
-      "Illustration",
-      "Digital",
-      "Traditional"
-    ],
     "single-links": [
+			"Gallery",
       "Projects",
       "About",
       "Contact",
