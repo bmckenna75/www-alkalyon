@@ -1,53 +1,13 @@
 ---
 title: Alka
 logo_name: logo.jpg
-layout: false
+description: Digital Illustrations
 ---
-<!doctype html>
-<html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="keywords" content="artwork, art, cat, design">
-    <meta name="description" content="<%= current_page.data.description || 'Certified Cat Artwork' %>">
-    <meta name="image" content="/images/preview.png">
-    <meta name="site_name" content="Certified Cat Artwork">
-
-    <meta name='HandheldFriendly' content='True'>
-    <meta name='MobileOptimized' content='320'>
-
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
-
-    <link rel="icon" sizes="196x196" href="/favicon-196x196.png">
-    <link rel="icon" sizes="160x160" href="/favicon-160x160.png">
-    <link rel="icon" sizes="96x96" href="/favicon-96x96.png">
-
-    <link rel="shortcut icon" href="/favicon.png" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-
-    <title><%= current_page.data.title %></title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-
-    <%= stylesheet_link_tag :global %>
-    <%= stylesheet_link_tag :mobile , :media => "(max-width:700px)" %>
-    <%= stylesheet_link_tag :desktop , :media => "(min-width:701px)"%>
-
-    <%= stylesheet_link_tag :homepage %>
-
-    <%= javascript_include_tag :responsive %>
-  </head>
-
-  <body class="<%= page_classes %>">
-    <div class="wrapper">
-        <%= partial 'layouts/header' %>
-        <%= partial 'layouts/widgets' %>
-    </div> <!-- wrapper -->
-  </body>
-</html>
+<div class="tiles">
+    <div class="content-tiles">
+        <%  data.gallery.art.each do |image| %>
+          <div class="tile"> <%= lightbox_insert_tiles image  %> </div>
+        <% end %>
+    </div>
+</div>
