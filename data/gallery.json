@@ -12,6 +12,16 @@
 	},
 	"art": [
 		{
+			"url":     "digital/delphoxy.png",
+			"caption": "Twisted Firestarters",
+			"title":   "Pokemon fanart."
+		},
+		{
+			"url":     "traditional/selfportrait.jpg",
+			"caption": "Self Portrait",
+			"title":   "Chalk Pastel, 24\" x 18\""
+		},
+		{
 			"url":     "digital/ladyoflake.png",
 			"caption": "Lady of the Lake",
 			"title":   "Speedpaint, 1.5h."
