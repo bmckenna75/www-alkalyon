@@ -12,6 +12,11 @@
 	},
 	"art": [
 		{
+			"url":     "digital/bearengineer.png",
+			"caption": "Engineer",
+			"title":   "Speedpaint, 1.5h."
+		},
+		{
 			"url":     "digital/delphoxy.png",
 			"caption": "Twisted Firestarters",
 			"title":   "Pokemon fanart."
