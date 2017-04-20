@@ -12,6 +12,11 @@
 	},
 	"art": [
 		{
+			"url":     "digital/armistice.png",
+			"caption": "Armistice",
+			"title":   "Painting study from the series Westworld, 3h"
+		},
+		{
 			"url":     "digital/bearengineer.png",
 			"caption": "Engineer",
 			"title":   "Speedpaint, 1.5h."
